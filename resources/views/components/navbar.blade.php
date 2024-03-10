@@ -1,5 +1,5 @@
 <nav class="bg-white">
-    <div class="container mx-auto flex justify-between items-center py-2">
+    <div class="container mx-auto flex justify-between items-center py-4 px-4">
         <a href="/" class="flex items-center">
             <img src="{{ asset('images/iconCPG.png') }}" alt="Gemilang Icon" class="h-14 mr-2">
         </a>
