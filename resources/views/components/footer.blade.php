@@ -1,5 +1,7 @@
-<footer class="bg-gray-800 py-4">
-    <div class="container mx-auto justify-between items-top pt-10 px-10">
+<footer class="bg-black py-4">
+    @vite('resources/css/app.css')
+
+    <div class="container mx-auto justify-between items-top pt-10 py-4 lg:px-20">
         <div class="flex">
             <!-- Kolom pertama -->
         <div class="w-1/3 ">
