@@ -103,9 +103,9 @@
 
 
         <div class="w-1/2">
-            <div class="text-6xl text-white mb-20 flex flex-cols 3">
+            <div class="text-6xl text-white mb-20 flex flex-cols-3">
                 <div>
-                    <div class="text-6xl text-white">
+                    <div class="text-6xl text-white mb-5 mr-10 mr-10">
                         50+
                     </div>
                     <div name="subdiv" class="text-sm text-white w-full">
@@ -114,26 +114,40 @@
 
                 </div>
                 <div>
-                    <div class="text-1xl text-white ">
+                    <div class="text-1xl text-white mb-5 mr-10">
                         50+
                     </div>
-                    <div name="subdiv" class="text-sm text-white w-full">
+                    <div name="subdiv" class="text-sm text-white w-full max-w-[100px]">
                         Training and Certification
                     </div>
                 </div>
                 <div>
-                    <div class="text-6xl text-white ">
-                        100+
+                    <div class="text-6xl text-white mb-5 mr-10">
+                        1000+
                     </div>
-                    <div name="subdiv" class="text-sm text-white w-full">
+                    <div name="subdiv" class="text-sm text-white max-w-[150px]">
                         Alumni peserta pelatihan dan sertifikasi
                     </div>
                 </div>
 
             </div>
-            <div class="text-lg leading-8 text-black">
-                Tingkatkan kualitas dirimu bersama Citra Prestasi Gemilang dan jadilah pribadi baru untuk mengantar anda
-                menuju kesuksesan dalam karir serta kehidupan.
+            <div class="grid grid-cols-2 text-white">
+                <div class="text-3sm font-semibold">
+                    Lorem, ipsum.
+                </div>
+
+                <div class="text-3sm font-semibold">
+                    Lorem, ipsum.
+                </div>
+
+                <div class="text-3sm font-semibold">
+                    Lorem, ipsum dolor.
+                </div>
+
+                <div class="text-3sm font-semibold">
+                    Lorem ipsum dolor sit.
+                </div>
+
             </div>
         </div>
     </div>
