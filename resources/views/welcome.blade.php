@@ -89,110 +89,92 @@
     </div>
 
     {{-- Section 4 --}}
-    <div class="flex flex-cols-2 bg-orange-500 p-20">
-        <div class="w-1/2">
-            <div class="text-6xl text-white mb-20">
-                Why Choose Us?
-            </div>
 
-            <div class="bg-orange-400 mr-20 w-[550px] h-[331px] rounded-[20px] p-10">
-            </div>
+<div class="grid w-full justify-center items-center xl:flex xl:flex-row bg-orange-500 p-10 xl:p-20">
+    <div class="w-full xl:w-1/2 mb-10 xl:mb-0 xl:mr-10">
+        <div class="text-4xl xl:text-6xl text-white mb-10">
+            Why Choose Us?
         </div>
 
-
-
-
-        <div class="w-1/2">
-            <div class="text-6xl text-white mb-20 flex flex-cols-3">
-                <div>
-                    <div class="text-6xl text-white mb-5 mr-10 mr-10">
-                        50+
-                    </div>
-                    <div name="subdiv" class="text-sm text-white w-full">
-                        Client
-                    </div>
-
-                </div>
-                <div>
-                    <div class="text-1xl text-white mb-5 mr-10">
-                        50+
-                    </div>
-                    <div name="subdiv" class="text-sm text-white w-full max-w-[100px]">
-                        Training and Certification
-                    </div>
-                </div>
-                <div>
-                    <div class="text-6xl text-white mb-5 mr-10">
-                        1000+
-                    </div>
-                    <div name="subdiv" class="text-sm text-white max-w-[150px]">
-                        Alumni peserta pelatihan dan sertifikasi
-                    </div>
-                </div>
-
-            </div>
-            <div class="display grid text-orange-100">
-                <div class="flex mb-10 border-b border-white border-solid max-w-[500px]">
-
-                    <div class="max-w-[235px] pr-2">
-                        <div class="font-bold mb-2 text-3sm text-white ">
-                            Trusted Program
-                        </div>
-                        <p class="text-sm pb-2  max-w-[235px]">
-                            Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
-                        </p>
-
-                    </div>
-
-                    <div class="max-w-[235px]">
-                        <div class="font-bold mb-2 text-3sm text-white">
-                            Trusted Program
-                        </div>
-                        <p class="text-sm pb-2  max-w-[235px]">
-                            Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-                <div class="flex mb-10 border-b border-white border-solid max-w-[500px]">
-
-                    <div class="max-w-[235px]">
-                        <div class="font-bold mb-2 text-3sm text-white">
-                            Trusted Program
-                        </div>
-                        <p class="text-sm pb-2  max-w-[235px]">
-                            Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
-                        </p>
-
-                    </div>
-
-                    <div class="max-w-[235px]">
-                        <div class="font-bold mb-2 text-3sm text-white">
-                            Trusted Program
-                        </div>
-                        <p class="text-sm pb-2  max-w-[235px]">
-                            Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-                <button class="bg-black px-8 py-4 text-white font-bold text-center rounded-full m-10 max-w-[200px]">
-                    Learn More!
-                </button>
-
-            </div>
-        </div>
+        <div class="bg-orange-400 w-full h-[331px] xl:w-[550px] rounded-[20px] p-10"></div>
     </div>
 
+    <div class="w-full xl:w-1/2">
+        <div class="text-4xl xl:text-6xl text-white mb-10 flex flex-wrap">
+            <div class="mr-10 mb-5">
+                <div class="text-4xl xl:text-6xl text-white mb-2">
+                    50+
+                </div>
+                <div class="text-sm text-white w-full max-w-[150px]">
+                    Client
+                </div>
+            </div>
+            <div class="mr-10 mb-5">
+                <div class="text-4xl xl:text-6xl text-white mb-2">
+                    50+
+                </div>
+                <div class="text-sm text-white w-full max-w-[150px]">
+                    Training and Certification
+                </div>
+            </div>
+            <div class="mb-5">
+                <div class="text-4xl xl:text-6xl text-white mb-2">
+                    1000+
+                </div>
+                <div class="text-sm text-white w-full max-w-[200px]">
+                    Alumni peserta pelatihan dan sertifikasi
+                </div>
+            </div>
+        </div>
+
+        <div class="grid text-orange-100">
+            <div class="flex mb-10 border-b border-white border-solid max-w-[500px]">
+                <div class="max-w-[235px] pr-2">
+                    <div class="font-bold mb-2 text-sm xl:text-base text-white">
+                        Trusted Program
+                    </div>
+                    <p class="text-sm pb-2">
+                        Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
+                    </p>
+                </div>
+                <div class="max-w-[235px]">
+                    <div class="font-bold mb-2 text-sm xl:text-base text-white">
+                        Trusted Program
+                    </div>
+                    <p class="text-sm pb-2">
+                        Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex mb-10 border-b border-white border-solid max-w-[500px]">
+                <div class="max-w-[235px]">
+                    <div class="font-bold mb-2 text-sm xl:text-base text-white">
+                        Trusted Program
+                    </div>
+                    <p class="text-sm pb-2">
+                        Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
+                    </p>
+                </div>
+                <div class="max-w-[235px]">
+                    <div class="font-bold mb-2 text-sm xl:text-base text-white">
+                        Trusted Program
+                    </div>
+                    <p class="text-sm pb-2">
+                        Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
+                    </p>
+                </div>
+            </div>
+
+            <button class="bg-black px-8 py-4 text-white font-bold text-center rounded-full m-10 max-w-[200px]">
+                Learn More!
+            </button>
+        </div>
+    </div>
+</div>
     {{-- Section 5 --}}
-    <div class="bg-white max-w-full flex p-20">
-        <div class="max-w-[400px] m-10">
+    <div class="bg-white max-w-full grid xl:flex p-20 ">
+        <div class="max-w-full xl:max-w-[400px] m-10">
             <div class="text-4xl font-bold text-black max-w-[580px] m-5">
                 Our Program
             </div>
@@ -203,7 +185,7 @@
                 scrambled it to make a type specimen book. It has survived not only five centuries
             </p>
         </div>
-        <div class="grid">
+        <div class="flex xl:grid">
 
             <div class="bg-orange-500 max-w-[400px] m-10 p-10 rounded-[20px]">
                 <h1 class="text-lg font-bold text-black text-left">
@@ -239,7 +221,7 @@
 
         </div>
 
-        <div class="grid">
+        <div class="flex xl:grid">
 
             <div class="bg-orange-500 max-w-[400px] m-10 p-10 rounded-[20px]">
                 <h1 class="text-lg font-bold text-black text-left">
@@ -277,21 +259,21 @@
     </div>
 
     {{-- Section 6 --}}
-    <div class="flex flex-cols-2 bg-orange-500 p-20">
-        <div class="w-1/2">
+    <div class="grid w-full justify-center items-center xl:flex xl:flex-row bg-orange-500 p-10 xl:p-20">
+        <div class="xl:w-1/2">
             <div class="text-6xl text-white mb-20">
 
                 Frequently Asked Questions
             </div>
 
-            <div class="bg-white mr-20 w-[550px] h-[331px] rounded-[20px] p-10">
+            <div class="bg-white mr-20 w-full xl:w-[550px] h-[331px] rounded-[20px] p-10 mb-10">
             </div>
         </div>
 
 
 
 
-        <div class="w-1/2">
+        <div class="xl:w-1/2">
             <div class="display grid text-orange-100">
                 <div class="grid mb-10 max-w-[500px]">
 
