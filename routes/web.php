@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BlogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +28,5 @@ Route::get('/program', function () {
 Route::get('/schedule', function () {
     return view('schedulePage');
 });
+
+Route::get('/blog', [BlogController::class, 'index']);

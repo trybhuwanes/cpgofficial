@@ -5,7 +5,28 @@
 
 @section('content')
     {{-- Section 1 --}}
-    <div class="bg-orange-500 max-w-full text-center">
+    <div class="items-center justify-center bg-white">
+        <div class="w-full max-h-full shadow-2xl overflow-hidden relative">
+            <img class="absolute inset-0 h-full w-full object-cover" src="images\hero image.png">
+            <div class="absolute inset-0 bg-white bg-opacity-50"></div>
+            <div class="flex h-full items-center justify-center relative">
+                {{-- <h1 class="text-4xl text-black font-semibold">BLOG</h1> --}}
+                <div class="flex flex-col justify-center items-center h-full">
+                    <div class="text-5xl font-semibold text-black max-w-full pb-6 leading tight">
+                        PASSION FOR COMPASSION
+                    </div>
+                    <p class="text-lg leading-8 text-black max-w-[580px] text-center pb-12">
+                        Tingkatkan kualitas dirimu bersama Citra Prestasi Gemilang dan jadilah pribadi baru untuk mengantar anda
+                        menuju kesuksesan dalam karir serta kehidupan.
+                    </p>
+                    <button class="bg-black px-8 py-4 text-white font-bold text-center rounded-full">
+                        Improve With Us!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- <div class="bg-orange-500 max-w-full text-center">
         <div class="bg-cover bg-center h-screen max-h-[650]" style="background-image: url('/images/tem-bg.jpg')">
             <div class="flex flex-col justify-center items-center h-full">
                 <div class="text-4xl font-bold text-black max-w-[580px]">
@@ -23,9 +44,10 @@
                 </button>
             </div>
         </div>
-    </div>
+    </div> --}}
+
     {{-- Section 2 --}}
-    <div class="bg-white max-w-full text-center">
+    <div class="bg-white max-w-full text-center pt-16">
         <div class="flex flex-col justify-center items-center">
             <div class="text-4xl font-bold text-black max-w-[580px]">
                 Our Clients
