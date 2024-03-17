@@ -63,7 +63,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @for ($i = 1; $i <= 5; $i++)
+                    @for ($i = 1; $i <= 5   ; $i++)
                     <tr>
                         <td class="text-lg text-center px-2">{{ $i }}</td>
                         <td class="text-lg px-2">Workshop Meeting Arrangement Mengatur Pertemuan</td>
