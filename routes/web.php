@@ -24,3 +24,7 @@ Route::get('/about', function () {
 Route::get('/program', function () {
     return view('programPage');
 });
+
+Route::get('/schedule', function () {
+    return view('schedulePage');
+});
