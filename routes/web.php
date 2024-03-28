@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\AssesmentController;
+use App\Http\Controllers\CeritaUmkmController;
+use App\Http\Controllers\OrganizingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +19,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/blog', function () {
-    return view('blog');
+
+Route::get('/about', function () {
+    return view('aboutPage');
 });
+
+Route::get('/program', function () {
+    return view('programPage');
+});
+
+Route::get('/schedule', function () {
+    return view('schedulePage');
+});
+
+Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index']);
+Route::get('/assesment-center', [AssesmentController::class, 'index']);
+Route::get('/organizing', [OrganizingController::class, 'index']);
+
