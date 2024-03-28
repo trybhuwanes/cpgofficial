@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\AssesmentController;
+use App\Http\Controllers\CeritaUmkmController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,3 +32,5 @@ Route::get('/schedule', function () {
 });
 
 Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index']);
+Route::get('/assesment-center', [AssesmentController::class, 'index']);
