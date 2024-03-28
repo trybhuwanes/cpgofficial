@@ -1,23 +1,22 @@
 <!-- resources/views/welcome.blade.php -->
 @extends('layouts.app-layout')
 
-@section('title', 'About Us')
+@section('title', 'Schedule')
 
 @section('content')
 
     <div class="font-inter font-tight">
         {{-- Section 1 --}}
-        <div class="bg-orange-500 max-w-full">
-            <div class="bg-orange-500 max-w-full">
-                <div class="h-[330px] bg-cover bg-center flex justify-center items-center"
-                    style="background-image: url('/images/tem-bg.jpg')">
-                    <div class="text-4xl font-semibold text-black max-w-[580px] text-center">
-                        SCHEDULE
-                    </div>
-                </div>
-            </div>
+        <div class="items-center justify-center bg-white">
+          <div class="w-full h-72 shadow-2xl overflow-hidden relative">
+              <img class="absolute inset-0 h-full w-full object-cover" src="images\hero image.png">
+              <div class="absolute inset-0 bg-white bg-opacity-50"></div>
+              <div class="flex h-full items-center justify-center relative">
+                  <h1 class="text-4xl text-black font-semibold">SCHEDULE</h1>
+              </div>
+          </div>
+      </div>
 
-        </div>
         {{-- Section 2 --}}
         <div class="container w-full mx-auto justify-center p-20">
             <div class="header text-black text-center pb-20 text-4xl">

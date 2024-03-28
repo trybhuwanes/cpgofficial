@@ -3,7 +3,7 @@
 
     <div class="container mx-auto flex justify-between items-center py-4 lg:px-20">
         <a href="/" class="flex items-center">
-            <img src="{{ asset('images/iconCPG.png') }}" alt="Gemilang Icon" class="h-14 mr-2">
+            <img src="{{ asset('images/iconCPG.png') }}" alt="Gemilang Icon" class="h-12 mr-2">
         </a>
 
         <!-- Tombol hamburger untuk mode mobile -->
@@ -15,13 +15,13 @@
 
         <!-- Daftar menu -->
         <ul class="hidden lg:flex space-x-4" id="menu-items">
-            <li><a href="/about" class="inline-block px-4 py-2 text-black hover:text-gray-300">About Us</a></li>
-            <li><a href="/program" class="inline-block px-4 py-2 text-black hover:text-gray-300">Program</a></li>
-            <li><a href="/schedule" class="inline-block px-4 py-2 text-black hover:text-gray-300">Schedule</a></li>
-            <li><a href="/blog" class="inline-block px-4 py-2 text-black hover:text-gray-300">Blog</a></li>
-            <li><a href="/collaboration" class="inline-block px-4 py-2 text-black hover:text-gray-300">Collaboration</a></li>
-            <li><a href="/cerita-umkm" class="inline-block px-4 py-2 text-black hover:text-gray-300">Cerita UMKM</a></li>
-            <li><a href="/contact" class="inline-block px-4 py-2 rounded-full bg-orange-500 text-white font-bold text-center">Hubungi Kami</a></li>
+            <li><a href="/about" class="inline-block px-3 py-2 text-black hover:text-gray-300">About Us</a></li>
+            <li><a href="/program" class="inline-block px-3 py-2 text-black hover:text-gray-300">Program</a></li>
+            <li><a href="/schedule" class="inline-block px-3 py-2 text-black hover:text-gray-300">Schedule</a></li>
+            <li><a href="/blog" class="inline-block px-3 py-2 text-black hover:text-gray-300">Blog</a></li>
+            <li><a href="/collaboration" class="inline-block px-3 py-2 text-black hover:text-gray-300">Collaboration</a></li>
+            <li><a href="/cerita-umkm" class="inline-block px-3 py-2 text-black hover:text-gray-300">Cerita UMKM</a></li>
+            <li><a href="/contact" class="inline-block px-6 py-2 rounded-full bg-orange-500 text-white font-bold text-center">Hubungi Kami</a></li>
         </ul>
     </div>
 </nav>
