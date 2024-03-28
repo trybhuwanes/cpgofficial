@@ -36,3 +36,4 @@ Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index']);
 Route::get('/assesment-center', [AssesmentController::class, 'index']);
 Route::get('/organizing', [OrganizingController::class, 'index']);
+
