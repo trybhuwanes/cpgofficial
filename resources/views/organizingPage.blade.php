@@ -17,7 +17,7 @@
 
     {{-- SECTION 2 --}}
     <div class="mx-36 mt-10">
-        <p class="font-normal text-black">
+        <p class="font-normal text-black text-justify">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum euismod pellentesque.
             Etiam interdum ex vel sapien porta rhoncus. Nam aliquet risus sapien, ut faucibus purus pharetra ac.
             Sed consectetur lorem in nibh blandit, eget tincidunt magna suscipit. Duis ac varius nulla.
