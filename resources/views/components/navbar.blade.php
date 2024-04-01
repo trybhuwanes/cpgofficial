@@ -15,7 +15,7 @@
 
         <!-- Daftar menu -->
         <ul class="hidden lg:flex space-x-4" id="menu-items">
-            <li><a href="/about" class="inline-block px-3 py-2 text-black hover:text-gray-300">About Us</a></li>
+            <li><a href="/about" class="inline-block px-7 py-2 text-black hover:text-gray-300">About Us</a></li>
             <li><a href="/program" class="inline-block px-3 py-2 text-black hover:text-gray-300">Program</a></li>
             <li><a href="/schedule" class="inline-block px-3 py-2 text-black hover:text-gray-300">Schedule</a></li>
             <li><a href="/blog" class="inline-block px-3 py-2 text-black hover:text-gray-300">Blog</a></li>
