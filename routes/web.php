@@ -6,6 +6,7 @@ use App\Http\Controllers\AssesmentController;
 use App\Http\Controllers\CeritaUmkmController;
 use App\Http\Controllers\OrganizingController;
 use App\Http\Controllers\InternshipController;
+use App\Http\Controllers\ContactUsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,4 +39,5 @@ Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index']);
 Route::get('/assesment-center', [AssesmentController::class, 'index']);
 Route::get('/organizing', [OrganizingController::class, 'index']);
 Route::get('/internship', [InternshipController::class, 'index']);
+Route::get('/contact', [ContactUsController::class, 'index']);
 
