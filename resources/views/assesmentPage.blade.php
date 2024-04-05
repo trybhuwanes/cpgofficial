@@ -16,7 +16,7 @@
     </div>
 
     {{-- SECTION 2 --}}
-    <div class="mx-36 mt-10">
+    <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 mt-10">
         <p class="font-normal text-black text-justify">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum euismod pellentesque.
             Etiam interdum ex vel sapien porta rhoncus. Nam aliquet risus sapien, ut faucibus purus pharetra ac.
@@ -52,14 +52,14 @@
 
 
     {{-- SECTION 3 --}}
-    <div class="mx-36 mb-5 my-10">
+    <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 mb-5 my-10">
         <h5 class="mb-2 text-3xl font-bold tracking-tight text-black">Skema</h5>
 
     </div>
-    <div class="grid grid-cols-3 gap-4 mx-36 mb-16">
+    <div data-aos="fade-up" data-aos-duration="1500" class="grid grid-cols-3 gap-4 mx-36 mb-16">
         {{-- CARD BLOG SERVICE EXCELLENCE --}}
         <div
-            class="h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
+            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
             <a href="#">
                 <img class="block h-36 object-cover w-full rounded-t-lg" src="images\service-excellence.jpg"
                     alt="" />
@@ -74,7 +74,7 @@
 
         {{-- CARD BLOG PUBLIC RELATION --}}
         <div
-            class=" h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
+            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
             <a href="#">
                 <img class="block h-36 object-cover w-full rounded-t-lg" src="images\public-relation.webp" alt="" />
             </a>
@@ -88,7 +88,7 @@
 
         {{-- CARD BLOG HUMAN CAPITAL --}}
         <div
-            class=" h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
+            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
             <a href="#">
                 <img class="block h-36 object-cover w-full rounded-t-lg" src="images\human capital.jpg" alt="" />
             </a>
@@ -102,7 +102,7 @@
 
         {{-- CARD BLOG FILLING SYSTEM --}}
         <div
-            class=" h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
+            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
             <a href="#">
                 <img class="block h-36 object-cover w-full rounded-t-lg" src="images\filing-system.jpg" alt="" />
             </a>
@@ -116,7 +116,7 @@
 
         {{-- CARD BLOG BODY SPA --}}
         <div
-            class=" h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
+            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
             <a href="#">
                 <img class="block h-36 object-cover w-full rounded-t-lg" src="images\body-spa.jpg" alt="" />
             </a>

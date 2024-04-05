@@ -16,7 +16,7 @@
     </div>
 
     {{-- SECTION 2 --}}
-    <div class="mx-36 mb-5 my-16">
+    <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 mb-5 my-16">
         <div class="relative container m-auto px-6 bg-orange-600 rounded-lg p-5">
             <h5 class="mb-3 text-3xl font-bold tracking-tight text-black">How We Can Help You?</h5>
             <h5 class="mb-3 text-xl font-bold tracking-tight text-black">Tell us what you need</h5>
@@ -60,7 +60,7 @@
 
 
                         <button type="submit"
-                            class="text-white bg-black font-medium rounded-full text-sm px-10 py-3 text-center">Send</button>
+                            class="text-white bg-black font-medium rounded-full text-sm px-10 py-3 text-center hover:bg-orange-700">Send</button>
                     </form>
                 </div>
 
@@ -79,10 +79,8 @@
                             Jl. Layur 1/12 Malang, Jawa Timur 65142 <br>
                             info@cpgofficial.com <br>
                             Ibu Sri Sudarwati <br></p> <br>
-
-
                         <button
-                            class="mx-16 text-white bg-black font-medium rounded-full text-sm px-10 py-3 text-center">Whatsapp</button>
+                            class="mx-16 text-white bg-black font-medium rounded-full text-sm px-10 py-3 text-center hover:bg-orange-700">Whatsapp</button>
                     </div>
                 </div>
             </div>
@@ -90,7 +88,7 @@
     </div>
 
     {{-- SECTION 3 --}}
-    <div class="mx-36 my-16">
+    <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 my-16">
         <h5 class="mb-8 text-3xl font-bold tracking-tight text-black">Find Our Creative Hub</h5>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.6256564946566!2d112.63323117484589!3d-7.9341077920898115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629eeeb9d8173%3A0x24f2eb544cb9e899!2sCitra%20Prestasi%20Gemilang!5e0!3m2!1sid!2sid!4v1711946643300!5m2!1sid!2sid"

@@ -5,7 +5,7 @@
 @section('content')
 
     {{-- SECTION 1 - JUDUL & FOTO --}}
-    <div class="mx-36 mb-5 my-10">
+    <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 mb-5 my-10">
         <h3 class="mb-2 text-4xl font-bold tracking-tight text-black">Lorem orem Ipsum is simply dummy text of the printing
             and typesetting industry.</h3>
         <h5 class="mb-8 text-sm font-normal tracking-tight text-orange-600">Selasa, 2 April 2024</h5>
@@ -13,7 +13,7 @@
     </div>
 
     {{-- SECTION 2 - BODY --}}
-    <div class="mx-36 mb-5 my-10">
+    <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 mb-5 my-10">
         <p class="text-justify mb-16 font-medium">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta urna nibh, non porta libero molestie eu.
             Sed ac erat sem. Nam id magna condimentum, aliquam nulla ut, posuere tellus. Praesent quam ex, varius eget dui
