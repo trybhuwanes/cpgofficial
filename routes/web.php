@@ -41,3 +41,13 @@ Route::get('/organizing', [OrganizingController::class, 'index']);
 Route::get('/internship', [InternshipController::class, 'index']);
 Route::get('/contact', [ContactUsController::class, 'index']);
 
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

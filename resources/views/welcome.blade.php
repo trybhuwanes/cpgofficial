@@ -4,6 +4,7 @@
 @section('title', 'Welcome')
 
 @section('content')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
     {{-- Section 1 --}}
     <div class="items-center justify-center bg-white">
         <div class="w-full max-h-full shadow-2xl overflow-hidden relative">
