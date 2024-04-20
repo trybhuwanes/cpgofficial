@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\AssesmentController;
+use App\Http\Controllers\CeritaUmkmController;
+use App\Http\Controllers\OrganizingController;
+use App\Http\Controllers\InternshipController;
+use App\Http\Controllers\ContactUsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +34,20 @@ Route::get('/schedule', function () {
     return view('schedulePage');
 });
 
-Route::get('/trainingPage', function () {
-    return view('trainingPage');
+Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index']);
+Route::get('/assesment-center', [AssesmentController::class, 'index']);
+Route::get('/organizing', [OrganizingController::class, 'index']);
+Route::get('/internship', [InternshipController::class, 'index']);
+Route::get('/contact', [ContactUsController::class, 'index']);
+
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 });

@@ -4,6 +4,7 @@
 @section('title', 'Welcome')
 
 @section('content')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
     {{-- Section 1 --}}
     <div class="bg-orange-500 max-w-full text-center">
         <div class="bg-cover bg-center h-screen max-h-[650]" style="background-image: url('/images/tem-bg.jpg')">
