@@ -7,6 +7,7 @@ use App\Http\Controllers\CeritaUmkmController;
 use App\Http\Controllers\OrganizingController;
 use App\Http\Controllers\InternshipController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,3 +42,7 @@ Route::get('/organizing', [OrganizingController::class, 'index']);
 Route::get('/internship', [InternshipController::class, 'index']);
 Route::get('/contact', [ContactUsController::class, 'index']);
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () { return view('Admin Page.dashboard'); })->name('dashboard');
+Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middleware('guest')->name('login');
+Route::post('/login', [AuthenticatedSessionController::class, 'store'])->middleware('guest');
+Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware('auth')->name('logout');
