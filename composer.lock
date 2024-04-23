@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ca05db1be44360695b5f09fd01fdf71",
+    "content-hash": "290eb9e86a1ef26ead61dc29a216e339",
+
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1420,7 +1421,7 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2024-04-16T14:26:04+00:00"
-        },
+},
         {
             "name": "laravel/jetstream",
             "version": "v4.3.1",
