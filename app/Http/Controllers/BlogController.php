@@ -14,4 +14,13 @@ class BlogController extends Controller
     public function read() {
         return view('blogReadPage');
     }
+
+    ///////////////// ADMIN FUNCTION /////////////////
+    public function adminBlog() {
+        return view('admin.blog');
+    }
+
+    public function createBlog() {
+        return view('admin.blogCreate');
+    }
 }
