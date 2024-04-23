@@ -7,6 +7,7 @@ use App\Http\Controllers\CeritaUmkmController;
 use App\Http\Controllers\OrganizingController;
 use App\Http\Controllers\InternshipController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +43,29 @@ Route::get('/organizing', [OrganizingController::class, 'index']);
 Route::get('/internship', [InternshipController::class, 'index']);
 Route::get('/contact', [ContactUsController::class, 'index']);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () { return view('Admin Page.dashboard'); })->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () { return view('admin.dashboard'); })->name('dashboard');
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middleware('guest')->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->middleware('guest');
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware('auth')->name('logout');
+
+// Route::prefix($this->urlAdmin)->group(function () {
+//     Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
+//     Route::prefix('blog')->group(function(){
+//         Route::get('/', [BlogController::class, 'adminBlog'])->name('admin.blog');
+//         Route::get('/create', [BlogController::class, 'createBlog'])->name('admin.blog.create');
+//     });
+// });
+
+    // Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
+
+    Route::prefix('blog')->group(function(){
+                Route::get('/', [BlogController::class, 'adminBlog'])->name('admin.blog');
+                Route::get('/create', [BlogController::class, 'createBlogPage'])->name('admin.blog.create.page');
+                Route::post('/create', [BlogController::class, 'createBlog'])->name('admin.blog.create');
+                Route::get('/edit/{id}', [BlogController::class, 'editBlogPage'])->name('admin.blog.edit.page');
+                Route::put('/edit/{id}', [BlogController::class, 'editBlog'])->name('edit');
+                Route::delete('/delete/{id}', [BlogController::class, 'deleteBlog'])->name('admin.blog.delete');
+
+            });
+
+
