@@ -71,7 +71,7 @@
                             <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
                                 <div class="text-base font-semibold text-gray-900 dark:text-white">Workshop Online Strategi Komunikasi Gen Z Mengahdapi Dunia Kerja</div>
                                 <div class="text-sm font-normal text-gray-500 dark:text-gray-400">Human Resource</div>
-                            </td>                            
+                            </td>
                             <td class="p-4 text-base text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">17-07-2024</td>
                             <td class="p-4 text-base text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">Online</td>
                             <td class="p-4 text-base text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">16-08-20</td>
@@ -81,7 +81,7 @@
                                     <svg class="w-4 h-4 mr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                         <path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"/>
                                         <path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
-                                      </svg>                                      
+                                      </svg>
                                     View
                                 </button>
                                 <button type="button" id="updateProductButton" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-600">

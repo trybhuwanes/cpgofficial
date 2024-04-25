@@ -21,6 +21,7 @@
         <div class="bg-white max-w-full text-center p-20">
             <div class="flex flex-col sm:flex-row justify-center items-center">
                 <div class="flex flex-col">
+                    <a href="/trainingPage">
                     <div class="grid relative m-5">
                         <img src="/images/card1.png" alt="" class="block">
                         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center">
@@ -30,7 +31,9 @@
                             </p>
                         </div>
                     </div>
+                </a>
 
+                <a href="/Organizing">
                     <div class="grid relative m-5">
                         <img src="/images/card1.png" alt="" class="block">
                         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center">
@@ -42,7 +45,9 @@
                         </div>
                     </div>
                 </div>
+            </a>
 
+            <a href="/consulting">
                 <div class="flex flex-col">
                     <div class="grid relative m-5">
                         <img src="/images/card1.png" alt="" class="block">
@@ -53,7 +58,9 @@
                             </p>
                         </div>
                     </div>
+                </a>
 
+                <a href="/AssesmentCenter">
                     <div class="grid relative m-5">
                         <img src="/images/card1.png" alt="" class="block">
                         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center">
@@ -63,6 +70,8 @@
                             </p>
                         </div>
                     </div>
+                </a>
+
                 </div>
             </div>
 
