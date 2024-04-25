@@ -132,8 +132,6 @@
                                 </button>
                             </td>
                         </tr> --}}
-
-
                         {{-- {{ end -}} --}}
                         {{-- {{< /products.inline >}}                        --}}
                     </tbody>

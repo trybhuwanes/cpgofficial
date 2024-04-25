@@ -12,7 +12,6 @@ class BlogController extends Controller
     public function index() {
         return view("blogPage");
     }
-
     // Admin Function
 
     public function adminBlog() {
