@@ -17,11 +17,11 @@ class BlogController extends Controller
     public function adminBlog() {
         $blog = Blog::all();
         // dd($blog);
-        return view('admin.blog', compact('blog'));
+        return view('admin.blog.blog', compact('blog'));
     }
 
     public function createBlogPage() {
-        return view('admin.blogCreate');
+        return view('admin.blog.blogCreate');
     }
 
     public function createBlog(Request $request) {
@@ -34,21 +34,21 @@ class BlogController extends Controller
 
         Blog::create($request->all());
 
-        return redirect()->route('admin.blog');
+        return redirect()->route('admin.blog.blog');
     }
 
     public function editBlogPage($id) {
         $encryptedId = Crypt::decrypt($id);
         $blog = Blog::find($encryptedId);
         // dd($id, $decrypted, $blog);
-        return view('admin.blogUpdate', compact('blog'), ['encryptedId' => $encryptedId]);
+        return view('admin.blog.blogUpdate', compact('blog'), ['encryptedId' => $encryptedId]);
 
         // return view('edit-blog', ['encryptedId' => $encryptedId]);
     }
 
     // public function editBlogPage($id) {
     //     $blog = Blog::find($id);
-    //     return view('admin.blogEdit', compact('blog'));
+    //     return view('admin.blog.blogEdit', compact('blog'));
     // }
 
     public function editBlog(Request $request, $id) {
@@ -99,12 +99,12 @@ class BlogController extends Controller
         // $blog = Blog::find($id);
 
 
-        return redirect()->route('admin.blog');
+        return redirect()->route('admin.blog.blog');
     }
 
     public function deleteBlog($id) {
         $encryptedId = Crypt::decrypt($id);
         Blog::find($encryptedId)->delete();
-        return redirect()->route('admin.blog');
+        return redirect()->route('admin.blog.blog');
     }
 }
