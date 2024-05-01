@@ -12,6 +12,10 @@ class BlogController extends Controller
     public function index() {
         return view("blogPage");
     }
+
+    public function read() {
+        return view('blogReadPage');
+    }
     // Admin Function
 
     public function adminBlog() {
