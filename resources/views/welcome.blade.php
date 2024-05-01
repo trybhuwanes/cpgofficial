@@ -4,6 +4,7 @@
 @section('title', 'Home')
 
 @section('content')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
     {{-- Section 1 --}}
     <div class="items-center justify-center bg-white">
         <div class="w-full max-h-full shadow-2xl overflow-hidden relative">
@@ -88,7 +89,8 @@
                         <img class="object-cover w-full rounded-t-lg" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
-
+                <h1 class="text-lg font-bold leading-10 text-black text-center">Lorem, ipsum.</h1>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, quia!</p>
             </div>
         </div>
         <button data-aos="fade-up" data-aos-duration="1500"

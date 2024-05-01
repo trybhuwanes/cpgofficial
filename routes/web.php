@@ -56,6 +56,7 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->midd
 
 Route::prefix($this->urlAdmin)->group(function () {
     Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
+
     Route::prefix('blog')->group(function () {
         Route::get('/', [BlogController::class, 'adminBlog'])->name('admin.blog');
         Route::get('/create', [BlogController::class, 'createBlogPage'])->name('admin.blog.create.page');
