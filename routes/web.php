@@ -64,10 +64,5 @@ Route::prefix($this->urlAdmin)->group(function () {
         Route::get('/edit/{id}', [BlogController::class, 'editBlogPage'])->name('admin.blog.edit.page');
         Route::put('/edit/{id}', [BlogController::class, 'editBlog'])->name('edit');
         Route::delete('/delete/{id}', [BlogController::class, 'deleteBlog'])->name('admin.blog.delete');
-        Route::get('/create', [BlogController::class, 'createBlogPage'])->name('admin.blog.create.page');
-        Route::post('/create', [BlogController::class, 'createBlog'])->name('admin.blog.create');
-        Route::get('/edit/{id}', [BlogController::class, 'editBlogPage'])->name('admin.blog.edit.page');
-        Route::put('/edit/{id}', [BlogController::class, 'editBlog'])->name('edit');
-        Route::delete('/delete/{id}', [BlogController::class, 'deleteBlog'])->name('admin.blog.delete');
     });
 });
