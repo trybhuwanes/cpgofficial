@@ -27,4 +27,12 @@ class AssesmentCenter extends Model
         'created_at',
         'updated_at',
     ];
+
+    public function syaratAssesment() {
+        return $this->hasMany(SyaratAssesment::class);
+    }
+
+    public function ukAssesment() {
+        return $this->hasMany(UkAssesment::class);
+    }
 }

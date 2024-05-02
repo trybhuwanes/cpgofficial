@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 
 class TrainingController extends Controller
 {
+
     public function trainingPage() {
         return view('trainingPage');
     }
