@@ -49,7 +49,7 @@ class BlogController extends Controller
             // Add other fields here if needed
         ]);
 
-        return redirect()->route('admin.blog');
+        return redirect()->route('admin.blog.blog');
     }
 
 
