@@ -6,7 +6,6 @@
 
 @include('components.component')
 
-
     {{-- FORM --}}
     <div class="mt-4 mx-8 space-y-6">
         <form action="" method="POST" enctype="multipart/form-data">

@@ -16,6 +16,10 @@ class AssesmentController extends Controller
 
         return view("assesmentPage");
     }
+  
+    public function detailAssesmentPage() {
+        return view('assesmentDetailPage');
+    }
 
     public function adminAssesment() {
         $assesment = AssesmentCenter::all();

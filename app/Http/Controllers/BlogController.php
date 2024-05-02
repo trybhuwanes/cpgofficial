@@ -12,6 +12,10 @@ class BlogController extends Controller
     public function index() {
         return view("blogPage");
     }
+
+    public function read() {
+        return view('blogReadPage');
+    }
     // Admin Function
 
     public function adminBlog() {
@@ -27,15 +31,27 @@ class BlogController extends Controller
     public function createBlog(Request $request) {
         $request->validate([
             'title_blog' => 'required',
-            'slug_blog' => 'required',
-            'pict_blog' => 'required',
             'desc_blog' => 'required',
         ]);
+        // dd($request);
 
-        Blog::create($request->all());
+
+
+
+        // Code for file upload if needed
+
+        Blog::create([
+            'title_blog' => $request->title_blog,
+            'desc_blog' => $request->desc_blog,
+            'slug_blog' => 'temp',
+            'pict_blog' => 'temp'
+
+            // Add other fields here if needed
+        ]);
 
         return redirect()->route('admin.blog.blog');
     }
+
 
     public function editBlogPage($id) {
         $encryptedId = Crypt::decrypt($id);

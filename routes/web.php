@@ -41,29 +41,27 @@ Route::get('/schedule', function () {
 
 Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/blog-read', [BlogController::class, 'read'])->name('blog-read');
-Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index']);
+Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index'])->name('cerita-umkm');
 Route::get('/cerita-umkm-read', [CeritaUmkmController::class, 'read'])->name('cerita-umkm-read');
-Route::get('/assesment-center', [AssesmentController::class, 'index']);
-Route::get('/organizing', [OrganizingController::class, 'index']);
-Route::get('/internship', [InternshipController::class, 'index']);
-Route::get('/contact', [ContactUsController::class, 'index']);
+Route::get('/assesment-center', [AssesmentController::class, 'index'])->name('assesment-center');
+Route::get('/assesment-center-detail', [AssesmentController::class, 'detailAssesmentPage'])->name('assesment-center.detail');
+Route::get('/organizing', [OrganizingController::class, 'index'])->name('organizing');
+Route::get('/internship', [InternshipController::class, 'index'])->name('internship');
+Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
+Route::get('/training', [TrainingController::class, 'trainingPage'])->name('training');
+Route::get('/training-detail', [TrainingController::class, 'trainingDetailPage'])->name('training.detail');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () { return view('admin.dashboard'); })->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('admin.dashboard');
+})->name('dashboard');
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middleware('guest')->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->middleware('guest');
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware('auth')->name('logout');
 
-// Route::prefix($this->urlAdmin)->group(function () {
-//     Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
-//     Route::prefix('blog')->group(function(){
-//         Route::get('/', [BlogController::class, 'adminBlog'])->name('admin.blog');
-//         Route::get('/create', [BlogController::class, 'createBlog'])->name('admin.blog.create');
-//     });
-// });
-
-    // Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
-
-            Route::prefix('blog')->group(function(){
+Route::prefix($this->urlAdmin)->group(function () {
+    Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
+  
+    Route::prefix('blog')->group(function(){
                 Route::get('/', [BlogController::class, 'adminBlog'])->name('admin.blog');
                 Route::get('/create', [BlogController::class, 'createBlogPage'])->name('admin.blog.create.page');
                 Route::post('/create', [BlogController::class, 'createBlog'])->name('admin.blog.create');
@@ -96,6 +94,6 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->midd
                 Route::delete('/delete/{id}', [AssesmentController::class, 'deleteAssesment'])->name('admin.assesment.delete');
 
             });
+});
 
-
-
+    // Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
