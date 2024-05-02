@@ -10,10 +10,10 @@
         <button class="text-black focus:outline-none lg:hidden" id="mobile-menu-button">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
         </button>
 
         <!-- Daftar menu -->
@@ -32,28 +32,24 @@
                     class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                     <ul class="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
                         <li>
-                            <a href="#"
-                                class="block px-4 py-2 hover:bg-orange-500">Training</a>
+                            <a href="{{ route('training') }}" class="block px-4 py-2 hover:bg-orange-500">Training</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block px-4 py-2 hover:bg-orange-500">Consulting</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-orange-500">Consulting</a>
                         </li>
                         <li>
                             <a href="{{ route('organizing') }}"
                                 class="block px-4 py-2 hover:bg-orange-500">Organizing</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block px-4 py-2 hover:bg-orange-500">Assesment Center</a>
+                            <a href="{{ route('assesment-center') }}" class="block px-4 py-2 hover:bg-orange-500">Assesment Center</a>
                         </li>
                         <li>
                             <a href="{{ route('internship') }}"
                                 class="block px-4 py-2 hover:bg-orange-500">Internship</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block px-4 py-2 hover:bg-orange-500">CSR</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-orange-500">CSR</a>
                         </li>
                     </ul>
                 </div>
@@ -65,8 +61,10 @@
             <li><a href="/cerita-umkm" class="inline-block px-3 py-2 text-black hover:text-gray-300">Cerita UMKM</a>
             </li>
             <li><a href="/contact"
-                    class="inline-block px-6 py-2 rounded-full bg-orange-500 text-white font-bold text-center">Contact Us
-                    </a></li>
+                    class="inline-block px-6 py-2 rounded-full bg-orange-500 text-white font-bold text-center">Contact
+                    Us
+                </a>
+            </li>
             <a href="/login" class="flex items-center">
                 <img src="{{ asset('images/login.svg') }}" alt="Login Icon" class="h-10 mr-2">
             </a>

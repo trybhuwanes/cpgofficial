@@ -21,6 +21,8 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 |
 */
 
+$this->urlAdmin = "admin";
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -41,10 +43,13 @@ Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/blog-read', [BlogController::class, 'read'])->name('blog-read');
 Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index'])->name('cerita-umkm');
 Route::get('/cerita-umkm-read', [CeritaUmkmController::class, 'read'])->name('cerita-umkm-read');
-Route::get('/assesment-center', [AssesmentController::class, 'index']);
+Route::get('/assesment-center', [AssesmentController::class, 'index'])->name('assesment-center');
+Route::get('/assesment-center-detail', [AssesmentController::class, 'detailAssesmentPage'])->name('assesment-center.detail');
 Route::get('/organizing', [OrganizingController::class, 'index'])->name('organizing');
 Route::get('/internship', [InternshipController::class, 'index'])->name('internship');
 Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
+Route::get('/training', [TrainingController::class, 'trainingPage'])->name('training');
+Route::get('/training-detail', [TrainingController::class, 'trainingDetailPage'])->name('training.detail');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('admin.dashboard');
@@ -53,34 +58,25 @@ Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middlew
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->middleware('guest');
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware('auth')->name('logout');
 
-// Route::prefix($this->urlAdmin)->group(function () {
-//     Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
-//     Route::prefix('blog')->group(function(){
-//         Route::get('/', [BlogController::class, 'adminBlog'])->name('admin.blog');
-//         Route::get('/create', [BlogController::class, 'createBlog'])->name('admin.blog.create');
-//     });
-// });
+Route::prefix($this->urlAdmin)->group(function () {
+    Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
+    Route::prefix('blog')->group(function () {
+        Route::get('/', [BlogController::class, 'adminBlog'])->name('admin.blog');
+        Route::get('/create', [BlogController::class, 'createBlogPage'])->name('admin.blog.create.page');
+        Route::post('/create', [BlogController::class, 'createBlog'])->name('admin.blog.create');
+        Route::get('/edit/{id}', [BlogController::class, 'editBlogPage'])->name('admin.blog.edit.page');
+        Route::put('/edit/{id}', [BlogController::class, 'editBlog'])->name('edit');
+        Route::delete('/delete/{id}', [BlogController::class, 'deleteBlog'])->name('admin.blog.delete');
+    });
+
+    Route::prefix('training')->group(function () {
+        Route::get('/', [TrainingController::class, 'adminTraining'])->name('admin.training');
+        Route::get('/create', [TrainingController::class, 'createTrainingPage'])->name('admin.training.create.page');
+        Route::post('/create', [TrainingController::class, 'createTraining'])->name('admin.training.create');
+        Route::get('/edit/{id}', [TrainingController::class, 'editTrainingPage'])->name('admin.training.edit.page');
+        Route::put('/edit/{id}', [TrainingController::class, 'editTraining'])->name('admin.training.edit');
+        Route::delete('/delete/{id}', [TrainingController::class, 'deleteTraining'])->name('admin.training.delete');
+    });
+});
 
     // Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
-
-    Route::prefix('blog')->group(function(){
-                Route::get('/', [BlogController::class, 'adminBlog'])->name('admin.blog');
-                Route::get('/create', [BlogController::class, 'createBlogPage'])->name('admin.blog.create.page');
-                Route::post('/create', [BlogController::class, 'createBlog'])->name('admin.blog.create');
-                Route::get('/edit/{id}', [BlogController::class, 'editBlogPage'])->name('admin.blog.edit.page');
-                Route::put('/edit/{id}', [BlogController::class, 'editBlog'])->name('edit');
-                Route::delete('/delete/{id}', [BlogController::class, 'deleteBlog'])->name('admin.blog.delete');
-
-            });
-
-            Route::prefix('training')->group(function(){
-                Route::get('/', [TrainingController::class, 'adminTraining'])->name('admin.training');
-                Route::get('/create', [TrainingController::class, 'createTrainingPage'])->name('admin.training.create.page');
-                Route::post('/create', [TrainingController::class, 'createTraining'])->name('admin.training.create');
-                Route::get('/edit/{id}', [TrainingController::class, 'editTrainingPage'])->name('admin.training.edit.page');
-                Route::put('/edit/{id}', [TrainingController::class, 'editTraining'])->name('admin.training.edit');
-                Route::delete('/delete/{id}', [TrainingController::class, 'deleteTraining'])->name('admin.training.delete');
-
-            });
-
-
