@@ -13,6 +13,9 @@ class BlogController extends Controller
         return view("blogPage");
     }
 
+    public function read() {
+        return view('blogReadPage');
+    }
     // Admin Function
 
     public function adminBlog() {
@@ -31,6 +34,7 @@ class BlogController extends Controller
             'desc_blog' => 'required',
         ]);
         // dd($request);
+
 
 
 

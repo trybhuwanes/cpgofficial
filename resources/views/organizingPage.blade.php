@@ -18,21 +18,15 @@
     {{-- SECTION 2 --}}
     <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 mt-10">
         <p class="font-normal text-black text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum euismod pellentesque.
-            Etiam interdum ex vel sapien porta rhoncus. Nam aliquet risus sapien, ut faucibus purus pharetra ac.
-            Sed consectetur lorem in nibh blandit, eget tincidunt magna suscipit. Duis ac varius nulla.
-            Phasellus elementum nisl vitae varius viverra. Etiam consequat odio dignissim convallis interdum.
-            Quisque id volutpat lectus, non scelerisque nisl. Vestibulum quis efficitur est.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam et
-            rutrum mi, a iaculis lorem.
-            Phasellus blandit eros a nunc vehicula, sit amet mollis felis condimentum <br>
+            Organizing adalah suatu cara pengaturan pekerjaan dan pengalokasian pekerjaan di antara para anggota organisasi sehingga 
+            tujuan organisasi dapat dicapai secara efisien. Program organizing dalam PT Citra Prestasi Gemilang meliputi:<br>
         </p>
         <ol class="space-y-1 text-black list-decimal list-inside">
-            <li>Family Gathering</li>
-            <li>Event Organizer</li>
+            <li>Pertemuan Keluarga</li>
+            <li>Penyelenggara Acara</li>
             <li>Publikasi</li>
             <li>Komunikasi Pelanggan</li>
-            <li>Recruitment Agency</li>
+            <li>Agen Rekrutmen</li>
             <li>Outbound</li>
         </ol>
     </div>
@@ -45,7 +39,7 @@
     <div data-aos="fade-up" data-aos-duration="1500" class="grid grid-cols-3 gap-4 mx-36 mb-16">
         {{-- CARD FOTO 1 --}}
         <div class="h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-            <img class="block h-36 object-cover w-full rounded-t-lg" src="images\service-excellence.jpg" alt="" />
+            <img class="block h-36 object-cover w-full rounded-t-lg" src="images\organizing-1.png" alt="" />
             <div class="px-5 py-3">
                 <h6 class="text-lg font-bold tracking-tight text-black dark:text-black">Noteworthy technology acquisitions
                 </h6>
@@ -56,7 +50,7 @@
 
         {{-- CARD FOTO 1 --}}
         <div class="h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-            <img class="block h-36 object-cover w-full rounded-t-lg" src="images\service-excellence.jpg" alt="" />
+            <img class="block h-36 object-cover w-full rounded-t-lg" src="images\organizing-1.png" alt="" />
             <div class="px-5 py-3">
                 <h6 class="text-lg font-bold tracking-tight text-black dark:text-black">Noteworthy technology acquisitions
                 </h6>
@@ -67,7 +61,7 @@
 
         {{-- CARD FOTO 1 --}}
         <div class="h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-            <img class="block h-36 object-cover w-full rounded-t-lg" src="images\service-excellence.jpg" alt="" />
+            <img class="block h-36 object-cover w-full rounded-t-lg" src="images\organizing-2.png" alt="" />
             <div class="px-5 py-3">
                 <h6 class="text-lg font-bold tracking-tight text-black dark:text-black">Noteworthy technology acquisitions
                 </h6>

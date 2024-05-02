@@ -38,13 +38,17 @@ Route::get('/schedule', function () {
 });
 
 Route::get('/blog', [BlogController::class, 'index']);
-Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index']);
+Route::get('/blog-read', [BlogController::class, 'read'])->name('blog-read');
+Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index'])->name('cerita-umkm');
+Route::get('/cerita-umkm-read', [CeritaUmkmController::class, 'read'])->name('cerita-umkm-read');
 Route::get('/assesment-center', [AssesmentController::class, 'index']);
-Route::get('/organizing', [OrganizingController::class, 'index']);
-Route::get('/internship', [InternshipController::class, 'index']);
-Route::get('/contact', [ContactUsController::class, 'index']);
+Route::get('/organizing', [OrganizingController::class, 'index'])->name('organizing');
+Route::get('/internship', [InternshipController::class, 'index'])->name('internship');
+Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () { return view('admin.dashboard'); })->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('admin.dashboard');
+})->name('dashboard');
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middleware('guest')->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->middleware('guest');
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware('auth')->name('logout');
