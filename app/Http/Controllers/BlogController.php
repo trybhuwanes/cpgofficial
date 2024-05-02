@@ -37,6 +37,7 @@ class BlogController extends Controller
 
 
 
+
         // Code for file upload if needed
 
         Blog::create([
