@@ -9,6 +9,7 @@ use App\Http\Controllers\InternshipController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\ConsultingController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,8 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// $this->urlAdmin = "admin";
 
 Route::get('/', function () {
     return view('welcome');
@@ -41,10 +44,14 @@ Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/blog-read', [BlogController::class, 'read'])->name('blog-read');
 Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index'])->name('cerita-umkm');
 Route::get('/cerita-umkm-read', [CeritaUmkmController::class, 'read'])->name('cerita-umkm-read');
-Route::get('/assesment-center', [AssesmentController::class, 'index']);
+Route::get('/assesment-center', [AssesmentController::class, 'index'])->name('assesment-center');
+Route::get('/assesment-center-detail', [AssesmentController::class, 'detailAssesmentPage'])->name('assesment-center.detail');
 Route::get('/organizing', [OrganizingController::class, 'index'])->name('organizing');
 Route::get('/internship', [InternshipController::class, 'index'])->name('internship');
 Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
+Route::get('/training', [TrainingController::class, 'trainingPage'])->name('training');
+Route::get('/training-detail', [TrainingController::class, 'trainingDetailPage'])->name('training.detail');
+Route::get('/consulting', [ConsultingController::class, 'index'])->name('consulting');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('admin.dashboard');
@@ -53,16 +60,9 @@ Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middlew
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->middleware('guest');
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware('auth')->name('logout');
 
-// Route::prefix($this->urlAdmin)->group(function () {
-//     Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
-//     Route::prefix('blog')->group(function(){
-//         Route::get('/', [BlogController::class, 'adminBlog'])->name('admin.blog');
-//         Route::get('/create', [BlogController::class, 'createBlog'])->name('admin.blog.create');
-//     });
-// });
-
-    // Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
-
+Route::prefix('admin')->group(function () {
+    Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
+  
     Route::prefix('blog')->group(function(){
                 Route::get('/', [BlogController::class, 'adminBlog'])->name('admin.blog');
                 Route::get('/create', [BlogController::class, 'createBlogPage'])->name('admin.blog.create.page');
@@ -83,4 +83,19 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->midd
 
             });
 
+            Route::prefix('assesment')->group(function(){
+                Route::get('/', [AssesmentController::class, 'adminAssesment'])->name('admin.assesment');
+                Route::get('/create', [AssesmentController::class, 'createAssesmentPage'])->name('admin.assesment.create.page');
+                Route::post('/create', [AssesmentController::class, 'createAssesment'])->name('admin.assesment.create');
+                Route::get('/edit/{id}', [AssesmentController::class, 'editAssesmentPage'])->name('admin.assesment.edit.page');
+                Route::put('/edit/{id}', [AssesmentController::class, 'editAssesment'])->name('admin.assesment.edit');
+                Route::get('/syarat/{id}', [AssesmentController::class, 'syaratAssesmentPage'])->name('admin.assesment.syarat.page');
+                Route::post('/syarat/{id}', [AssesmentController::class, 'syaratAssesment'])->name('admin.assesment.syarat');
+                Route::get('/uk/{id}', [AssesmentController::class, 'ukAssesmentPage'])->name('admin.assesment.uk.page');
+                Route::post('/uk/{id}', [AssesmentController::class, 'ukAssesment'])->name('admin.assesment.uk');
+                Route::delete('/delete/{id}', [AssesmentController::class, 'deleteAssesment'])->name('admin.assesment.delete');
 
+            });
+});
+
+    // Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');

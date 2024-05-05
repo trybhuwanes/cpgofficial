@@ -11,6 +11,16 @@ use Illuminate\Support\Str;
 
 class TrainingController extends Controller
 {
+
+    public function trainingPage() {
+        return view('trainingPage');
+    }
+
+    public function trainingDetailPage() {
+        return view('trainingDetailPage');
+    }
+
+    // ADMIN FUNCTION
     public function adminTraining()
     {
         $training = Training::all();

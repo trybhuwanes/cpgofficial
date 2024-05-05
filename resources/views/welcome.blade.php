@@ -7,16 +7,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
     {{-- Section 1 --}}
     <div class="items-center justify-center bg-white">
-        <div class="w-full max-h-full shadow-2xl overflow-hidden relative">
-            <img class="absolute inset-0 h-full w-full object-cover" src="images\hero-image.jpg">
-            <div class="absolute inset-0 bg-white bg-opacity-50"></div>
+        <div class="w-full h-fit sm:h-[600px] overflow-hidden relative">
+            <img class="absolute inset-0 h-full w-full object-cover" src="images\hero-image.png">
+            {{-- <div class="absolute inset-0 bg-white bg-opacity-50"></div> --}}
             <div class="flex h-full items-center justify-center relative">
                 {{-- <h1 class="text-4xl text-black font-semibold">BLOG</h1> --}}
                 <div class="flex flex-col justify-center items-center h-full">
-                    <div class="text-5xl font-semibold text-black max-w-full pb-6 leading tight">
-                        PASSION FOR COMPASSION
+                    <div class="xl:text-5xl sm:text-6xl font-semibold text-black max-w-full pb-6 leading tight">
+                        PASSION FOR <br> COMPASSION
                     </div>
-                    <p class="text-lg leading-8 text-black max-w-[580px] text-center pb-12">
+                    <p class="text-lg leading-8 text-black xl:max-w-[520px] md:max-w-[460px] sm:w-full text-center pb-10">
                         Tingkatkan kualitas dirimu bersama Citra Prestasi Gemilang dan jadilah pribadi baru untuk mengantar
                         anda
                         menuju kesuksesan dalam karir serta kehidupan.
@@ -67,30 +67,29 @@
                 Jangan lewatkan agenda kami!
             </p>
 
-            <div data-aos="fade-up" data-aos-duration="1500" class="grid grid-cols-3 gap-10 mx-52 sm:mx-36 mb-12">
+            <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-3 sm:grid-cols-1 gap-10 mx-52 sm:mx-36 mb-12 sm:content-center place-items-center">
                 {{-- CARD BLOG --}}
                 <div
-                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 h-auto border border-gray-200 rounded-lg shadow-2xl">
+                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-1/3 sm:w-1/2 h-auto border border-gray-200 rounded-lg shadow-2xl ">
+                    <a href="{{ route('blog-read') }}">
+                        <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
+                    </a>
+                </div>
+
+                <div
+                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-1/3 sm:w-1/2 h-auto border border-gray-200 rounded-lg shadow-2xl">
                     <a href="{{ route('blog-read') }}">
                         <img class="object-cover w-full rounded-t-lg" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
 
                 <div
-                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 h-auto border border-gray-200 rounded-lg shadow-2xl">
+                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-1/3 sm:w-1/2 h-auto border border-gray-200 rounded-lg shadow-2xl">
                     <a href="{{ route('blog-read') }}">
                         <img class="object-cover w-full rounded-t-lg" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
-
-                <div
-                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 h-auto border border-gray-200 rounded-lg shadow-2xl">
-                    <a href="{{ route('blog-read') }}">
-                        <img class="object-cover w-full rounded-t-lg" src="images\Flyer CSR 2024.png" alt="" />
-                    </a>
-                </div>
-                <h1 class="text-lg font-bold leading-10 text-black text-center">Lorem, ipsum.</h1>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, quia!</p>
+                
             </div>
         </div>
         <button data-aos="fade-up" data-aos-duration="1500"
