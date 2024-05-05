@@ -56,7 +56,7 @@
         <h5 class="mb-2 text-3xl font-bold tracking-tight text-black">Skema</h5>
 
     </div>
-    <div data-aos="fade-up" data-aos-duration="1500" class="grid grid-cols-3 sm:grid-cols-2 gap-4 mx-36 mb-16">
+    <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-3 sm:grid-cols-2 gap-4 mx-36 mb-16">
         {{-- CARD BLOG SERVICE EXCELLENCE --}}
         <div
             class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
