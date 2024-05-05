@@ -9,6 +9,7 @@ use App\Http\Controllers\InternshipController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\ConsultingController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +51,7 @@ Route::get('/internship', [InternshipController::class, 'index'])->name('interns
 Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
 Route::get('/training', [TrainingController::class, 'trainingPage'])->name('training');
 Route::get('/training-detail', [TrainingController::class, 'trainingDetailPage'])->name('training.detail');
+Route::get('/consulting', [ConsultingController::class, 'index'])->name('consulting');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('admin.dashboard');
@@ -58,7 +60,7 @@ Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middlew
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->middleware('guest');
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware('auth')->name('logout');
 
-Route::prefix($this->urlAdmin)->group(function () {
+Route::prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
   
     Route::prefix('blog')->group(function(){
