@@ -21,7 +21,7 @@
                         anda
                         menuju kesuksesan dalam karir serta kehidupan.
                     </p>
-                    <button class="bg-black px-8 py-4 text-white font-bold text-center rounded-full">
+                    <button class="bg-black px-8 py-4 text-white font-bold text-center rounded-full hover:bg-orange-500">
                         Improve With Us!
                     </button>
                 </div>
@@ -38,15 +38,15 @@
 
             <div data-aos="fade-up" data-aos-duration="1500"
                 class="flex justify-center items-center h-full mb-10 space-x-10">
-                <img class="h-20" src="images\kemnaker.png" alt="Kemnaker" class="mx-auto">
-                <img class="h-20" src="images\kemdikbud.png" alt="Kemendikbud" class="mx-auto">
-                <img class="h-20" src="images\kominfo.png" alt="kominfo" class="mx-auto">
-                <img class="h-20" src="images\kemenparekraf.png" alt="kemenparekraf" class="mx-auto">
-                <img class="h-20" src="images\bappenas.png" alt="bappenas" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\kementerian\kemnaker.png" alt="Kemnaker" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\kementerian\kemdikbud.png" alt="Kemendikbud" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\kementerian\kemenparekraf.png" alt="kemenparekraf" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\kementerian\bappenas.png" alt="bappenas" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\kementerian\kominfo.png" alt="kominfo" class="mx-auto">
             </div>
 
-            <a href="#">
-                <button data-aos="fade-up" data-aos-duration="1500" type="button" class="text-white bg-black hover:bg-orange-500 focus:outline-none focus:ring-4 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 ">See More</button>
+            <a href="{{ route('collaboration') }}">
+                <button data-aos="fade-up" data-aos-duration="1500" type="button" class="text-white bg-black hover:bg-orange-500 focus:outline-none focus:ring-4 font-medium rounded-full text-lg px-5 py-2.5 text-center me-2 mb-2 ">See More</button>
             </a>
 
         </div>
@@ -56,7 +56,7 @@
     {{-- Section 3 --}}
     <div class="bg-white max-w-full h-auto text-center">
         <div data-aos="fade-up" data-aos-duration="1500" class="flex flex-col justify-center">
-            <p class="text-lg leading-8 text-orange-400 max-w-full mt-20">
+            <p class="text-lg leading-8 text-orange-400 max-w-full mt-20 font-bold">
                 SCHEDULE
             </p>
             <div class="text-4xl font-bold text-black max-w-full m-5">
@@ -67,33 +67,33 @@
                 Jangan lewatkan agenda kami!
             </p>
 
-            <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-3 sm:grid-cols-1 gap-10 mx-52 sm:mx-36 mb-12 sm:content-center place-items-center">
+            <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-10 mx-52 sm:mx-36 mb-12 sm:content-center place-items-center">
                 {{-- CARD BLOG --}}
                 <div
-                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-1/3 sm:w-1/2 h-auto border border-gray-200 rounded-lg shadow-2xl ">
+                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
                     <a href="{{ route('blog-read') }}">
                         <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
 
                 <div
-                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-1/3 sm:w-1/2 h-auto border border-gray-200 rounded-lg shadow-2xl">
+                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
                     <a href="{{ route('blog-read') }}">
-                        <img class="object-cover w-full rounded-t-lg" src="images\Flyer CSR 2024.png" alt="" />
+                        <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
 
                 <div
-                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-1/3 sm:w-1/2 h-auto border border-gray-200 rounded-lg shadow-2xl">
+                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
                     <a href="{{ route('blog-read') }}">
-                        <img class="object-cover w-full rounded-t-lg" src="images\Flyer CSR 2024.png" alt="" />
+                        <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
                 
             </div>
         </div>
         <button data-aos="fade-up" data-aos-duration="1500"
-            class="bg-black px-8 py-4 text-white font-bold text-center rounded-full mb-20">
+            class="bg-black px-8 py-4 text-white font-bold text-center rounded-full mb-20 hover:bg-orange-500">
             Learn More!
         </button>
     </div>
