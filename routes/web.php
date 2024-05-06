@@ -10,6 +10,7 @@ use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\ConsultingController;
+use App\Http\Controllers\CollaborationController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 /*
 |--------------------------------------------------------------------------
@@ -38,9 +39,9 @@ Route::get('/program', function () {
 
 Route::get('/schedule', function () {
     return view('schedulePage');
-});
+})->name('schedule');
 
-Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog-read', [BlogController::class, 'read'])->name('blog-read');
 Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index'])->name('cerita-umkm');
 Route::get('/cerita-umkm-read', [CeritaUmkmController::class, 'read'])->name('cerita-umkm-read');
@@ -52,6 +53,8 @@ Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
 Route::get('/training', [TrainingController::class, 'trainingPage'])->name('training');
 Route::get('/training-detail', [TrainingController::class, 'trainingDetailPage'])->name('training.detail');
 Route::get('/consulting', [ConsultingController::class, 'index'])->name('consulting');
+Route::get('/collaboration', [CollaborationController::class, 'index'])->name('collaboration');
+Route::get('/csr', function () { return view('csrPage'); })->name('csr');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('admin.dashboard');

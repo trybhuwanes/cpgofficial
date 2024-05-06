@@ -48,16 +48,16 @@
                                 class="block px-4 py-2 hover:bg-orange-500">Internship</a>
                         </li>
                         <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-orange-500">CSR</a>
+                            <a href="{{ route('csr') }}" class="block px-4 py-2 hover:bg-orange-500">CSR</a>
                         </li>
                     </ul>
                 </div>
             </li>
-            <li><a href="/schedule" class="inline-block px-3 py-2 text-black hover:text-gray-300">Schedule</a></li>
-            <li><a href="/blog" class="inline-block px-3 py-2 text-black hover:text-gray-300">Blog</a></li>
-            <li><a href="/collaboration" class="inline-block px-3 py-2 text-black hover:text-gray-300">Collaboration</a>
+            <li><a href="{{ route('schedule') }}" class="inline-block px-3 py-2 text-black hover:text-gray-300">Schedule</a></li>
+            <li><a href="{{ route('blog') }}" class="inline-block px-3 py-2 text-black hover:text-gray-300">Blog</a></li>
+            <li><a href="{{ route('collaboration') }}" class="inline-block px-3 py-2 text-black hover:text-gray-300">Collaboration</a>
             </li>
-            <li><a href="/cerita-umkm" class="inline-block px-3 py-2 text-black hover:text-gray-300">Cerita UMKM</a>
+            <li><a href="{{ route('cerita-umkm') }}" class="inline-block px-3 py-2 text-black hover:text-gray-300">Cerita UMKM</a>
             </li>
             <li><a href="/contact"
                     class="inline-block px-6 py-2 rounded-full bg-orange-500 text-white font-bold text-center">Contact
