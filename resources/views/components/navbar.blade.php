@@ -60,7 +60,7 @@
             <li><a href="{{ route('cerita-umkm') }}" class="inline-block px-3 py-2 text-black hover:text-gray-300">Cerita UMKM</a>
             </li>
             <li><a href="/contact"
-                    class="inline-block px-6 py-2 rounded-full bg-orange-500 text-white font-bold text-center">Contact
+                    class="inline-block px-6 py-2 rounded-full bg-orange-500 text-white font-bold text-center hover:bg-black">Contact
                     Us
                 </a>
             </li>
