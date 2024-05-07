@@ -31,7 +31,7 @@ Route::get('/', function () {
 
 Route::get('/about', function () {
     return view('aboutPage');
-});
+})->name('about');
 
 Route::get('/program', function () {
     return view('programPage');

@@ -18,8 +18,9 @@
     {{-- SECTION 2 --}}
     <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 mt-10">
         <p class="font-normal text-black text-justify">
-            Organizing adalah suatu cara pengaturan pekerjaan dan pengalokasian pekerjaan di antara para anggota organisasi sehingga 
-            tujuan organisasi dapat dicapai secara efisien. Program organizing dalam PT Citra Prestasi Gemilang meliputi:<br>
+            Di tengah kesibukan bisnis, kemampuan untuk mengorganisir dengan cermat adalah kunci untuk meraih kesuksesan. 
+            Citra Prestasi Gemilang hadir untuk memastikan setiap detail tersusun dengan rapi dan setiap acara berjalan dengan lancar. 
+            Mari menjelajahi bagaimana kami mengubah ide menjadi kenyataan dengan keunggulan organisasi kami melalui tema-tema berikut:<br>
         </p>
         <ol class="space-y-1 text-black list-decimal list-inside">
             <li>Pertemuan Keluarga</li>
