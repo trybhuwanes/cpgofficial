@@ -58,9 +58,9 @@ Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middlew
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->middleware('guest');
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware('auth')->name('logout');
 
-Route::prefix($this->urlAdmin)->group(function () {
+Route::prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
-  
+
     Route::prefix('blog')->group(function(){
                 Route::get('/', [BlogController::class, 'adminBlog'])->name('admin.blog');
                 Route::get('/create', [BlogController::class, 'createBlogPage'])->name('admin.blog.create.page');
@@ -92,8 +92,21 @@ Route::prefix($this->urlAdmin)->group(function () {
                 Route::get('/uk/{id}', [AssesmentController::class, 'ukAssesmentPage'])->name('admin.assesment.uk.page');
                 Route::post('/uk/{id}', [AssesmentController::class, 'ukAssesment'])->name('admin.assesment.uk');
                 Route::delete('/delete/{id}', [AssesmentController::class, 'deleteAssesment'])->name('admin.assesment.delete');
+                Route::delete('/delete/{id}', [AssesmentController::class, 'deleteSyaratAssesment'])->name('admin.assesment.deleteSyarat');
+            });
+
+            Route::prefix('umkm_story')->group(function(){
+                Route::get('/', [CeritaUmkmController::class, 'adminCeritaUmkm'])->name('admin.umkm_story');
+                Route::get('/create', [CeritaUmkmController::class, 'createCeritaUmkmPage'])->name('admin.umkm_story.create.page');
+                Route::post('/create', [CeritaUmkmController::class, 'createCeritaUmkm'])->name('admin.umkm_story.create');
+                Route::get('/edit/{id}', [CeritaUmkmController::class, 'editCeritaUmkmPage'])->name('admin.umkm_story.edit.page');
+                Route::put('/edit/{id}', [CeritaUmkmController::class, 'editCeritaUmkm'])->name('admin.umkm_story.edit');
+                Route::delete('/delete/{id}', [CeritaUmkmController::class, 'deleteCeritaUmkm'])->name('admin.umkm_story.delete');
+            });
+
+
 
             });
-});
+// });
 
     // Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
