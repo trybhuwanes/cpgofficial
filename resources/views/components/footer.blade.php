@@ -4,11 +4,11 @@
         <div class="container mx-auto justify-between items-top pt-10 px-10">
             <div class="flex pb-6">
                 <!-- Kolom pertama -->
-            <div class="w-2/5 ml-36">
+            <div class="w-2/5 xl:ml-36 sm:ml-5">
                 {{-- <h3 class="text-white text-lg font-semibold mb-2">Kolom Pertama</h3> --}}
                 <img src="{{ asset('images\iconCPG.png') }}" alt="Logo" class="h-14 mr-2 mb-2">
-                <div class="text-white text-sm mb-5">
-                    The most preferable training, coaching and <br> learning institution in Indonesia.
+                <div class="text-white text-sm mb-5 sm:w-3/4">
+                    The most preferable training, coaching and learning institution in Indonesia.
                 </div>
                 <div class="flex">
                     <img class="h-5 mr-5" src="{{ asset('images/iconLinkedin.png') }}" alt="">
@@ -44,7 +44,7 @@
             </div>
     
             <!-- Kolom keempat -->
-            <div class="w-1/5 mr-16">
+            <div class="w-1/5 xl:mr-16 sm:mr-5">
                 <h3 class="text-white text-lg font-semibold mb-2">Address</h3>
                 <ul class="text-white">
                     <li class="mb-2"><a href="#" class="hover:text-gray-300">Jl. Layur 1/12 Malang 62142, Jawa Timur 65142</a></li>
@@ -53,7 +53,7 @@
             </div>
     
             <hr class="border-orange-500 my-4">
-            <span class="text-white text-sm ml-36">© 2024 Citra Prestasi Gemilang</span>
+            <span class="text-white text-sm xl:ml-36 sm:ml-5">© 2024 Citra Prestasi Gemilang</span>
         </div>
 </footer>
 
