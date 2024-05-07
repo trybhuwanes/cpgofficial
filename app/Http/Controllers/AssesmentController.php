@@ -16,7 +16,7 @@ class AssesmentController extends Controller
 
         return view("assesmentPage");
     }
-  
+
     public function detailAssesmentPage() {
         return view('assesmentDetailPage');
     }
@@ -186,6 +186,18 @@ public function deleteAssesment($id) {
     //  dd($encryptedId);
     return view('admin.assesment.assesment');
 }
+public function deleteSyaratAssesment($id, $assesmentId) {
+    $encryptedId = Crypt::decrypt($id);
+     // Hapus baris-baris terkait di tabel 'uk_assesment'
+
+     SyaratAssesment::find($encryptedId)->delete();
+
+
+     // Hapus baris dari tabel 'AssesmentCenter'
+    //  dd($encryptedId);
+    $encryptedId = Crypt::encrypt($id);
+
+    return redirect()->route('admin.assesment.edit.page', ['id' => $encryptedId]);}
 
 public function createAssesmentPage() {
     return view('admin.assesment.assesmentCreate');

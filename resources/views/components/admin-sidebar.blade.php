@@ -11,10 +11,10 @@
 
     <ul class="hidden lg:flex space-x-4" id="menu-items">
         <li><a href="{{ route('dashboard') }}" class="inline-block px-7 py-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Dashboard</a></li>
-        <li><a href="{{ route('admin.training') }}" class="inline-block px-3 py-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Training Event</a></li>
-        <li><a href="/blog/" class="inline-block px-3 py-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Assesment</a></li>
+        <li><a href="/admin/training" class="inline-block px-3 py-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Training Event</a></li>
+        <li><a href="{{ route('admin.assesment') }}" class="inline-block px-3 py-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Assesment</a></li>
         <li><a href="{{ route('admin.blog') }}" class="inline-block px-3 py-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Blog</a></li>
-        <li><a href="#" class="inline-block px-3 py-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">UMKM Story</a></li>
+        <li><a href="{{ route('admin.umkm_story')}}" class="inline-block px-3 py-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">UMKM Story</a></li>
     </ul>
 </button>
 </nav>
