@@ -29,14 +29,14 @@ class BlogController extends Controller
     }
 
     public function createBlog(Request $request) {
-        $request->validate([
-            'title_blog' => 'required',
-            'desc_blog' => 'required',
-        ]);
         // dd($request);
 
+        $request->validate([
+            'title' => 'required',
+            'desc' => 'required',
+        ]);
 
-
+// dd($request);
 
         // Code for file upload if needed
 
