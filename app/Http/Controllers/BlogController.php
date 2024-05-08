@@ -10,11 +10,13 @@ class BlogController extends Controller
 {
     //
     public function index() {
-        return view("blogPage");
+        $blog = Blog::all();
+        return view('blogPage', compact(['blog']));
     }
 
-    public function read() {
-        return view('blogReadPage');
+    public function read($id) {
+        $blog = Blog::whereId($id)->first();
+        return view('blogReadPage')->with('blog', $blog);
     }
     // Admin Function
 

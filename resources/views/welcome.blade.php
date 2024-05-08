@@ -71,21 +71,21 @@
                 {{-- CARD BLOG --}}
                 <div
                     class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
-                    <a href="{{ route('blog-read') }}">
+                    <a href="">
                         <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
 
                 <div
                     class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
-                    <a href="{{ route('blog-read') }}">
+                    <a href="">
                         <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
 
                 <div
                     class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
-                    <a href="{{ route('blog-read') }}">
+                    <a href="">
                         <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
@@ -112,7 +112,7 @@
             <div data-aos="fade-up" data-aos-duration="1500" class="w-full xl:w-1/2">
                 <div class="text-4xl xl:text-6xl text-white mb-10 flex flex-wrap">
                     <div class="mr-10">
-                        <span class="mb-3 flex tabular-nums text-4xl xl:text-5xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:50]'">
+                        <span class="mb-3 flex tabular-nums text-4xl xl:text-5xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:100]'">
                             <span class="supports-[counter-set]:sr-only"></span>+
                         </span>
                         <div class="text-base text-white w-full max-w-[150px]">
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     <div class="">
-                        <span class="mb-3 flex tabular-nums text-4xl xl:text-5xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:75]'">
+                        <span class="mb-3 flex tabular-nums text-4xl xl:text-5xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:100]'">
                             <span class="supports-[counter-set]:sr-only"></span>+
                         </span>
                         <div class="text-base text-white w-full max-w-[150px]">
@@ -128,7 +128,7 @@
                         </div>
                     </div>
                     <div class="">
-                        <span class="mb-3 flex tabular-nums text-4xl xl:text-5xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:1000]'">
+                        <span class="mb-3 flex tabular-nums text-4xl xl:text-5xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:3600]'">
                             <span class="supports-[counter-set]:sr-only"></span>+
                         </span>
                         <div class="text-base text-white w-full max-w-[200px]">
@@ -194,9 +194,7 @@
             </div>
 
             <p class="text-lg leading-8 text-black max-w-[580px] mx-5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries
+                Dapatkan keunggulan kompetitif melalui layanan kami yang komprehensif dalam Training, Consulting, Organizing, dan Assesment Center
             </p>
         </div>
         <div class="flex xl:grid">
