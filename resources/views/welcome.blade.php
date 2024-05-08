@@ -7,21 +7,21 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
     {{-- Section 1 --}}
     <div class="items-center justify-center bg-white">
-        <div class="w-full max-h-full shadow-2xl overflow-hidden relative">
-            <img class="absolute inset-0 h-full w-full object-cover" src="images\hero-image.jpg">
-            <div class="absolute inset-0 bg-white bg-opacity-50"></div>
+        <div class="w-full h-fit sm:h-[600px] overflow-hidden relative">
+            <img class="absolute inset-0 h-full w-full object-cover" src="images\hero-image.png">
+            {{-- <div class="absolute inset-0 bg-white bg-opacity-50"></div> --}}
             <div class="flex h-full items-center justify-center relative">
                 {{-- <h1 class="text-4xl text-black font-semibold">BLOG</h1> --}}
                 <div class="flex flex-col justify-center items-center h-full">
-                    <div class="text-5xl font-semibold text-black max-w-full pb-6 leading tight">
-                        PASSION FOR COMPASSION
+                    <div class="xl:text-5xl sm:text-6xl font-semibold text-black max-w-full pb-6 leading tight">
+                        PASSION FOR <br> COMPASSION
                     </div>
-                    <p class="text-lg leading-8 text-black max-w-[580px] text-center pb-12">
+                    <p class="text-lg leading-8 text-black xl:max-w-[520px] md:max-w-[460px] sm:w-full text-center pb-10">
                         Tingkatkan kualitas dirimu bersama Citra Prestasi Gemilang dan jadilah pribadi baru untuk mengantar
                         anda
                         menuju kesuksesan dalam karir serta kehidupan.
                     </p>
-                    <button class="bg-black px-8 py-4 text-white font-bold text-center rounded-full">
+                    <button class="bg-black px-8 py-4 text-white font-bold text-center rounded-full hover:bg-orange-500">
                         Improve With Us!
                     </button>
                 </div>
@@ -38,15 +38,15 @@
 
             <div data-aos="fade-up" data-aos-duration="1500"
                 class="flex justify-center items-center h-full mb-10 space-x-10">
-                <img class="h-20" src="images\kemnaker.png" alt="Kemnaker" class="mx-auto">
-                <img class="h-20" src="images\kemdikbud.png" alt="Kemendikbud" class="mx-auto">
-                <img class="h-20" src="images\kominfo.png" alt="kominfo" class="mx-auto">
-                <img class="h-20" src="images\kemenparekraf.png" alt="kemenparekraf" class="mx-auto">
-                <img class="h-20" src="images\bappenas.png" alt="bappenas" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\kementerian\kemnaker.png" alt="Kemnaker" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\kementerian\kemdikbud.png" alt="Kemendikbud" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\kementerian\kemenparekraf.png" alt="kemenparekraf" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\kementerian\bappenas.png" alt="bappenas" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\kementerian\kominfo.png" alt="kominfo" class="mx-auto">
             </div>
 
-            <a href="#">
-                <button data-aos="fade-up" data-aos-duration="1500" type="button" class="text-white bg-black hover:bg-orange-500 focus:outline-none focus:ring-4 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 ">See More</button>
+            <a href="{{ route('collaboration') }}">
+                <button data-aos="fade-up" data-aos-duration="1500" type="button" class="text-white bg-black hover:bg-orange-500 focus:outline-none focus:ring-4 font-medium rounded-full text-lg px-5 py-2.5 text-center me-2 mb-2 ">See More</button>
             </a>
 
         </div>
@@ -56,7 +56,7 @@
     {{-- Section 3 --}}
     <div class="bg-white max-w-full h-auto text-center">
         <div data-aos="fade-up" data-aos-duration="1500" class="flex flex-col justify-center">
-            <p class="text-lg leading-8 text-orange-400 max-w-full mt-20">
+            <p class="text-lg leading-8 text-orange-400 max-w-full mt-20 font-bold">
                 SCHEDULE
             </p>
             <div class="text-4xl font-bold text-black max-w-full m-5">
@@ -67,34 +67,33 @@
                 Jangan lewatkan agenda kami!
             </p>
 
-            <div data-aos="fade-up" data-aos-duration="1500" class="grid grid-cols-3 gap-10 mx-52 sm:mx-36 mb-12">
+            <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-10 mx-52 sm:mx-36 mb-12 sm:content-center place-items-center">
                 {{-- CARD BLOG --}}
                 <div
-                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 h-auto border border-gray-200 rounded-lg shadow-2xl">
-                    <a href="{{ route('blog-read') }}">
-                        <img class="object-cover w-full rounded-t-lg" src="images\Flyer CSR 2024.png" alt="" />
+                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
+                    <a href="">
+                        <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
 
                 <div
-                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 h-auto border border-gray-200 rounded-lg shadow-2xl">
-                    <a href="{{ route('blog-read') }}">
-                        <img class="object-cover w-full rounded-t-lg" src="images\Flyer CSR 2024.png" alt="" />
+                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
+                    <a href="">
+                        <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
 
                 <div
-                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 h-auto border border-gray-200 rounded-lg shadow-2xl">
-                    <a href="{{ route('blog-read') }}">
-                        <img class="object-cover w-full rounded-t-lg" src="images\Flyer CSR 2024.png" alt="" />
+                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
+                    <a href="">
+                        <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
-                <h1 class="text-lg font-bold leading-10 text-black text-center">Lorem, ipsum.</h1>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, quia!</p>
+                
             </div>
         </div>
         <button data-aos="fade-up" data-aos-duration="1500"
-            class="bg-black px-8 py-4 text-white font-bold text-center rounded-full mb-20">
+            class="bg-black px-8 py-4 text-white font-bold text-center rounded-full mb-20 hover:bg-orange-500">
             Learn More!
         </button>
     </div>
@@ -113,7 +112,7 @@
             <div data-aos="fade-up" data-aos-duration="1500" class="w-full xl:w-1/2">
                 <div class="text-4xl xl:text-6xl text-white mb-10 flex flex-wrap">
                     <div class="mr-10">
-                        <span class="mb-3 flex tabular-nums text-4xl xl:text-5xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:50]'">
+                        <span class="mb-3 flex tabular-nums text-4xl xl:text-5xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:100]'">
                             <span class="supports-[counter-set]:sr-only"></span>+
                         </span>
                         <div class="text-base text-white w-full max-w-[150px]">
@@ -121,7 +120,7 @@
                         </div>
                     </div>
                     <div class="">
-                        <span class="mb-3 flex tabular-nums text-4xl xl:text-5xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:75]'">
+                        <span class="mb-3 flex tabular-nums text-4xl xl:text-5xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:100]'">
                             <span class="supports-[counter-set]:sr-only"></span>+
                         </span>
                         <div class="text-base text-white w-full max-w-[150px]">
@@ -129,7 +128,7 @@
                         </div>
                     </div>
                     <div class="">
-                        <span class="mb-3 flex tabular-nums text-4xl xl:text-5xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:1000]'">
+                        <span class="mb-3 flex tabular-nums text-4xl xl:text-5xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:3600]'">
                             <span class="supports-[counter-set]:sr-only"></span>+
                         </span>
                         <div class="text-base text-white w-full max-w-[200px]">
@@ -195,9 +194,7 @@
             </div>
 
             <p class="text-lg leading-8 text-black max-w-[580px] mx-5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries
+                Dapatkan keunggulan kompetitif melalui layanan kami yang komprehensif dalam Training, Consulting, Organizing, dan Assesment Center
             </p>
         </div>
         <div class="flex xl:grid">

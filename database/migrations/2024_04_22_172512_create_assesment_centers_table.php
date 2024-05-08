@@ -18,7 +18,7 @@ class CreateAssesmentCentersTable extends Migration
             $table->string('title');
             $table->string('pict');
             $table->text('desc');
-            $table->integer('importance');
+            $table->text('importance');
             $table->string('uk');
             $table->string('syarat1');
             $table->string('syarat2');

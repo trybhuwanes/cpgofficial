@@ -78,7 +78,7 @@
                         <p class="text-sm text-black dark:text-black text-center">
                             Jl. Layur 1/12 Malang, Jawa Timur 65142 <br>
                             info@cpgofficial.com <br>
-                            Ibu Sri Sudarwati <br></p> <br>
+                            <br></p>
                         <button
                             class="mx-16 text-white bg-black font-medium rounded-full text-sm px-10 py-3 text-center hover:bg-orange-700">Whatsapp</button>
                     </div>
