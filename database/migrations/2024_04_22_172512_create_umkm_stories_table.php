@@ -12,7 +12,7 @@ class CreateUMKMStoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('umkm_stories', function (Blueprint $table) {
+        Schema::create('umkm_story', function (Blueprint $table) {
             $table->id();
             $table->string('title_story');
             $table->string('slug_story')->unique();

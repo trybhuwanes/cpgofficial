@@ -9,6 +9,8 @@ class UMKMStory extends Model
 {
     use HasFactory;
 
+    protected $table = 'umkm_story';
+
     protected $fillable = [
         'id_story',
         'title_story',
