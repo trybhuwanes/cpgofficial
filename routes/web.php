@@ -42,7 +42,7 @@ Route::get('/schedule', function () {
 })->name('schedule');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
-Route::get('/blog-read', [BlogController::class, 'read'])->name('blog-read');
+Route::get('/blog/{blog:id}', [BlogController::class, 'read'])->name('blog.read');
 Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index'])->name('cerita-umkm');
 Route::get('/cerita-umkm-read', [CeritaUmkmController::class, 'read'])->name('cerita-umkm-read');
 Route::get('/assesment-center', [AssesmentController::class, 'index'])->name('assesment-center');
@@ -54,7 +54,9 @@ Route::get('/training', [TrainingController::class, 'trainingPage'])->name('trai
 Route::get('/training-detail', [TrainingController::class, 'trainingDetailPage'])->name('training.detail');
 Route::get('/consulting', [ConsultingController::class, 'index'])->name('consulting');
 Route::get('/collaboration', [CollaborationController::class, 'index'])->name('collaboration');
-Route::get('/csr', function () { return view('csrPage'); })->name('csr');
+Route::get('/csr', function () {
+    return view('csrPage');
+})->name('csr');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('admin.dashboard');
@@ -65,40 +67,37 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->midd
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
-  
-    Route::prefix('blog')->group(function(){
-                Route::get('/', [BlogController::class, 'adminBlog'])->name('admin.blog');
-                Route::get('/create', [BlogController::class, 'createBlogPage'])->name('admin.blog.create.page');
-                Route::post('/create', [BlogController::class, 'createBlog'])->name('admin.blog.create');
-                Route::get('/edit/{id}', [BlogController::class, 'editBlogPage'])->name('admin.blog.edit.page');
-                Route::put('/edit/{id}', [BlogController::class, 'editBlog'])->name('edit');
-                Route::delete('/delete/{id}', [BlogController::class, 'deleteBlog'])->name('admin.blog.delete');
 
-            });
+    Route::prefix('blog')->group(function () {
+        Route::get('/', [BlogController::class, 'adminBlog'])->name('admin.blog');
+        Route::get('/create', [BlogController::class, 'createBlogPage'])->name('admin.blog.create.page');
+        Route::post('/create', [BlogController::class, 'createBlog'])->name('admin.blog.create');
+        Route::get('/edit/{id}', [BlogController::class, 'editBlogPage'])->name('admin.blog.edit.page');
+        Route::put('/edit/{id}', [BlogController::class, 'editBlog'])->name('edit');
+        Route::delete('/delete/{id}', [BlogController::class, 'deleteBlog'])->name('admin.blog.delete');
+    });
 
-            Route::prefix('training')->group(function(){
-                Route::get('/', [TrainingController::class, 'adminTraining'])->name('admin.training');
-                Route::get('/create', [TrainingController::class, 'createTrainingPage'])->name('admin.training.create.page');
-                Route::post('/create', [TrainingController::class, 'createTraining'])->name('admin.training.create');
-                Route::get('/edit/{id}', [TrainingController::class, 'editTrainingPage'])->name('admin.training.edit.page');
-                Route::put('/edit/{id}', [TrainingController::class, 'editTraining'])->name('admin.training.edit');
-                Route::delete('/delete/{id}', [TrainingController::class, 'deleteTraining'])->name('admin.training.delete');
+    Route::prefix('training')->group(function () {
+        Route::get('/', [TrainingController::class, 'adminTraining'])->name('admin.training');
+        Route::get('/create', [TrainingController::class, 'createTrainingPage'])->name('admin.training.create.page');
+        Route::post('/create', [TrainingController::class, 'createTraining'])->name('admin.training.create');
+        Route::get('/edit/{id}', [TrainingController::class, 'editTrainingPage'])->name('admin.training.edit.page');
+        Route::put('/edit/{id}', [TrainingController::class, 'editTraining'])->name('admin.training.edit');
+        Route::delete('/delete/{id}', [TrainingController::class, 'deleteTraining'])->name('admin.training.delete');
+    });
 
-            });
-
-            Route::prefix('assesment')->group(function(){
-                Route::get('/', [AssesmentController::class, 'adminAssesment'])->name('admin.assesment');
-                Route::get('/create', [AssesmentController::class, 'createAssesmentPage'])->name('admin.assesment.create.page');
-                Route::post('/create', [AssesmentController::class, 'createAssesment'])->name('admin.assesment.create');
-                Route::get('/edit/{id}', [AssesmentController::class, 'editAssesmentPage'])->name('admin.assesment.edit.page');
-                Route::put('/edit/{id}', [AssesmentController::class, 'editAssesment'])->name('admin.assesment.edit');
-                Route::get('/syarat/{id}', [AssesmentController::class, 'syaratAssesmentPage'])->name('admin.assesment.syarat.page');
-                Route::post('/syarat/{id}', [AssesmentController::class, 'syaratAssesment'])->name('admin.assesment.syarat');
-                Route::get('/uk/{id}', [AssesmentController::class, 'ukAssesmentPage'])->name('admin.assesment.uk.page');
-                Route::post('/uk/{id}', [AssesmentController::class, 'ukAssesment'])->name('admin.assesment.uk');
-                Route::delete('/delete/{id}', [AssesmentController::class, 'deleteAssesment'])->name('admin.assesment.delete');
-
-            });
+    Route::prefix('assesment')->group(function () {
+        Route::get('/', [AssesmentController::class, 'adminAssesment'])->name('admin.assesment');
+        Route::get('/create', [AssesmentController::class, 'createAssesmentPage'])->name('admin.assesment.create.page');
+        Route::post('/create', [AssesmentController::class, 'createAssesment'])->name('admin.assesment.create');
+        Route::get('/edit/{id}', [AssesmentController::class, 'editAssesmentPage'])->name('admin.assesment.edit.page');
+        Route::put('/edit/{id}', [AssesmentController::class, 'editAssesment'])->name('admin.assesment.edit');
+        Route::get('/syarat/{id}', [AssesmentController::class, 'syaratAssesmentPage'])->name('admin.assesment.syarat.page');
+        Route::post('/syarat/{id}', [AssesmentController::class, 'syaratAssesment'])->name('admin.assesment.syarat');
+        Route::get('/uk/{id}', [AssesmentController::class, 'ukAssesmentPage'])->name('admin.assesment.uk.page');
+        Route::post('/uk/{id}', [AssesmentController::class, 'ukAssesment'])->name('admin.assesment.uk');
+        Route::delete('/delete/{id}', [AssesmentController::class, 'deleteAssesment'])->name('admin.assesment.delete');
+    });
 });
 
     // Route::get('/', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
