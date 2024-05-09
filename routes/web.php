@@ -44,7 +44,7 @@ Route::get('/schedule', function () {
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/{blog:id}', [BlogController::class, 'read'])->name('blog.read');
 Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index'])->name('cerita-umkm');
-Route::get('/cerita-umkm-read', [CeritaUmkmController::class, 'read'])->name('cerita-umkm-read');
+Route::get('/cerita-umkm/{blog:id}', [CeritaUmkmController::class, 'read'])->name('cerita-umkm-read');
 Route::get('/assesment-center', [AssesmentController::class, 'index'])->name('assesment-center');
 Route::get('/assesment-center-detail', [AssesmentController::class, 'detailAssesmentPage'])->name('assesment-center.detail');
 Route::get('/organizing', [OrganizingController::class, 'index'])->name('organizing');
