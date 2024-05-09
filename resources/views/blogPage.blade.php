@@ -22,13 +22,13 @@
         <div
             class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
             <a href="{{ route('blog.read', $blog->id) }}">
-                <img class="block h-36 object-cover w-full rounded-t-lg" src="images\meeting (3).jpeg" alt="{{ $blog->pict_blog }}" />
+                <img class="block h-36 object-cover w-full rounded-t-lg" src="{{ asset('assets/img/' . $blog->pict_blog) }}" alt="{{ $blog->pict_blog }}" />
             </a>
             <div class="p-5">
                 <a href="{{ route('blog.read', $blog->id) }}">
                     <h6 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-black">{{ $blog->title_blog }}</h6>
                 </a>
-                <p class="mb-3 text-sm font-normal text-black dark:text-black">{{ Str::substr($blog->desc_blog, 0, 15) }}</p>
+                <p class="mb-3 text-sm font-normal text-black dark:text-black">{{ Str::substr($blog->desc_blog, 0, 40) }} ... </p>
                 <a href="{{ route('blog.read', $blog->id) }}"
                     class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-orange-700 focus:outline-none">
                     Read more

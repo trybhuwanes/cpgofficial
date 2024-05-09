@@ -12,11 +12,13 @@ class CeritaUmkmController extends Controller
     //
     public function index()
     {
-        return view('ceritaUmkmPage');
+        $story = UMKMStory::all();
+        return view('ceritaUmkmPage', compact(['story']));
     }
-    public function read()
+    public function read($id)
     {
-        return view('ceritaUmkmReadPage');
+        $story = UMKMStory::whereId($id)->first();
+        return view('ceritaUmkmReadPage')->with('story', $story);
     }
 
     public function adminCeritaUmkm()
