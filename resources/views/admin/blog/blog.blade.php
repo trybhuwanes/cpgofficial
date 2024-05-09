@@ -59,6 +59,9 @@
                                 Title
                             </th>
                             <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400">
+                                Description
+                            </th>
+                            <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400">
                                 Tanggal Update
                             </th>
                             <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400">
@@ -75,6 +78,9 @@
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">1</td>
                             <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
                                 <div class="text-base font-semibold text-gray-900 dark:text-white">{{ $item->title_blog}}</div>
+                            </td>
+                            <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                <div class="text-base font-semibold text-gray-900 dark:text-white">{{ Str::substr($item->desc_blog, 0, 40) }} ...</div>
                             </td>
                             <td class="p-4 text-base text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $item->updated_at}}</td>
                             <td class="p-4 space-x-2 whitespace-nowrap">
