@@ -26,7 +26,7 @@
             <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">All Blog</h1>
         </div>
         <div class="items-center justify-between block sm:flex md:divide-x md:divide-gray-100 dark:divide-gray-700">
-            <div class="flex items-center mb-4 sm:mb-0">
+            <div class="flex items-center sm:mb-0">
                 <form class="sm:pr-3" action="#" method="GET">
                     <label for="products-search" class="sr-only">Search</label>
                     <div class="relative w-48 mt-1 sm:w-64 xl:w-96">
@@ -34,12 +34,11 @@
                     </div>
                 </form>
             </div>
-            <a href="{{ route('admin.blog.create') }}">
+            <a href="{{ route('admin.umkm_story.create') }}">
                 <button id="createBlogButton" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none" type="button">
                     Add new blog
                 </button>
             </a>
-
         </div>
     </div>
 </div>

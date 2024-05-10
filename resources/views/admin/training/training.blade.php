@@ -35,11 +35,10 @@
                 </form>
             </div>
             <a href="{{ route('admin.training.create') }}">
-                <button id="createBlogButton" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none" type="button">
+                <button id="createBlogButton" class="mr-0 mb-2 text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none" type="button">
                     Add new training
                 </button>
             </a>
-
         </div>
     </div>
 </div>

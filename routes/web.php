@@ -84,6 +84,16 @@ Route::prefix('admin')->group(function () {
         Route::get('/edit/{id}', [TrainingController::class, 'editTrainingPage'])->name('admin.training.edit.page');
         Route::put('/edit/{id}', [TrainingController::class, 'editTraining'])->name('admin.training.edit');
         Route::delete('/delete/{id}', [TrainingController::class, 'deleteTraining'])->name('admin.training.delete');
+
+        Route::prefix('category')->group(function() {
+            Route::get('/', [TrainingController::class, 'adminCategoryTraining'])->name('admin.training.category');
+            Route::get('/create', [TrainingController::class, 'createCategoryPage'])->name('admin.training.category.create');
+            Route::post('/create', [TrainingController::class, 'storeCategory'])->name('admin.training.category.store');
+            Route::get('/edit/{id}', [TrainingController::class, 'editCategoryPage'])->name('admin.training.category.edit');
+            Route::put('/edit/{id}', [TrainingController::class, 'updateCategory'])->name('admin.training.category.update');
+            Route::get('/delete/{id}', [TrainingController::class, 'deleteCategory'])->name('admin.training.category.delete');
+        });
+        
     });
 
     Route::prefix('assesment')->group(function () {
