@@ -58,75 +58,21 @@
     </div>
     <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-3 sm:grid-cols-2 gap-4 mx-36 mb-16">
         {{-- CARD BLOG SERVICE EXCELLENCE --}}
-        <div
-            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
-            <a href="{{ route('assesment-center.detail') }}">
-                <img class="block h-36 object-cover w-full rounded-t-lg" src="images\service-excellence.jpg"
-                    alt="" />
-            </a>
-            <div class="p-5">
-                <a href="{{ route('assesment-center.detail') }}">
-                    <h6 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-black">Service Excellence</h6>
+        @foreach ($assesment as $item)
+            <div
+                class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
+                <a href="{{ route('assesment-center.detail', $item->id) }}">
+                    <img class="block h-36 object-cover w-full rounded-t-lg" src="images\service-excellence.jpg"
+                        alt="" />
                 </a>
+                <div class="p-5">
+                    <a href="{{ route('assesment-center.detail', $item->id) }}">
+                        <h6 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-black">{{ $item->title }}</h6>
+                    </a>
 
+                </div>
             </div>
-        </div>
-
-        {{-- CARD BLOG PUBLIC RELATION --}}
-        <div
-            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
-            <a href="#">
-                <img class="block h-36 object-cover w-full rounded-t-lg" src="images\public-relation.webp" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h6 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-black">Public Relation</h6>
-                </a>
-
-            </div>
-        </div>
-
-        {{-- CARD BLOG HUMAN CAPITAL --}}
-        <div
-            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
-            <a href="#">
-                <img class="block h-36 object-cover w-full rounded-t-lg" src="images\human capital.jpg" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h6 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-black">Human Capital</h6>
-                </a>
-
-            </div>
-        </div>
-
-        {{-- CARD BLOG FILLING SYSTEM --}}
-        <div
-            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
-            <a href="#">
-                <img class="block h-36 object-cover w-full rounded-t-lg" src="images\filing-system.jpg" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h6 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-black">Filling System</h6>
-                </a>
-
-            </div>
-        </div>
-
-        {{-- CARD BLOG BODY SPA --}}
-        <div
-            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
-            <a href="#">
-                <img class="block h-36 object-cover w-full rounded-t-lg" src="images\body-spa.jpg" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h6 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-black">Perawatan Spa & Terapi</h6>
-                </a>
-
-            </div>
-        </div>
+        @endforeach
 
     </div>
 

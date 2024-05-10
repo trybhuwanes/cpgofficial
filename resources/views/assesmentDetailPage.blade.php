@@ -9,13 +9,11 @@
         <div class="xl:w-7/12 sm:w-full">
             <div data-aos="fade-up" data-aos-duration="1500" class="max-w-full pr-10">
                 <div class="w-full text-4xl text-white mb-5 font-bold">
-                    Sertifikasi Kompetensi BNSP Service Excellence
+                    {{ $assesment->title }}
                 </div>
 
                 <p class="text-sm leading-7 text-white w-full">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book. It has survived not only five centuries
+                    {{ $assesment->desc }}
                 </p>
             </div>
         </div>
@@ -29,12 +27,7 @@
         <div class="block w-full p-10 bg-white border border-gray-300 rounded-xl shadow-2xl">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-orange-600">Pentingnya Service Excellence</h5>
             <hr class="h-px my-3 border-0 bg-gray-800">
-            <p class="text-base font-medium text-black mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Etiam vestibulum libero quis nulla fermentum, sit amet eleifend purus aliquet.
-                Phasellus porttitor sapien et eros posuere viverra. Donec at scelerisque purus.
-                Nunc vel lacinia urna. Duis vitae sapien dui. Pellentesque et sapien a orci tincidunt molestie eget quis
-                turpis.
-                Donec vehicula eros a tincidunt maximus. Nunc scelerisque felis a neque molestie porttitor.</p>
+            <p class="text-base font-medium text-black mb-5">{{ $assesment->importance }}</p>
 
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-orange-600">Pentingnya Sertifikasi BNSP</h5>
             <hr class="h-px my-3 border-0 bg-gray-800">
