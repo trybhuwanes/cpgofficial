@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\CategoryTraining;
 use Illuminate\Http\Request;
 use App\Models\Training;
+use App\Models\TrainingCategory;
+use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
 
@@ -29,11 +31,14 @@ class TrainingController extends Controller
 
     public function createTrainingPage()
     {
-        return view('admin.training.createTrainingPage');
+        $categories = CategoryTraining::all();
+
+        return view('admin.training.createTrainingPage', compact('categories'));
     }
 
     public function createTraining(Request $request)
     {
+        // dd($request->all());
         // $request->validate([
         //     'pict_training' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Menambahkan aturan validasi untuk file gambar
         //     // Aturan validasi lainnya untuk input lainnya
@@ -58,22 +63,32 @@ class TrainingController extends Controller
 
     // Menambahkan id_category ke dalam request jika perlu
     $request->merge([
-        'id_category' => 1,
         'slug_training' => Str::slug($request->title_training),
         'pict_training' => 'dummy',]);
-                dd($request);
+                // dd($request);
+
+                $training = new Training();
+$training->id_category = $request->category;
+$training->title_training = $request->title_training;
+$training->slug_training = $request->slug_training;
+$training->pict_training = $request->pict_training;
+$training->desc_training = $request->desc_training;
+$training->shortdesc_training = $request->shortdesc_training;
+$training->date_training = $request->date_training;
+$training->location_training = $request->location_training;
+    $training->save();
 
 
-                Training::create([
-                    // 'id_category' => $request->id_category,
-                    'title_training' => $request->title_training,
-                    'slug_training' => $request->slug_training, // Anda harus memastikan bahwa nilai slug_training diisi dengan benar, atau jika Anda menggunakan metode Eloquent Model mutator, biarkan saja.
-                    'pict_training' => $request->pict_training,
-                    'desc_training' => $request->desc_training,
-                    'shortdesc_training' => $request->shortdesc_training,
-                    'date_training' => $request->date_training,
-                    'location_training' => $request->location_training,
-                ]);
+                // Training::create([
+                //     'id_category' => $request->category,
+                //     'title_training' => $request->title_training,
+                //     'slug_training' => $request->slug_training,
+                //     'pict_training' => $request->pict_training,
+                //     'desc_training' => $request->desc_training,
+                //     'shortdesc_training' => $request->shortdesc_training,
+                //     'date_training' => $request->date_training,
+                //     'location_training' => $request->location_training,
+                // ]);
 
 
         return redirect()->route('admin.training');
@@ -147,7 +162,7 @@ class TrainingController extends Controller
     }
 
 
-    // CATEGORY TRAINING 
+    // CATEGORY TRAINING
     public function adminCategoryTraining()
     {
         $category = CategoryTraining::all();

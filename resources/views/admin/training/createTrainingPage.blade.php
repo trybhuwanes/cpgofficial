@@ -12,6 +12,17 @@
         <form action="{{ route( 'admin.training.create')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-5">
+                <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+                <select id="category" name="category" class="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option value="">Select a category</option>
+                    @foreach ($categories as $item)
+                    <option value="{{ $item->id}}">{{$item->name_category}}</option>
+                    @endforeach
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <div class="mb-5">
                 <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
                 <input type="text" id="title_training" name="title_training"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\AssesmentCenter;
 use App\Models\SyaratAssesment;
 Use App\Models\UkAssesment;
+use App\Models\CategoryTraining;
 use Illuminate\Support\Facades\Crypt;
 
 use Illuminate\Http\Request;
@@ -200,20 +201,22 @@ public function deleteSyaratAssesment($id, $assesmentId) {
     return redirect()->route('admin.assesment.edit.page', ['id' => $encryptedId]);}
 
 public function createAssesmentPage() {
-    return view('admin.assesment.assesmentCreate');
+    // dd($categories);
+    return view('admin.assesment.assesmentCreate', compact('categories'));
 }
 
 public function createAssesment(Request $request) {
     // dd($request->all());
     $request->validate([
-        'title_assesment' => 'required',
-        'desc_assesment' => 'required',
+        'title_assessment' => 'required',
+        'desc_assessment' => 'required',
         'importance' => 'required',
     ]);
 
     $assesment = new AssesmentCenter();
-    $assesment->title = $request->title_assesment;
-    $assesment->desc = $request->desc_assesment;
+    // $assesment->id_category = $request->category;
+    $assesment->title = $request->title_assessment;
+    $assesment->desc = $request->desc_assessment;
     $assesment->importance = $request->importance;
     $assesment->pict = 'default.jpg';
     $assesment->uk = 'default.jpg';
