@@ -147,5 +147,52 @@ class TrainingController extends Controller
     }
 
 
+    // CATEGORY TRAINING 
+    public function adminCategoryTraining()
+    {
+        $category = CategoryTraining::all();
+        return view('admin.training.category.category', compact('category'));
+    }
+
+    public function createCategoryPage() {
+        return view('admin.training.category.createCategoryPage');
+    }
+
+    public function storeCategory(Request $request) {
+        $request->validate([
+            'name_category' => 'required',
+        ]);
+
+        try {
+            CategoryTraining::create([
+                'name_category' => $request->name_category,
+            ]);
+            return redirect()->route('admin.training.category');
+        } catch (\Throwable $th) {
+            return redirect()->back()->with('admin.training.category', 'Data gagal ditambahkan');
+        }
+    }
+
+    public function editCategoryPage($id) {
+        $encryptedId = Crypt::decrypt($id);
+        $category = CategoryTraining::find($encryptedId);
+        return view('admin.training.category.editCategoryPage', compact('category'), ['encryptedId' => $encryptedId]);
+    }
+
+    public function updateCategory(Request $request, $id) {
+        $category = CategoryTraining::find($id);
+
+        $category->name_category = $request->name_category;
+        $category->updated_at = now();
+        $category->save();
+        return redirect()->route('admin.training.category');
+    }
+
+    public function deleteCategory($id) {
+        $encryptedId = Crypt::decrypt($id);
+        CategoryTraining::find($encryptedId)->delete();
+        return redirect()->route('admin.training.category');
+    }
+
 
 }
