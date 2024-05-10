@@ -15,11 +15,13 @@ class TrainingController extends Controller
 {
 
     public function trainingPage() {
-        return view('trainingPage');
+        $training = Training::all();
+        return view('trainingPage', compact(['training']));
     }
 
-    public function trainingDetailPage() {
-        return view('trainingDetailPage');
+    public function trainingDetailPage($id) {
+        $training = Training::whereId($id)->first();
+        return view('trainingDetailPage')->with('training', $training);
     }
 
     // ADMIN FUNCTION

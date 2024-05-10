@@ -14,12 +14,13 @@ class AssesmentController extends Controller
 {
     //
     public function index() {
-
-        return view("assesmentPage");
+        $assesment = AssesmentCenter::all();
+        return view('assesmentPage', compact(['assesment']));
     }
 
-    public function detailAssesmentPage() {
-        return view('assesmentDetailPage');
+    public function detailAssesmentPage($id) {
+        $assesment = AssesmentCenter::whereId($id)->first();
+        return view('assesmentDetailPage')->with('assesment', $assesment);
     }
 
     public function adminAssesment() {
