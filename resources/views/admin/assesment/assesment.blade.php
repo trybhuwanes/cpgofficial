@@ -81,7 +81,7 @@
                                 <div class="text-base font-semibold text-gray-900 dark:text-white">{{ $item->title}}</div>
                             </td>
                             <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                <div class="text-base font-semibold text-gray-900 dark:text-white">{{ $item->desc}}</div>
+                                <div class="text-base font-semibold text-gray-900 dark:text-white">{{ Str::substr($item->desc, 0, 40) }} ...</div>
                             </td>
 
                             <td class="p-4 text-base text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $item->updated_at}}</td>
