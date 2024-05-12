@@ -16,6 +16,7 @@ class CreateAssesmentCentersTable extends Migration
         Schema::create('assesment_centers', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('slug');
             $table->string('pict');
             $table->text('desc');
             $table->text('importance');

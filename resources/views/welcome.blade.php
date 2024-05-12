@@ -141,7 +141,7 @@
                     <div class="flex mb-10 border-b border-white border-solid max-w-[500px]">
                         <div class="max-w-[235px] pr-2 mb-3">
                             <div class="font-bold mb-2 text-base xl:text-lg text-white">
-                                Trusted Program
+                                Big Expansion
                             </div>
                             <p class="text-sm pb-2">
                                 Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
@@ -149,10 +149,10 @@
                         </div>
                         <div class="max-w-[235px]">
                             <div class="font-bold mb-2 text-base xl:text-lg text-white">
-                                Trusted Program
+                                Commitmen to Quality
                             </div>
                             <p class="text-sm pb-2">
-                                Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
+                                Dengan dedikasi terhadap negeri, kami menyediakan pendampingan yang berfokus pada pertumbuhan dan pengembangan yang berkelanjutan.
                             </p>
                         </div>
                     </div>
@@ -160,10 +160,10 @@
                     <div class="flex border-b mb-5 border-white border-solid max-w-[500px]">
                         <div class="max-w-[235px] mb-3">
                             <div class="font-bold mb-2 text-base xl:text-lg text-white">
-                                Trusted Program
+                                Professional Team
                             </div>
                             <p class="text-sm pb-2">
-                                Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
+                                Tim kami terdiri dari ahli yang berpengalaman dan berkomitmen untuk memberikan layanan berkualitas tertinggi kepada klien kami. 
                             </p>
                         </div>
                         <div class="max-w-[235px]">
@@ -186,7 +186,7 @@
         
     </div>
 
-    {{-- Section 5 --}}
+    {{-- Section 5 OUR PROGRAM & INTERNSHIP --}}
     <div class="bg-white max-w-full grid xl:flex px-20 pt-20">
         <div data-aos="fade-up" data-aos-duration="1500" class="max-w-full xl:max-w-[480px] m-10 sm:mb-0">
             <div class="max-w-[580px] m-5 text-5xl text-black mb-10 font-bold">
@@ -232,7 +232,7 @@
                         Organizing
                     </h1>
                     <p class="text-sm">
-                        Pengorganisasian atau perencanaan kegiatan untuk mencapai tujuan yang efisien.                    </p>
+                        Organizing, kita akan menjelajahi seni menyusun dan mengelola segala hal, dari ide hingga eksekusi, untuk menciptakan dampak yang berarti.                   </p>
                     <a href="#">
                         <div class="text-black mt-5 font-bold text-base hover:text-blue-700">
                             Learn More
@@ -245,7 +245,7 @@
                         Assesment Center
                     </h1>
                     <p class="text-sm">
-                        Proses sistematik untuk menilai Kompetensi yang dipersyaratkan bagi keberhasilan dalam pekerjaan.                    </p>
+                        Metode berbasis kompetensi yang sesuai dengan standar internasional, membawa peserta pada perjalanan pencapaian terbaik mereka.                   </p>
                     <a href="#">
                         <div class="text-black mt-5 font-bold text-base hover:text-blue-700">
                             Learn More
@@ -304,68 +304,55 @@
         </script>
     </div>
 
-    {{-- Section 6 --}}
+    {{-- Section 6 FAQ --}}
     <div class="grid w-full justify-center items-center xl:flex xl:flex-row bg-orange-500 xl:px-36 xl:p-24 sm:py-24">
         <div data-aos="fade-up" data-aos-duration="1500" class="xl:w-1/2">
             <div class="text-5xl text-black mb-10 font-bold">
                 Frequently Asked Questions
             </div>
-
-            <div class="bg-white mr-20 w-full xl:w-[550px] h-[331px] rounded-[20px] p-10 mb-10">
+            <div class=" mr-20 ">
+                <img class="object-cover w-full xl:w-[550px] h-[331px] rounded-[20px]" src="images\faq.jpg" alt="">
             </div>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1500" class="xl:w-1/2">
+        <div data-aos="fade-up" data-aos-duration="1500" class="xl:w-1/2 justify-center items-center place-items-center">
             <div class="display grid text-orange-100">
-                <div class="grid mb-10 max-w-[600px]">
+                <div class="grid max-w-[600px]">
                     <div class=" pr-2 mb-8">
                         <div class="font-bold mb-4 text-xl text-black ">
-                            What types of electrical services does electema Provide for homes?
+                            Bagaimana cara mendaftar pelatihan atau event lainnya di CPG?
                         </div>
                         <p class="text-sm pb-5  border-b border-white border-solid">
-                            Tincidunt viverra dui faucibus leo adipiscing id luctus facilisis. Urna turpis felis aliquet
-                            feugiat nunc. Sagittis diam morbi aenean.
+                            Cara mendaftar nya bisa langsung mengisi link pendaftaran yang tersedia, 
+                            dan apabila ada pertanyaan lain bisa menghubungi contact person.
                         </p>
-
                     </div>
 
                     <div class=" pr-2 mb-8">
                         <div class="font-bold mb-2 text-xl text-black ">
-                            What types of electrical services does electema Provide for homes?
+                            Apakah sertifikat dari CPG cukup kuat untuk melamar pekerjaan?
                         </div>
                         <p class="text-sm pb-5  border-b border-white border-solid">
-                            Tincidunt viverra dui faucibus leo adipiscing id luctus facilisis. Urna turpis felis aliquet
-                            feugiat nunc. Sagittis diam morbi aenean.
+                            Sertifikat CPG bisa digunakan untuk melamar pekerjaan sebagai pendukung portofolio peserta. 
+                            Jika pelatihan terdapat program sertifikasi keahlian, 
+                            sertifikasi dapat membantu peserta dalam melamar pekerjaan.
                         </p>
-
                     </div>
 
                     <div class=" pr-2 mb-8">
                         <div class="font-bold mb-2 text-xl text-black ">
-                            What types of electrical services does electema Provide for homes?
+                            Apakah pelatihan CPG ini hanya bisa diikuti secara online saja?
                         </div>
                         <p class="text-sm pb-5 border-b border-white border-solid">
-                            Tincidunt viverra dui faucibus leo adipiscing id luctus facilisis. Urna turpis felis aliquet
-                            feugiat nunc. Sagittis diam morbi aenean.
+                            Pelatihan ini dapat diikuti secara online dan offline sesuai ketentuan pada tema pelatihan, 
+                            untuk info event terkini dapat cek di instagram dan website.
                         </p>
-
-                    </div>
-
-                    <div class=" pr-2 mb-8">
-                        <div class="font-bold mb-2 text-xl text-black ">
-                            What types of electrical services does electema Provide for homes?
-                        </div>
-                        <p class="text-sm pb-5  border-b border-white border-solid">
-                            Tincidunt viverra dui faucibus leo adipiscing id luctus facilisis. Urna turpis felis aliquet
-                            feugiat nunc. Sagittis diam morbi aenean.
-                        </p>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    {{-- Section 7 --}}
+    {{-- Section 7 VIDEP --}}
     <div class="bg-white max-w-full">
         <div class="flex flex-col py-10">
             <div data-aos="fade-up" data-aos-duration="1500" class="flex justify-between items-center my-10 mx-36">
@@ -381,18 +368,18 @@
                 {{-- <iframe class="w-full aspect-[4/3]" src="https://www.youtube.com/embed/kvUAwvpWHrA?si=zzuAfovcryTSfUMc"></iframe> --}}
                 <div class=" sm:w-auto md:w-1/3 xl:w-1/4">
                     <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/kvUAwvpWHrA?si=zzuAfovcryTSfUMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h1 class="text-lg font-bold leading-10 text-black text-left">Lorem, ipsum.</h1>
-                    <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, quia!</p>
+                    {{-- <h1 class="text-lg font-bold leading-10 text-black text-left">Lorem, ipsum.</h1> --}}
+                    {{-- <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, quia!</p> --}}
                 </div>
                 <div class=" sm:w-auto md:w-1/3 xl:w-1/4">
                     <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/kvUAwvpWHrA?si=zzuAfovcryTSfUMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h1 class="text-lg font-bold leading-10 text-black text-left">Lorem, ipsum.</h1>
-                    <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, quia!</p>
+                    {{-- <h1 class="text-lg font-bold leading-10 text-black text-left">Lorem, ipsum.</h1> --}}
+                    {{-- <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, quia!</p> --}}
                 </div>
                 <div class=" sm:w-auto md:w-1/3 xl:w-1/4">
                     <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/kvUAwvpWHrA?si=zzuAfovcryTSfUMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h1 class="text-lg font-bold leading-10 text-black text-left">Lorem, ipsum.</h1>
-                    <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, quia!</p>
+                    {{-- <h1 class="text-lg font-bold leading-10 text-black text-left">Lorem, ipsum.</h1> --}}
+                    {{-- <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, quia!</p> --}}
                 </div>
             </div>
 

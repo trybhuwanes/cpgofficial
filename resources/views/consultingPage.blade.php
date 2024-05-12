@@ -18,18 +18,8 @@
     {{-- SECTION 2 --}}
     <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 my-20">
         <p class="font-normal text-black text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta urna nibh, non porta libero molestie eu.
-            Sed ac erat sem.
-            Nam id magna condimentum, aliquam nulla ut, posuere tellus. Praesent quam ex, varius eget dui sed, bibendum
-            fermentum sem.
-            In hac habitasse platea dictumst. Phasellus luctus nibh quis nulla dapibus viverra. Proin cursus condimentum
-            ante, sed pulvinar sapien.
-            Fusce semper ultricies quam at volutpat. Vivamus faucibus massa rutrum felis congue dignissim. Nulla ultricies
-            nulla eu sem tincidunt pretium.
-            Maecenas euismod laoreet urna, a lobortis dolor lacinia id. Etiam in varius erat, eu aliquam tellus. Aliquam
-            feugiat cursus sodales.
-            Aliquam vel diam vitae felis convallis finibus. Vestibulum mattis justo metus, blandit faucibus dui posuere
-            elementum
+            Citra Prestasi Gemilang tidak hanya menawarkan layanan konsultasi. Kami membantu Anda mengubah potensi bisnis menjadi kenyataan. 
+            Dari merencanakan acara hingga memperkuat operasional, kami memiliki solusi yang Anda butuhkan, diantaranya:
         </p>
         <ol class="space-y-1 text-black list-decimal list-inside">
             <li>Management Event</li>
@@ -136,13 +126,25 @@
             <img class="w-full aspect-square object-cover rounded-xl shadow-xl" src="images\consulting.png" alt="Poster">
         </div>
         <div data-aos="fade-up" data-aos-duration="1500"
-            class="xl:w-1/2 sm:w-full h-[333px] p-12 xl:mt-0 sm:mt-5 bg-white rounded-[20px] shadow-xl border border-neutral-500 flex-col justify-start items-start gap-5 inline-flex">
-            <p class="text-base font-medium text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Etiam vestibulum libero quis nulla fermentum, sit amet eleifend purus aliquet.
-                Phasellus porttitor sapien et eros posuere viverra. Donec at scelerisque purus.
-                Nunc vel lacinia urna. Duis vitae sapien dui. Pellentesque et sapien a orci tincidunt molestie eget quis
-                turpis.
-                Donec vehicula eros a tincidunt maximus. Nunc scelerisque felis a neque molestie porttitor.</p>
+            class="xl:w-1/2 sm:w-full h-auto p-12 xl:mt-0 sm:mt-5 bg-white rounded-[20px] shadow-xl border border-neutral-500 flex-col justify-start items-start gap-5 inline-flex">
+            <p class="text-base font-medium text-black">
+                Citra Prestasi Gemilang adalah mitra strategis yang membantu mengubah tantangan bisnis menjadi peluang sukses. 
+                Dengan pengalaman yang luas dan pendekatan yang inovatif, kami bekerja sama dengan Anda untuk:
+            </p>
+
+            <ul class="max-w-md space-y-1 text-black list-disc list-inside font-medium">
+                <li>Mengidentifikasi masalah utama dalam bisnis Anda.</li>
+                <li>Membangun strategi yang efektif untuk mengatasi tantangan tersebut.</li>
+                <li>Menerapkan solusi yang praktis dan terukur.</li>
+                <li>Mengoptimalkan kinerja dan pertumbuhan bisnis Anda.</li>
+            </ul>
+
+            <p class="text-base font-medium text-black">
+                Jadi, jika Anda ingin mencapai potensi penuh bisnis Anda, bergabunglah dengan kami di Citra Prestasi Gemilang. 
+                Bersama-sama kita akan menghadapi masa depan dengan keyakinan dan keberhasilan!
+            </p>
+
+            
 
             <a href="#">
                 <button type="button"

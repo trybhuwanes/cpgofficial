@@ -37,22 +37,22 @@ Route::get('/program', function () {
     return view('programPage');
 });
 
-Route::get('/schedule', function () {
-    return view('schedulePage');
-})->name('schedule');
+// Route::get('/schedule', function () {
+//     return view('schedulePage');
+// })->name('schedule');
 
+Route::get('/schedule', [DashboardController::class, 'schedule'])->name('schedule');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/{slug}', [BlogController::class, 'read'])->name('blog.read');
 Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index'])->name('cerita-umkm');
 Route::get('/cerita-umkm/{slug}', [CeritaUmkmController::class, 'read'])->name('cerita-umkm-read');
 Route::get('/assesment-center', [AssesmentController::class, 'index'])->name('assesment-center');
-Route::get('/assesment-center/{id}', [AssesmentController::class, 'detailAssesmentPage'])->name('assesment-center.detail');
+Route::get('/assesment-center/{slug}', [AssesmentController::class, 'detailAssesmentPage'])->name('assesment-center.detail');
 Route::get('/organizing', [OrganizingController::class, 'index'])->name('organizing');
 Route::get('/internship', [InternshipController::class, 'index'])->name('internship');
 Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
 Route::get('/training', [TrainingController::class, 'trainingPage'])->name('training');
 Route::get('/training/{slug}', [TrainingController::class, 'trainingDetailPage'])->name('training.detail');
-Route::get('/training/{category}', [TrainingController::class, 'getTrainingCategory'])->name('training.category');
 Route::get('/consulting', [ConsultingController::class, 'index'])->name('consulting');
 Route::get('/collaboration', [CollaborationController::class, 'index'])->name('collaboration');
 Route::get('/csr', function () {

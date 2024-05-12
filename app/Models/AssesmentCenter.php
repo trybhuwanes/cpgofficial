@@ -13,6 +13,7 @@ class AssesmentCenter extends Model
     protected $fillable = [
         'id',
         'title',
+        'slug',
         'pict',
         'desc',
         'importance',

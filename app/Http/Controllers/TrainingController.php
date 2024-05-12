@@ -24,10 +24,6 @@ class TrainingController extends Controller
         return view('trainingDetailPage')->with('training', $training);
     }
 
-    // public function getTrainingCategory($id) {
-        
-    // }
-
     // ADMIN FUNCTION
     public function adminTraining()
     {

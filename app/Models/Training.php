@@ -26,4 +26,8 @@ class Training extends Model
     {
         return $this->belongsTo(CategoryTraining::class, 'id_category');
     }
+
+    protected $casts = [
+        'date_training' => 'datetime'
+    ];
 }

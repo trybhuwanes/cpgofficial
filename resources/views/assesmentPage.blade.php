@@ -18,14 +18,10 @@
     {{-- SECTION 2 --}}
     <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 mt-10">
         <p class="font-normal text-black text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum euismod pellentesque.
-            Etiam interdum ex vel sapien porta rhoncus. Nam aliquet risus sapien, ut faucibus purus pharetra ac.
-            Sed consectetur lorem in nibh blandit, eget tincidunt magna suscipit. Duis ac varius nulla.
-            Phasellus elementum nisl vitae varius viverra. Etiam consequat odio dignissim convallis interdum.
-            Quisque id volutpat lectus, non scelerisque nisl. Vestibulum quis efficitur est.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam et
-            rutrum mi, a iaculis lorem.
-            Phasellus blandit eros a nunc vehicula, sit amet mollis felis condimentum <br>
+            Citra Prestasi Gemilang sebagai wadah Assessment Center menyediakan beragam program evaluasi dan pengembangan 
+            untuk membantu Anda mencapai potensi terbaik Anda. Dari manajemen sumber daya manusia hingga keahlian administratif, 
+            kami menawarkan layanan yang komprehensif untuk membantu perusahaan dan individu dalam mencapai tujuan mereka. 
+            Berikut beberapa bidang jasa yang kami tawarkan:<br>
         </p>
         <ol class="space-y-1 text-black list-decimal list-inside">
             <li>Human Capital</li>
@@ -61,12 +57,12 @@
         @foreach ($assesment as $item)
             <div
                 class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
-                <a href="{{ route('assesment-center.detail', $item->id) }}">
-                    <img class="block h-36 object-cover w-full rounded-t-lg" src="images\service-excellence.jpg"
-                        alt="" />
+                <a href="{{ route('assesment-center.detail', $item->slug) }}">
+                    <img class="block h-36 object-cover w-full rounded-t-lg" src="{{ asset('assets/img/' . $item->pict) }}"
+                        alt="{{ $item->pict }}" />
                 </a>
                 <div class="p-5">
-                    <a href="{{ route('assesment-center.detail', $item->id) }}">
+                    <a href="{{ route('assesment-center.detail', $item->slug) }}">
                         <h6 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-black">{{ $item->title }}</h6>
                     </a>
 

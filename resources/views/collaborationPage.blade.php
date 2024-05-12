@@ -21,10 +21,10 @@
             <div class="w-full">
                 <div data-aos="fade-up" data-aos-duration="1500" class="max-w-full pr-10">
                     <p class="text-lg leading-7 text-black w-full mb-5 xl:text-left sm:text-center">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta urna nibh, non porta libero molestie eu. 
-                        Sed ac erat sem. Nam id magna condimentum, aliquam nulla ut, posuere tellus. Praesent quam ex, varius eget dui sed,
-                         bibendum fermentum sem. In hac habitasse platea dictumst. 
-                        (Kalimat mengajak berkolaborasi dengan CPG).</p>
+                        Bergabunglah dengan PT Citra Prestasi Gemilang dalam perjalanan kami untuk menciptakan perubahan yang positif! 
+                        Kami selalu terbuka untuk berkolaborasi dengan individu, organisasi, dan mitra yang memiliki visi dan nilai yang sejalan dengan kami. 
+                        Mari kita bergandengan tangan untuk menciptakan dampak yang berarti bagi masyarakat dan lingkungan. 
+                        Ayo, bergabunglah bersama kami hari ini!</p>
                         <a href="#">
                             <button type="button"
                                 class="text-white bg-black hover:bg-orange-500 focus:outline-none focus:ring-4 font-medium rounded-full text-base px-8 py-4 text-center">Hubungi Kami</button>
