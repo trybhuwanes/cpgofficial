@@ -18,14 +18,11 @@
     {{-- SECTION 2 --}}
     <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 mt-10">
         <p class="font-normal text-black text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta urna nibh, non porta libero molestie eu. 
-            Sed ac erat sem. Nam id magna condimentum, aliquam nulla ut, posuere tellus. 
-            Praesent quam ex, varius eget dui sed, bibendum fermentum sem. In hac habitasse platea dictumst. 
-            Phasellus luctus nibh quis nulla dapibus viverra. Proin cursus condimentum ante, sed pulvinar sapien. 
-            Fusce semper ultricies quam at volutpat. Vivamus faucibus massa rutrum felis congue dignissim. 
-            Nulla ultricies nulla eu sem tincidunt pretium. Maecenas euismod laoreet urna, a lobortis dolor lacinia id. 
-            Etiam in varius erat, eu aliquam tellus. Aliquam feugiat cursus sodales. Aliquam vel diam vitae felis convallis finibus. 
-            Vestibulum mattis justo metus, blandit faucibus dui posuere elementum.
+            PT Citra Prestasi Gemilang memahami bahwa keberhasilan sebuah perusahaan tidak hanya diukur dari segi keuangan, 
+            tetapi juga dari dampaknya terhadap masyarakat dan lingkungan sekitar. 
+            Melalui Program Corporate Social Responsibility (CSR) kami, kami berkomitmen untuk memberikan kontribusi positif 
+            bagi masyarakat dan lingkungan. 
+            Bersama-sama, mari kita wujudkan perubahan yang berarti dan menciptakan masa depan yang lebih baik untuk semua.
         </p>
     </div>
 
@@ -40,21 +37,21 @@
                 {{-- CARD BLOG --}}
                 <div
                     class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
-                    <a href="{{ route('blog-read') }}">
+                    <a href="#">
                         <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
 
                 <div
                     class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
-                    <a href="{{ route('blog-read') }}">
+                    <a href="#">
                         <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
 
                 <div
                     class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
-                    <a href="{{ route('blog-read') }}">
+                    <a href="#">
                         <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>

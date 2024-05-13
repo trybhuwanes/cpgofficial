@@ -11,6 +11,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\ConsultingController;
 use App\Http\Controllers\CollaborationController;
+use App\Http\Controllers\CsrController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 /*
 |--------------------------------------------------------------------------
@@ -37,21 +38,22 @@ Route::get('/program', function () {
     return view('programPage');
 });
 
-Route::get('/schedule', function () {
-    return view('schedulePage');
-})->name('schedule');
+// Route::get('/schedule', function () {
+//     return view('schedulePage');
+// })->name('schedule');
 
+Route::get('/schedule', [DashboardController::class, 'schedule'])->name('schedule');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
-Route::get('/blog/{blog:id}', [BlogController::class, 'read'])->name('blog.read');
+Route::get('/blog/{slug}', [BlogController::class, 'read'])->name('blog.read');
 Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index'])->name('cerita-umkm');
-Route::get('/cerita-umkm/{blog:id}', [CeritaUmkmController::class, 'read'])->name('cerita-umkm-read');
+Route::get('/cerita-umkm/{slug}', [CeritaUmkmController::class, 'read'])->name('cerita-umkm-read');
 Route::get('/assesment-center', [AssesmentController::class, 'index'])->name('assesment-center');
-Route::get('/assesment-center/{id}', [AssesmentController::class, 'detailAssesmentPage'])->name('assesment-center.detail');
+Route::get('/assesment-center/{slug}', [AssesmentController::class, 'detailAssesmentPage'])->name('assesment-center.detail');
 Route::get('/organizing', [OrganizingController::class, 'index'])->name('organizing');
 Route::get('/internship', [InternshipController::class, 'index'])->name('internship');
 Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
 Route::get('/training', [TrainingController::class, 'trainingPage'])->name('training');
-Route::get('/training/{id}', [TrainingController::class, 'trainingDetailPage'])->name('training.detail');
+Route::get('/training/{slug}', [TrainingController::class, 'trainingDetailPage'])->name('training.detail');
 Route::get('/consulting', [ConsultingController::class, 'index'])->name('consulting');
 Route::get('/collaboration', [CollaborationController::class, 'index'])->name('collaboration');
 Route::get('/csr', function () {
@@ -74,7 +76,7 @@ Route::prefix('admin')->group(function () {
         Route::post('/create', [BlogController::class, 'createBlog'])->name('admin.blog.create');
         Route::get('/edit/{id}', [BlogController::class, 'editBlogPage'])->name('admin.blog.edit.page');
         Route::put('/edit/{id}', [BlogController::class, 'editBlog'])->name('edit');
-        Route::delete('/delete/{id}', [BlogController::class, 'deleteBlog'])->name('admin.blog.delete');
+        Route::get('/delete/{id}', [BlogController::class, 'deleteBlog'])->name('admin.blog.delete');
     });
 
     Route::prefix('training')->group(function () {
@@ -83,7 +85,7 @@ Route::prefix('admin')->group(function () {
         Route::post('/create', [TrainingController::class, 'createTraining'])->name('admin.training.create');
         Route::get('/edit/{id}', [TrainingController::class, 'editTrainingPage'])->name('admin.training.edit.page');
         Route::put('/edit/{id}', [TrainingController::class, 'editTraining'])->name('admin.training.edit');
-        Route::delete('/delete/{id}', [TrainingController::class, 'deleteTraining'])->name('admin.training.delete');
+        Route::get('/delete/{id}', [TrainingController::class, 'deleteTraining'])->name('admin.training.delete');
 
         Route::prefix('category')->group(function() {
             Route::get('/', [TrainingController::class, 'adminCategoryTraining'])->name('admin.training.category');
@@ -116,7 +118,16 @@ Route::prefix('admin')->group(function () {
         Route::post('/create', [CeritaUmkmController::class, 'createCeritaUmkm'])->name('admin.umkm_story.create');
         Route::get('/edit/{id}', [CeritaUmkmController::class, 'editCeritaUmkmPage'])->name('admin.umkm_story.edit.page');
         Route::put('/edit/{id}', [CeritaUmkmController::class, 'editCeritaUmkm'])->name('admin.umkm_story.edit');
-        Route::delete('/delete/{id}', [CeritaUmkmController::class, 'deleteCeritaUmkm'])->name('admin.umkm_story.delete');
+        Route::get('/delete/{id}', [CeritaUmkmController::class, 'deleteCeritaUmkm'])->name('admin.umkm_story.delete');
+    });
+
+    Route::prefix('csr')->group(function () {
+        Route::get('/', [CsrController::class, 'adminCsr'])->name('admin.csr');
+        Route::get('/create', [CsrController::class, 'createCsrPage'])->name('admin.csr.create.page');
+        Route::post('/create', [CsrController::class, 'createCsr'])->name('admin.csr.create');
+        Route::get('/edit/{id}', [CsrController::class, 'editCsrPage'])->name('admin.csr.edit.page');
+        Route::put('/edit/{id}', [CsrController::class, 'editCsr'])->name('admin.csr.edit');
+        Route::get('/delete/{id}', [CsrController::class, 'deleteCsr'])->name('admin.csr.delete');
     });
 });
 // });

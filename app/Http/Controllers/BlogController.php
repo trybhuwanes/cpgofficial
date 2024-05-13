@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use App\Models\Blog;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+
 
 class BlogController extends Controller
 {
@@ -15,8 +17,8 @@ class BlogController extends Controller
         return view('blogPage', compact(['blog']));
     }
 
-    public function read($id) {
-        $blog = Blog::whereId($id)->first();
+    public function read($slug) {
+        $blog = Blog::where('slug_blog', $slug)->first();
         return view('blogReadPage')->with('blog', $blog);
     }
     // Admin Function
@@ -38,17 +40,21 @@ class BlogController extends Controller
             'pict_blog' => 'required|image|mimes:jpeg,png,jpg',
         ]);
 
+        $request->merge([
+            'slug_blog' => Str::slug($request->title),
+        ]);
+
         $pictBlog = $request->file('pict_blog');
-        $fileName = $request->title . '-pict' . '.' . $pictBlog->extension();
+        $fileName = $request->slug_blog . '-pict' . '.' . $pictBlog->extension();
         $pictBlog->move(public_path('assets/img'), $fileName);
 
         try {
-            Blog::create([
-                'title_blog' => $request->title,
-                'desc_blog' => $request->desc,
-                'slug_blog' => 'temp',
-                'pict_blog' => $fileName
-            ]);
+            $blog = new Blog();
+            $blog->title_blog = $request->title;
+            $blog->slug_blog = $request->slug_blog;
+            $blog->pict_blog = $fileName;
+            $blog->desc_blog = $request->desc;
+            $blog->save();
             return redirect()->route('admin.blog');
         } catch (\Throwable $th) {
             return redirect()->back()->with('admin.blog', 'Data gagal ditambahkan');
@@ -65,10 +71,14 @@ class BlogController extends Controller
     public function editBlog(Request $request, $id) {
         $blog = Blog::find($id);
 
+        $request->merge([
+            'slug_blog' => Str::slug($request->title),
+        ]);
+
         if($request->file('pict_blog')){
             // upload image
             $pictBlog = $request->file('pict_blog');
-            $fileName = $request->title . '-pict' . '.' . $pictBlog->extension();
+            $fileName = $request->slug_blog . '-pict' . '.' . $pictBlog->extension();
             $pictBlog->move(public_path('assets/img'), $fileName);
         
             // delete old image
@@ -81,7 +91,9 @@ class BlogController extends Controller
         }
 
         $blog->title_blog = $request->title;
-        $blog->desc_blog = $request->desc;
+        $blog->slug_blog = $request->slug_blog;
+        $blog->pict_blog = $fileName;
+        $blog->desc_blog = $request->desc;        
         $blog->updated_at = now();
         $blog->save();
         return redirect()->route('admin.blog');
@@ -90,6 +102,6 @@ class BlogController extends Controller
     public function deleteBlog($id) {
         $encryptedId = Crypt::decrypt($id);
         Blog::find($encryptedId)->delete();
-        return redirect()->route('admin.blog.blog');
+        return redirect()->route('admin.blog');
     }
 }

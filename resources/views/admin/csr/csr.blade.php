@@ -1,6 +1,6 @@
 @extends('layouts.admin-app')
 
-@section('title', 'Admin | Dashboard')
+@section('title', 'Admin | CSR')
 
 @section('content')
 
@@ -12,25 +12,33 @@
                   <li class="inline-flex items-center">
                     <a href="#" class="inline-flex items-center text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white">
                       <svg class="w-5 h-5 mr-2.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-                      Dashboard
+                      Dashboard CSR
                     </a>
+                  </li>
+                  <li>
+                    <div class="flex items-center">
+                      <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                      <a href="#" class="ml-1 text-gray-700 hover:text-primary-600 md:ml-2 dark:text-gray-300 dark:hover:text-white">CSR</a>
+                    </div>
                   </li>
                 </ol>
             </nav>
-            <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">All Event</h1>
+            <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">All CSR</h1>
         </div>
         <div class="items-center justify-between block sm:flex md:divide-x md:divide-gray-100 dark:divide-gray-700">
             <div class="flex items-center mb-4 sm:mb-0">
                 <form class="sm:pr-3" action="#" method="GET">
                     <label for="products-search" class="sr-only">Search</label>
                     <div class="relative w-48 mt-1 sm:w-64 xl:w-96">
-                        <input type="text" name="email" id="products-search" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Search for products">
+                        <input type="text" name="email" id="products-search" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Search for CSR">
                     </div>
                 </form>
             </div>
-            <button id="createProductButton" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none" type="button">
-                Add new event
-            </button>
+            <a href="{{ route('admin.csr.create') }}">
+                <button id="createBlogButton" class="mr-0 mb-2 text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none" type="button">
+                    Add new CSR
+                </button>
+            </a>
         </div>
     </div>
 </div>
@@ -50,10 +58,7 @@
                                 Title
                             </th>
                             <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400">
-                                Date
-                            </th>
-                            <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400">
-                                Location
+                                Deskripsi Singkat
                             </th>
                             <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400">
                                 Tanggal Update
@@ -64,19 +69,18 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
-                        {{-- {{< products.inline >}} --}}
-                        {{-- {{- range (index $.Site.Data "products") }} --}}
                         <?php $number = 1; ?>
+                        @foreach ($csr as $item)
                         <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">{{ $number++ }}</td>
                             <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                <div class="text-base font-semibold text-gray-900 dark:text-white">Workshop Online Strategi Komunikasi Gen Z Mengahdapi Dunia Kerja</div>
-                                <div class="text-sm font-normal text-gray-500 dark:text-gray-400">Human Resource</div>
+                                <div class="text-base font-semibold text-gray-900 dark:text-white">{{ $item->title_csr}}</div>
                             </td>
-                            <td class="p-4 text-base text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">17-07-2024</td>
-                            <td class="p-4 text-base text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">Online</td>
-                            <td class="p-4 text-base text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">16-08-20</td>
+                            <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                <div class="text-base font-semibold text-gray-900 dark:text-white">{{ Str::substr($item->desc_csr, 0, 40) }} ...</div>
+                            </td>
 
+                            <td class="p-4 text-base text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $item->updated_at}}</td>
                             <td class="p-4 space-x-2 whitespace-nowrap">
                                 <button type="button" id="updateProductButton" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-green-600 hover:bg-green-800 focus:ring-4 focus:ring-green-600">
                                     <svg class="w-4 h-4 mr-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -85,16 +89,30 @@
                                       </svg>
                                     View
                                 </button>
-                                <button type="button" id="updateProductButton" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-600">
+                                <a href="{{ route('admin.csr.edit.page', ['id' => Crypt::encrypt($item->id)]) }}">
+                                    <button type="button" id="updateProductButton" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-600">
                                     <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
                                     Update
                                 </button>
-                                <button type="button" id="deleteProductButton" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
-                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                            </a>
+                            <a href="{{ route('admin.csr.delete', ['id' => Crypt::encrypt($item->id)]) }}" onclick="return confirm('Are you sure?')">
+                                <button type="button" id="deleteButton" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
                                     Delete
                                 </button>
+                            </a>
+                                {{-- <form action="{{ route('admin.training.delete', ['id' => Crypt::encrypt($item->id)]) }}" method="POST" onclick="return confirm('Are you sure?')">
+                                    @csrf
+                                    @method('DELETE')
+
+                                    <button type="submit" id="deleteProductButton" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                                        Delete item
+                                    </button>
+                                </form> --}}
                             </td>
                         </tr>
+                        @endforeach
                 </table>
             </div>
         </div>

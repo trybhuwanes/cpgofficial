@@ -9,6 +9,7 @@ use App\Models\TrainingCategory;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 
 class TrainingController extends Controller
@@ -16,7 +17,8 @@ class TrainingController extends Controller
 
     public function trainingPage() {
         $training = Training::all();
-        return view('trainingPage', compact(['training']));
+        $category = CategoryTraining::all();
+        return view('trainingPage', compact(['training', 'category']));
     }
 
     public function trainingDetailPage($id) {
@@ -56,77 +58,73 @@ class TrainingController extends Controller
             // 'id_category' => 'required',
             'title_training' => 'required',
             // 'slug_training' => 'required',
-            // 'pict_training' => 'required',
+            'pict_training' => 'required|image|mimes:jpeg,png,jpg',
             'desc_training' => 'required',
             'shortdesc_training' => 'required',
             'date_training' => 'required',
             'location_training' => 'required',
         ]);
 
-    // Menambahkan id_category ke dalam request jika perlu
-    $request->merge([
-        'slug_training' => Str::slug($request->title_training),
-        'pict_training' => 'dummy',]);
-                // dd($request);
+        // Menambahkan id_category ke dalam request jika perlu
+        $request->merge([
+            'slug_training' => Str::slug($request->title_training),
+        ]);
 
-                $training = new Training();
-$training->id_category = $request->category;
-$training->title_training = $request->title_training;
-$training->slug_training = $request->slug_training;
-$training->pict_training = $request->pict_training;
-$training->desc_training = $request->desc_training;
-$training->shortdesc_training = $request->shortdesc_training;
-$training->date_training = $request->date_training;
-$training->location_training = $request->location_training;
-    $training->save();
+        $pictTraining = $request->file('pict_training');
+        $fileName = $request->slug_training . '-pict' . '.' . $pictTraining->extension();
+        $pictTraining->move(public_path('assets/img'), $fileName);
 
-
-                // Training::create([
-                //     'id_category' => $request->category,
-                //     'title_training' => $request->title_training,
-                //     'slug_training' => $request->slug_training,
-                //     'pict_training' => $request->pict_training,
-                //     'desc_training' => $request->desc_training,
-                //     'shortdesc_training' => $request->shortdesc_training,
-                //     'date_training' => $request->date_training,
-                //     'location_training' => $request->location_training,
-                // ]);
-
+        $training = new Training();
+        $training->id_category = $request->category;
+        $training->title_training = $request->title_training;
+        $training->slug_training = $request->slug_training;
+        $training->pict_training = $fileName;
+        $training->desc_training = $request->desc_training;
+        $training->shortdesc_training = $request->shortdesc_training;
+        $training->date_training = $request->date_training;
+        $training->location_training = $request->location_training;
+        $training->save();
 
         return redirect()->route('admin.training');
 
     }
 
     public function editTrainingPage($id) {
-        // dd($id);
         $encryptedId = Crypt::decrypt($id);
         $training = Training::find($encryptedId);
-        // dd($id, $decrypted, $blog);
         return view('admin.training.trainingUpdate', compact('training'), ['encryptedId' => $encryptedId]);
-
-        // return view('edit-blog', ['encryptedId' => $encryptedId]);
     }
 
     public function editTraining(Request $request, $id) {
-        // dd($request->all());
-        // $request->validate([
-        //     'title' => 'required',
-        //     'desc' => 'required',
-        // ]);
-
-        // dd($request->all());
         $training = Training::find($id);
 
+        $request->merge([
+            'slug_training' => Str::slug($request->title_training),
+        ]);
+
+        if($request->file('pict_training')){
+            // upload image
+            $pictTraining = $request->file('pict_training');
+            $fileName = $request->slug_training . '-pict' . '.' . $pictTraining->extension();
+            $pictTraining->move(public_path('assets/img'), $fileName);
+        
+            // delete old image
+            Storage::delete('public/assets/img/'. $training->pict_training);
+        
+            // update post data image
+            $training->update([
+                'pict_training'   => $fileName,
+            ]);
+        }
+
         $training->title_training = $request->title_training;
+        $training->slug_training = $request->slug_training;
         $training->desc_training = $request->desc_training;
         $training->shortdesc_training = $request->shortdesc_training;
         $training->date_training = $request->date_training;
         $training->location_training = $request->location_training;
-
-
-
+        $training->updated_at = now();
         $training->save();
-
 
         return redirect()->route('admin.training');
     }

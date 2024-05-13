@@ -28,25 +28,24 @@
                     <tr>
                         <th class="w-1/12 text-center px-2 py-2 text-lg bg-orange-300 ">No</th>
                         <th class="w-6/12 text-center px-2 py-2 text-lg bg-orange-500">Nama Event</th>
-                        <th class="w-2/12 text-center px-2 py-2 text-lg bg-orange-300">Tanggal Mulai</th>
+                        <th class="w-2/12 text-center px-2 py-2 text-lg bg-orange-300">Tanggal</th>
                         <th class="w-2/12 text-center px-2 py-2 text-lg bg-orange-500">Lokasi</th>
                         <th class="w-1/12 text-center px-2 py-2 text-lg bg-orange-300">Detail</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @for ($i = 1; $i <= 7; $i++)
+                    <?php $number = 1 ?>
+                    @foreach ($training as $item)
                         <tr>
                             <td class="text-lg text-center px-2 border-collapse border border-slate-400">
-                                {{ $i }}</td>
-                            <td class="text-lg px-2 border-collapse border border-slate-400">Workshop Meeting
-                                Arrangement Mengatur Pertemuan</td>
-                            <td class="text-lg text-center px-2 border-collapse border border-slate-400">16 Februari
-                                2024</td>
-                            <td class="text-lg text-center px-2 border-collapse border border-slate-400">Online</td>
-                            <td class="text-lg text-center px-2 border-collapse border border-slate-400"><a
-                                    href="#">Detail</a></td>
-                        </tr>
-                    @endfor
+                                {{ $number++ }}</td>
+                            <td class="text-lg px-2 border-collapse border border-slate-400">{{ $item->title_training }}</td>
+                            <td class="text-lg text-center px-2 border-collapse border border-slate-400">{{ $item->date_training->format('d F Y') }}</td>
+                            <td class="text-lg text-center px-2 border-collapse border border-slate-400">{{ $item->location_training }}</td>
+                            <td class="text-lg text-center px-2 border-collapse border border-slate-400 hover:text-blue-600"><a
+                                    href="{{ route('training.detail', $item->slug_training) }}">Detail</a></td>
+                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

@@ -16,6 +16,7 @@ class AssesmentCenterSeeder extends Seeder
     {
         AssesmentCenter::create([
             'title' => 'Title of Assesment Center',
+            'slug' => 'title-of-assesment-center',
             'pict' => 'image_path.jpg',
             'desc' => 'Description of Assesment Center',
             'importance' => '1',

@@ -6,6 +6,7 @@ use App\Models\UMKMStory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class CeritaUmkmController extends Controller
 {
@@ -15,9 +16,9 @@ class CeritaUmkmController extends Controller
         $story = UMKMStory::all();
         return view('ceritaUmkmPage', compact(['story']));
     }
-    public function read($id)
+    public function read($slug)
     {
-        $story = UMKMStory::whereId($id)->first();
+        $story = UMKMStory::where('slug_story', $slug)->first();
         return view('ceritaUmkmReadPage')->with('story', $story);
     }
 
@@ -40,17 +41,21 @@ class CeritaUmkmController extends Controller
             'pict_story' => 'required|image|mimes:jpeg,png,jpg',
         ]);
 
+        $request->merge([
+            'slug_story' => Str::slug($request->title),
+        ]);
+
         $pictStory = $request->file('pict_story');
-        $fileName = $request->title . '-pict' . '.' . $pictStory->extension();
+        $fileName = $request->slug_story . '-pict' . '.' . $pictStory->extension();
         $pictStory->move(public_path('assets/img'), $fileName);
 
         try {
-            UMKMStory::create([
-                'title_story' => $request->title,
-                'body_story' => $request->body,
-                'slug_story' => 'temp',
-                'pict_story' => $fileName
-            ]);
+            $story = new UMKMStory();
+            $story->title_story = $request->title;
+            $story->slug_story = $request->slug_story;
+            $story->pict_story = $fileName;
+            $story->body_story = $request->body;
+            $story->save();
             return redirect()->route('admin.umkm_story');
         } catch (\Throwable $th) {
             return redirect()->back()->with('admin.umkm_story', 'Data gagal ditambahkan');
@@ -69,10 +74,14 @@ class CeritaUmkmController extends Controller
     {
         $umkm = UMKMStory::find($id);
 
+        $request->merge([
+            'slug_story' => Str::slug($request->title),
+        ]);
+
         if($request->file('pict_story')){
             // upload image
             $pictStory = $request->file('pict_story');
-            $fileName = $request->title . '-pict' . '.' . $pictStory->extension();
+            $fileName = $request->slug_story . '-pict' . '.' . $pictStory->extension();
             $pictStory->move(public_path('assets/img'), $fileName);
         
             // delete old image
@@ -85,7 +94,7 @@ class CeritaUmkmController extends Controller
         }
 
         $umkm->title_story = $request->title;
-        // $umkm->slug_story = $request->slug_story;
+        $umkm->slug_story = $request->slug_story;
         $umkm->body_story = $request->body;
         $umkm->updated_at = now();
         $umkm->save();
