@@ -18,9 +18,9 @@
     {{-- SECTION 2 --}}
     <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 mt-10">
         <p class="font-normal text-black text-justify">
-            Citra Prestasi Gemilang sebagai wadah Assessment Center menyediakan beragam program evaluasi dan pengembangan 
-            untuk membantu Anda mencapai potensi terbaik Anda. Dari manajemen sumber daya manusia hingga keahlian administratif, 
-            kami menawarkan layanan yang komprehensif untuk membantu perusahaan dan individu dalam mencapai tujuan mereka. 
+            Citra Prestasi Gemilang sebagai wadah Assessment Center menyediakan beragam program evaluasi dan pengembangan
+            untuk membantu Anda mencapai potensi terbaik Anda. Dari manajemen sumber daya manusia hingga keahlian administratif,
+            kami menawarkan layanan yang komprehensif untuk membantu perusahaan dan individu dalam mencapai tujuan mereka.
             Berikut beberapa bidang jasa yang kami tawarkan:<br>
         </p>
         <ol class="space-y-1 text-black list-decimal list-inside">

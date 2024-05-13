@@ -42,14 +42,13 @@
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-orange-600">Unit Kompetensi</h5>
             <hr class="h-px my-3 border-0 bg-gray-800">
             <ul class="text-base font-medium text-black mb-5 list-disc pl-4">
-                <li>S.941000.022.02 Melaksanakan Public Speaking</li>
+                @foreach ($uk as $item)
+                <li>{{ $item->uk}} </li>
+                @endforeach
+                {{-- <li>S.941000.022.02 Melaksanakan Public Speaking</li>
                 <li>S.941000.018.02 Melaksanakan Master Of Ceremony</li>
                 <li>S.941000.023.02 Membuat Pidato</li>
-                <li>S. 941000.026.02 Melaksanakan Fungsi Juru Bicara / Spokeperson</li>
-                <li>S.941000.015.02 Melaksanakan Fungsi Moderator</li>
-            </ul>
-
-        </div>
+                <li>S. 941000.026.02 Melaksanakan Fungsi Juru Bicara / Spokeperson</li> --}}
 
     </div>
 
@@ -105,12 +104,12 @@
                         Investasi Sekarang!
                     </div>
 
-                    <p class="text-sm leading-7 text-white w-full mb-5"> 
-                        Saatnya untuk mengembangkan portofolio Anda dengan keputusan investasi yang tepat. 
-                        Di PT Citra Prestasi Gemilang, kami menawarkan kesempatan investasi yang menjanjikan dalam berbagai sektor yang berkembang pesat. 
+                    <p class="text-sm leading-7 text-white w-full mb-5">
+                        Saatnya untuk mengembangkan portofolio Anda dengan keputusan investasi yang tepat.
+                        Di PT Citra Prestasi Gemilang, kami menawarkan kesempatan investasi yang menjanjikan dalam berbagai sektor yang berkembang pesat.
                         Dengan pendekatan yang terpercaya dan tim yang berpengalaman, kami hadir untuk membantu Anda meraih keuntungan maksimal dari investasi Anda. <br>
 
-                        Jangan Tunda Lagi, Hubungi Kami Hari Ini! Kunjungi website kami untuk informasi lebih lanjut atau langsung hubungi kami untuk berkonsultasi 
+                        Jangan Tunda Lagi, Hubungi Kami Hari Ini! Kunjungi website kami untuk informasi lebih lanjut atau langsung hubungi kami untuk berkonsultasi
                         <br>
                         <br>Hubungi contact di bawah ini:
                         <br>0811 360 215
@@ -126,7 +125,7 @@
             </div>
         </div>
 
-        
+
     </div>
 
 @endsection

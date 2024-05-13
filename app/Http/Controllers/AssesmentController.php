@@ -21,17 +21,16 @@ class AssesmentController extends Controller
     }
 
     public function detailAssesmentPage($slug)
-    {   
+    {
         $assesment = AssesmentCenter::where('slug', $slug)->first();
-        $id = AssesmentCenter::getIdByName($slug);
-        $syarat = SyaratAssesment::where('assesment_center_id', $id)->get();
+        // $id = AssesmentCenter::getIdByName($slug);
+        $syarat = SyaratAssesment::where('assesment_center_id', $assesment->id)->get();
+        $uk = UkAssesment::where('assesment_center_id', $assesment->id)->get();
         // $syarat = DB::table('assesment_centers')
         //     ->join('syarat_assesment', 'assesment_centers.id', '=', 'syarat_assesment.assesment_center_id')
         //     ->select('assesment_centers.*', 'syarat_assesment.syarat')
         //     ->get();
-        return view('assesmentDetailPage')
-            ->with('assesment', $assesment)
-            ->with('syarat', $syarat);
+        return view('assesmentDetailPage', compact(['assesment', 'syarat', 'uk']));
     }
 
     public function adminAssesment()
@@ -227,7 +226,7 @@ public function createAssesmentPage() {
     return view('admin.assesment.assesmentCreate', compact('categories'));
 }
 
-  
+
 public function createAssesment(Request $request) {
         // dd($request->all());
         $request->validate([
@@ -258,10 +257,10 @@ public function createAssesment(Request $request) {
         $assesment->importance = $request->importance;
         $assesment->pict = $fileNameAssesment;
         $assesment->pictagenda = $fileNameAgenda;
-        $assesment->uk = 'default.jpg';
-        $assesment->syarat1 = 'default.jpg';
-        $assesment->syarat2 = 'default.jpg';
-        $assesment->syarat3 = 'default.jpg';
+        // $assesment->uk = 'default.jpg';
+        // $assesment->syarat1 = 'default.jpg';
+        // $assesment->syarat2 = 'default.jpg';
+        // $assesment->syarat3 = 'default.jpg';
         $assesment->save();
 
         for ($i=0; $i < $request->jumlah_syarat; $i++) {
