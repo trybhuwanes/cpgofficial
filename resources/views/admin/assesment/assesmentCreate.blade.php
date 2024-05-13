@@ -71,7 +71,7 @@
                 <button type="button" id="add-uk-container" class="mt-3 px-4 py-2 bg-blue-500 text-white rounded-md">Tambah Uji Kompetensi</button>
             </div>
         </div>
-    
+
         <div class="mb-5">
             <label for="pict_agenda" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Flyer Agenda</label>
             <input type="file" id="pict_agenda" name="pict_agenda" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="photo" />

@@ -222,8 +222,9 @@ class AssesmentController extends Controller
     }
 
 public function createAssesmentPage() {
+    // $categories = CategoryTraining::all();
     // dd($categories);
-    return view('admin.assesment.assesmentCreate', compact('categories'));
+    return view('admin.assesment.assesmentCreate');
 }
 
 
