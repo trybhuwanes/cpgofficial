@@ -10,6 +10,9 @@
 <div class="mt-4 mx-8 space-y-6">
     <form action="{{ route('admin.assesment.create') }}" method="POST" enctype="multipart/form-data">
         @csrf
+
+
+
         <div class="mb-5">
             <label for="title_assessment" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
             <input type="text" id="title_assessment" name="title_assessment"

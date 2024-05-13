@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\AssesmentCenter;
 use App\Models\SyaratAssesment;
-use App\Models\UkAssesment;
+Use App\Models\UkAssesment;
+use App\Models\CategoryTraining;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -221,12 +222,13 @@ class AssesmentController extends Controller
         return redirect()->route('admin.assesment.edit.page', ['id' => $encryptedId]);
     }
 
-    public function createAssesmentPage()
-    {
-        return view('admin.assesment.assesmentCreate');
-    }
+public function createAssesmentPage() {
+    // dd($categories);
+    return view('admin.assesment.assesmentCreate', compact('categories'));
+}
 
-    public function createAssesment(Request $request) {
+  
+public function createAssesment(Request $request) {
         // dd($request->all());
         $request->validate([
             'title_assessment' => 'required',
@@ -278,7 +280,7 @@ class AssesmentController extends Controller
 
         return redirect()->route('admin.assesment');
 
-    }
+   }
 
     // public function createAssesment(Request $request)
     // {

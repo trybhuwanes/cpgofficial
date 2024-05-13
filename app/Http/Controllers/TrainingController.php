@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\CategoryTraining;
 use Illuminate\Http\Request;
 use App\Models\Training;
+use App\Models\TrainingCategory;
+use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
@@ -33,11 +35,14 @@ class TrainingController extends Controller
 
     public function createTrainingPage()
     {
-        return view('admin.training.createTrainingPage');
+        $categories = CategoryTraining::all();
+
+        return view('admin.training.createTrainingPage', compact('categories'));
     }
 
     public function createTraining(Request $request)
     {
+        // dd($request->all());
         // $request->validate([
         //     'pict_training' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Menambahkan aturan validasi untuk file gambar
         //     // Aturan validasi lainnya untuk input lainnya
@@ -68,7 +73,6 @@ class TrainingController extends Controller
         $pictTraining = $request->file('pict_training');
         $fileName = $request->slug_training . '-pict' . '.' . $pictTraining->extension();
         $pictTraining->move(public_path('assets/img'), $fileName);
-
 
         $training = new Training();
         $training->id_category = $request->category;
@@ -158,7 +162,7 @@ class TrainingController extends Controller
     }
 
 
-    // CATEGORY TRAINING 
+    // CATEGORY TRAINING
     public function adminCategoryTraining()
     {
         $category = CategoryTraining::all();

@@ -89,7 +89,7 @@
                         <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
                     </a>
                 </div>
-                
+
             </div>
         </div>
         <button data-aos="fade-up" data-aos-duration="1500"
@@ -104,7 +104,7 @@
                 <div class="text-5xl text-white mb-10 font-bold">
                     Why Choose Us?
                 </div>
-        
+
                 <div class="">
                     <img class="object-cover w-full h-[380px] xl:w-[550px] rounded-[20px]" src="images\why-choose-us.jpg" alt="">
                 </div>
@@ -136,7 +136,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="grid text-orange-100">
                     <div class="flex mb-10 border-b border-white border-solid max-w-[500px]">
                         <div class="max-w-[235px] pr-2 mb-3">
@@ -156,7 +156,7 @@
                             </p>
                         </div>
                     </div>
-    
+
                     <div class="flex border-b mb-5 border-white border-solid max-w-[500px]">
                         <div class="max-w-[235px] mb-3">
                             <div class="font-bold mb-2 text-base xl:text-lg text-white">
@@ -175,7 +175,7 @@
                             </p>
                         </div>
                     </div>
-    
+
                     <a href="#">
                         <button class="bg-black px-8 py-4 text-white font-bold text-center rounded-full m-5 max-w-[200px]">
                             Learn More!
@@ -183,7 +183,7 @@
                     </a>
                 </div>
             </div>
-        
+
     </div>
 
     {{-- Section 5 OUR PROGRAM & INTERNSHIP --}}
@@ -212,7 +212,7 @@
                         </div>
                     </a>
                 </div>
-        
+
                 <div class="bg-orange-500 max-w-[400px] max-h-60 p-10 rounded-[20px]">
                     <h1 class="text-2xl font-bold text-black text-left mb-3">
                         Consulting
@@ -239,7 +239,7 @@
                         </div>
                     </a>
                 </div>
-        
+
                 <div class="bg-orange-500 max-w-[400px] max-h-60 p-10 rounded-[20px]">
                     <h1 class="text-2xl font-bold text-black text-left mb-3">
                         Assesment Center
