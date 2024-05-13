@@ -33,6 +33,8 @@ class AssesmentController extends Controller
         return view('assesmentDetailPage', compact(['assesment', 'syarat', 'uk']));
     }
 
+
+
     public function adminAssesment()
     {
         $assesment = AssesmentCenter::all();

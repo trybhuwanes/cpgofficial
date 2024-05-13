@@ -21,6 +21,17 @@ class TrainingController extends Controller
         return view('trainingPage', compact(['training', 'category']));
     }
 
+    public function trainingByCategory(Request $request)
+    {
+        // dd($request->all());
+        $category = CategoryTraining::where('name_category', $request->category)->first();
+        // dd($category);
+        $training = Training::where('id_category', $category->id)->get();
+        $category = CategoryTraining::all();
+
+        return view('trainingPage', compact(['training', 'category']));
+    }
+
     public function trainingDetailPage($id) {
         $training = Training::whereId($id)->first();
         return view('trainingDetailPage')->with('training', $training);
@@ -107,10 +118,10 @@ class TrainingController extends Controller
             $pictTraining = $request->file('pict_training');
             $fileName = $request->slug_training . '-pict' . '.' . $pictTraining->extension();
             $pictTraining->move(public_path('assets/img'), $fileName);
-        
+
             // delete old image
             Storage::delete('public/assets/img/'. $training->pict_training);
-        
+
             // update post data image
             $training->update([
                 'pict_training'   => $fileName,

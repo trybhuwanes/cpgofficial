@@ -18,20 +18,23 @@
 
     {{-- Section 2 --}}
     <div class="bg-white max-w-full px-36 py-20 pb-0">
-        
-        <select class="text-black bg-white rounded-[20px] px-4 py-2 " value="">
-            <option value="full" class="hover:bg-orange-500">Category</option>
-            @foreach($category as $category)
-                <option value="{{ $category->id }}" class="hover:bg-orange-500">{{ $category->name_category }}</option>
-            @endforeach
-        </select>
+        <form action="{{ route('training.category') }}" method="GET">
+            <select name="category" class="text-black bg-white rounded-[20px] px-4 py-2">
+                <option value="full" class="hover:bg-orange-500">Pilih Kategori: </option>
+                @foreach($category as $category)
+                    <option value="{{ $category->name_category }}" class="hover:bg-orange-500">{{ $category->name_category }}</option>
+                @endforeach
+            </select>
+            <button type="submit">Filter</button>
+        </form>
     </div>
+
 
     {{-- SECTION 3 --}}
     <div class="grid xl:grid-cols-3 sm:grid-cols-2 gap-10 mx-36 mb-20 pt-10">
         {{-- CARD 1 --}}
         @foreach($training as $item)
-        <div data-aos="fade-up" data-aos-duration="1500" 
+        <div data-aos="fade-up" data-aos-duration="1500"
             class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 h-[600px] bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
             <a href="{{ route('training.detail', $item->slug_training) }}">
                 <img class="w-full rounded-t-lg" src="{{ asset('assets/img/' . $item->pict_training) }}" alt="" />
@@ -55,7 +58,7 @@
         @endforeach
 
         {{-- CARD 2
-        <div data-aos="fade-up" data-aos-duration="1500" 
+        <div data-aos="fade-up" data-aos-duration="1500"
             class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
             <a href="{{ route('training.detail') }}">
                 <img class="w-full rounded-t-lg" src="images/dummyTrainingProgram.png" alt="" />
@@ -79,7 +82,7 @@
         </div>
 
         CARD 3
-        <div data-aos="fade-up" data-aos-duration="1500" 
+        <div data-aos="fade-up" data-aos-duration="1500"
             class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
             <a href="{{ route('training.detail') }}">
                 <img class="w-full rounded-t-lg" src="images/dummyTrainingProgram.png" alt="" />
@@ -103,7 +106,7 @@
         </div>
 
         CARD 4
-        <div data-aos="fade-up" data-aos-duration="1500" 
+        <div data-aos="fade-up" data-aos-duration="1500"
             class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
             <a href="{{ route('training.detail') }}">
                 <img class="w-full rounded-t-lg" src="images/dummyTrainingProgram.png" alt="" />
@@ -125,9 +128,9 @@
                 </a>
             </div>
         </div>
-        
+
         CARD 5
-        <div data-aos="fade-up" data-aos-duration="1500" 
+        <div data-aos="fade-up" data-aos-duration="1500"
             class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
             <a href="{{ route('training.detail') }}">
                 <img class="w-full rounded-t-lg" src="images/dummyTrainingProgram.png" alt="" />
@@ -151,7 +154,7 @@
         </div>
 
         CARD 6
-        <div data-aos="fade-up" data-aos-duration="1500" 
+        <div data-aos="fade-up" data-aos-duration="1500"
             class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
             <a href="{{ route('training.detail') }}">
                 <img class="w-full rounded-t-lg" src="images/dummyTrainingProgram.png" alt="" />
