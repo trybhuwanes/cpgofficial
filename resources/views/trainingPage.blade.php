@@ -18,13 +18,15 @@
 
     {{-- Section 2 --}}
     <div class="bg-white max-w-full px-36 py-20 pb-0">
-        
-        <select class="text-black bg-white rounded-[20px] px-4 py-2 " value="">
-            <option value="full" class="hover:bg-orange-500">Category</option>
-            @foreach($category as $category)
-                <option value="{{ $category->id }}" class="hover:bg-orange-500">{{ $category->name_category }}</option>
-            @endforeach
-        </select>
+        <form action="{{ route('training.category') }}" method="GET">
+            <select name="category" class="text-black bg-white rounded-[20px] px-4 py-2">
+                <option value="full" class="hover:bg-orange-500">Pilih Kategori: </option>
+                @foreach($category as $category)
+                    <option value="{{ $category->name_category }}" class="hover:bg-orange-500">{{ $category->name_category }}</option>
+                @endforeach
+            </select>
+            <button type="submit" class="ml-5 bg-black px-10 py-2 max-h-12 text-white font-bold text-center rounded-full">Apply</button>
+        </form>
     </div>
 
     {{-- SECTION 3 --}}

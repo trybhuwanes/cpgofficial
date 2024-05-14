@@ -52,13 +52,14 @@ Route::get('/assesment-center/{slug}', [AssesmentController::class, 'detailAsses
 Route::get('/organizing', [OrganizingController::class, 'index'])->name('organizing');
 Route::get('/internship', [InternshipController::class, 'index'])->name('internship');
 Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactUsController::class, 'store'])->name('contact.store');
 Route::get('/training', [TrainingController::class, 'trainingPage'])->name('training');
 Route::get('/training/{slug}', [TrainingController::class, 'trainingDetailPage'])->name('training.detail');
 Route::get('/consulting', [ConsultingController::class, 'index'])->name('consulting');
 Route::get('/collaboration', [CollaborationController::class, 'index'])->name('collaboration');
-Route::get('/csr', function () {
-    return view('csrPage');
-})->name('csr');
+Route::get('/collaboration', [CollaborationController::class, 'index'])->name('collaboration');
+Route::get('/csr', [CsrController::class, 'index'])->name('csr');
+Route::get('/csr/{slug}', [CsrController::class, 'csrDetail'])->name('csr.detail');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('admin.dashboard');

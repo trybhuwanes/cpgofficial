@@ -25,7 +25,7 @@
                         Kami selalu terbuka untuk berkolaborasi dengan individu, organisasi, dan mitra yang memiliki visi dan nilai yang sejalan dengan kami. 
                         Mari kita bergandengan tangan untuk menciptakan dampak yang berarti bagi masyarakat dan lingkungan. 
                         Ayo, bergabunglah bersama kami hari ini!</p>
-                        <a href="#">
+                        <a href="https://wa.me/62811360215" target="_blank">
                             <button type="button"
                                 class="text-white bg-black hover:bg-orange-500 focus:outline-none focus:ring-4 font-medium rounded-full text-base px-8 py-4 text-center">Hubungi Kami</button>
                         </a>

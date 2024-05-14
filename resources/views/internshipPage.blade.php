@@ -91,7 +91,7 @@
         <hr class="h-px my-3 border-0 bg-gray-800">
     </div>
 
-    <div data-aos="fade-up" data-aos-duration="1500" class="grid grid-cols-3 sm:grid-cols-2 gap-4 gap-4 mx-36 mb-16">
+    <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-3 sm:grid-cols-2 gap-4 mx-36 mb-16">
         {{-- CARD FOTO 1 --}}
         <div class="h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
             <img class="block h-36 object-cover w-full rounded-t-lg" src="images\internbg.png" alt="" />

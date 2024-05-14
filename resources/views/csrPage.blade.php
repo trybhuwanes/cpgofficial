@@ -34,34 +34,16 @@
             </div>
 
             <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-10 mx-52 sm:mx-36 mb-12 sm:content-center place-items-center">
-                {{-- CARD BLOG --}}
-                <div
+                @foreach ($csr as $item)
+                    <div
                     class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
-                    <a href="#">
-                        <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
-                    </a>
-                </div>
-
-                <div
-                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
-                    <a href="#">
-                        <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
-                    </a>
-                </div>
-
-                <div
-                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
-                    <a href="#">
-                        <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png" alt="" />
-                    </a>
-                </div>
-                
+                        <a href="{{ route('csr.detail', $item->slug_csr) }}">
+                            <img class="object-cover w-full rounded-t-lg place-items-center" src="{{ asset('assets/img/'. $item->pict_csr) }}" alt="{{ $item->pict_csr }}" />
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
-        <button data-aos="fade-up" data-aos-duration="1500"
-            class="bg-black px-8 py-4 text-white font-bold text-center rounded-full mb-8 hover:bg-orange-500">
-            Learn More!
-        </button>
     </div>
 
 

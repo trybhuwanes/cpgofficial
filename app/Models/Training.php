@@ -18,6 +18,7 @@ class Training extends Model
         'shortdesc_training',
         'date_training',
         'location_training',
+        'link_pendaftaran',
         'created_at',
         'updated_at',
     ];

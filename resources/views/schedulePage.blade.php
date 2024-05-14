@@ -50,7 +50,8 @@
             </table>
         </div>
 
-        <div class="header text-black text-center pb-10 text-4xl font-bold">
+        {{-- TABEL ASSESMENT CENTER  --}}
+        {{-- <div class="header text-black text-center pb-10 text-4xl font-bold">
             <h1>Assesment Center</h1>
         </div>
         <div class="table w-full mx-auto pb-20">
@@ -81,7 +82,7 @@
                     @endfor
                 </tbody>
             </table>
-        </div>
+        </div> --}}
     </div>
 
 @endsection

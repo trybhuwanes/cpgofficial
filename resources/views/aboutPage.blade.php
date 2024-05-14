@@ -42,7 +42,7 @@
         </div>
     </div>
 
-    {{-- Section 3 --}}
+    {{-- Section 3 statistic --}}
     <div class="bg-white max-w-full text-center"
         style="background-image: url('/images/tem-bg.jpg'); background-size: cover; background-position: center;">
 
@@ -56,7 +56,7 @@
                         <div class="w-full max-w-[200px]">
                             <span
                                 class="mb-3 flex tabular-nums text-4xl xl:text-6xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
-                                x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:50]'">
+                                x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:100]'">
                                 <span class="supports-[counter-set]:sr-only"></span>+
                             </span>
                             <div class="text-sm text-white text-left w-full max-w-[150px]">
@@ -66,7 +66,7 @@
                         <div class="w-full max-w-[200px]">
                             <span
                                 class="mb-3 flex tabular-nums text-4xl xl:text-6xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
-                                x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:75]'">
+                                x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:100]'">
                                 <span class="supports-[counter-set]:sr-only"></span>+
                             </span>
                             <div class="text-sm text-white text-left w-full max-w-[150px]">
@@ -90,7 +90,7 @@
                         <div data-aos="fade-up" data-aos-duration="1500" class="max-w-[235px] xl:m-10 sm:mx-5">
                             <div class="font-bold mb-2 text-sm text-left xl:text-xl text-white max-h-[200px]">
                                 {{-- <img class="w-[60px]" src="/images/users.png" alt="Logo Client 1" class="h-[20px]"> --}}
-                                Trusted Program
+                                Big Expansion
                             </div>
                             <p class="text-sm text-left pb-2">
                                 Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
@@ -100,7 +100,7 @@
                         <div data-aos="fade-up" data-aos-duration="1500" class="max-w-[235px] xl:m-10 sm:mx-5">
                             <div class="font-bold mb-2 text-sm text-left xl:text-xl text-white">
                                 {{-- <img src="/images/users.png" alt="Logo Client 1" class="h-[20px]"> --}}
-                                Trusted Program
+                                Commitmen to Quality
                             </div>
                             <p class="text-sm text-left pb-2">
                                 Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
@@ -110,7 +110,7 @@
                         <div data-aos="fade-up" data-aos-duration="1500" class="max-w-[235px] xl:m-10 sm:mx-5">
                             <div class="font-bold mb-2 text-sm text-left xl:text-xl text-white">
                                 {{-- <img src="/images/users.png" alt="Logo Client 1" class="h-[20px]"> --}}
-                                Trusted Program
+                                Professional Team
                             </div>
                             <p class="text-sm text-left pb-2">
                                 Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
@@ -204,11 +204,12 @@
                     <div class="grid max-w-[600px]">
                         <div class=" pr-2 mb-8">
                             <div class="font-bold mb-4 text-4xl text-white ">
-                                Sri Sudarwati
+                                Sri Sudarwati, M.M
                             </div>
                             <p class="text-sm pb-5">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta urna nibh, non porta libero molestie eu. 
-                                Sed ac erat sem. Nam id magna condimentum, aliquam nulla ut, posuere tellus. 
+                                Ibu Sri Sudarwati adalah seorang perempuan mandiri yang terlibat dalam beragam kegiatan dan berpartisipasi aktif dalam berbagai organisasi.
+                                Menjunjukkan kemahiran dalam berbagai keterampilan, divalidasi oleh sertifikasi BNSP.
+                                Bercirikan kepribadian yang berpikiran terbuka, komunikatif, rendah hati, dan gesit.
                             </p>
                         </div>
                         <div class=" pr-2 mb-8">

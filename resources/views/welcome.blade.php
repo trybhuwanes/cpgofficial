@@ -92,10 +92,12 @@
 
             </div>
         </div>
-        <button data-aos="fade-up" data-aos-duration="1500"
+        <a href="{{ route('training') }}">
+            <button data-aos="fade-up" data-aos-duration="1500"
             class="bg-black px-8 py-4 text-white font-bold text-center rounded-full mb-20 hover:bg-orange-500">
             Learn More!
         </button>
+        </a>
     </div>
 
     {{-- Section 4 --}}
@@ -176,7 +178,7 @@
                         </div>
                     </div>
 
-                    <a href="#">
+                    <a href="{{ route('about') }}">
                         <button class="bg-black px-8 py-4 text-white font-bold text-center rounded-full m-5 max-w-[200px]">
                             Learn More!
                         </button>
@@ -206,8 +208,8 @@
                     <p class="text-sm">
                         Training untuk kalangan dunia pendidikan, perusahaan, instansi atau lembaga lainnya.
                     </p>
-                    <a href="#">
-                        <div class="text-black mt-5 font-bold text-base hover:text-blue-700">
+                    <a href="{{ route('training') }}">
+                        <div class="text-black mt-5 font-bold text-base hover:text-blue-800">
                             Learn More
                         </div>
                     </a>
@@ -220,8 +222,8 @@
                     <p class="text-sm">
                         Pemecahan masalah yang dihadapi dengan bantuan konsultan berpengalaman.
                     </p>
-                    <a href="#">
-                        <div class="text-black mt-5 font-bold text-base hover:text-blue-700">
+                    <a href="{{ route('consulting') }}">
+                        <div class="text-black mt-5 font-bold text-base hover:text-blue-800">
                             Learn More
                         </div>
                     </a>
@@ -233,8 +235,8 @@
                     </h1>
                     <p class="text-sm">
                         Organizing, kita akan menjelajahi seni menyusun dan mengelola segala hal, dari ide hingga eksekusi, untuk menciptakan dampak yang berarti.                   </p>
-                    <a href="#">
-                        <div class="text-black mt-5 font-bold text-base hover:text-blue-700">
+                    <a href="{{ route('organizing') }}">
+                        <div class="text-black mt-5 font-bold text-base hover:text-blue-800">
                             Learn More
                         </div>
                     </a>
@@ -246,8 +248,8 @@
                     </h1>
                     <p class="text-sm">
                         Metode berbasis kompetensi yang sesuai dengan standar internasional, membawa peserta pada perjalanan pencapaian terbaik mereka.                   </p>
-                    <a href="#">
-                        <div class="text-black mt-5 font-bold text-base hover:text-blue-700">
+                    <a href="{{ route('assesment-center') }}">
+                        <div class="text-black mt-5 font-bold text-base hover:text-blue-800">
                             Learn More
                         </div>
                     </a>
@@ -352,33 +354,35 @@
         </div>
     </div>
 
-    {{-- Section 7 VIDEP --}}
+    {{-- Section 7 VIDEO --}}
     <div class="bg-white max-w-full">
         <div class="flex flex-col py-10">
             <div data-aos="fade-up" data-aos-duration="1500" class="flex justify-between items-center my-10 mx-36">
                 <div class="max-w-[580px] m-5 text-5xl text-black mb-10 font-bold">
                     Video
                 </div>
-                <button class="bg-black px-6 py-2 max-h-12 text-white font-bold text-center rounded-full">
-                    Learn More!
-                </button>
+                <a href="http://www.youtube.com/@citraprestasigemilang655" target="_blank">
+                    <button class="bg-black px-6 py-2 max-h-12 text-white font-bold text-center rounded-full">
+                        See More!
+                    </button>
+                </a>
             </div>
 
             <div data-aos="fade-up" data-aos-duration="1500" class="flex justify-center flex-wrap sm:gap-5 md:gap-5 lg:gap-20 xl:gap-30 pb-20 px-20">
                 {{-- <iframe class="w-full aspect-[4/3]" src="https://www.youtube.com/embed/kvUAwvpWHrA?si=zzuAfovcryTSfUMc"></iframe> --}}
                 <div class=" sm:w-auto md:w-1/3 xl:w-1/4">
                     <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/kvUAwvpWHrA?si=zzuAfovcryTSfUMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    {{-- <h1 class="text-lg font-bold leading-10 text-black text-left">Lorem, ipsum.</h1> --}}
+                    <h1 class="mt-5 text-lg font-bold leading-6 text-black text-left">CORPORATE SOCIAL RESPONSIBILITY</h1>
                     {{-- <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, quia!</p> --}}
                 </div>
                 <div class=" sm:w-auto md:w-1/3 xl:w-1/4">
-                    <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/kvUAwvpWHrA?si=zzuAfovcryTSfUMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    {{-- <h1 class="text-lg font-bold leading-10 text-black text-left">Lorem, ipsum.</h1> --}}
+                    <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/jMxJP1XJc0I?si=uNKMVA5WqaUnF9CW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h1 class="mt-5 text-lg font-bold leading-6 text-black text-left">PUBLIC SPEAKING #2</h1>
                     {{-- <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, quia!</p> --}}
                 </div>
                 <div class=" sm:w-auto md:w-1/3 xl:w-1/4">
-                    <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/kvUAwvpWHrA?si=zzuAfovcryTSfUMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    {{-- <h1 class="text-lg font-bold leading-10 text-black text-left">Lorem, ipsum.</h1> --}}
+                    <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/PE7s-6iBuQ0?si=RSL2PYTHZJyYqZJa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h1 class="mt-5 text-lg font-bold leading-6 text-black text-left">CSR SEBAGAI TANGGUNG JAWAB MORAL (CSR VOL.2)</h1>
                     {{-- <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, quia!</p> --}}
                 </div>
             </div>

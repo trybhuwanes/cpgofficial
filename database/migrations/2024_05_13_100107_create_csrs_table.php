@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('desc_csr');
             $table->date('date_csr');
             $table->string('location_csr');
+            $table->string('link_pendaftaran');
             $table->timestamps();
         });
     }
