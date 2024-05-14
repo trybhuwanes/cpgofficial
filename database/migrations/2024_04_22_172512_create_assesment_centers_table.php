@@ -16,16 +16,10 @@ class CreateAssesmentCentersTable extends Migration
         Schema::create('assesment_centers', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('slug');
             $table->string('pict');
             $table->text('desc');
             $table->text('importance');
-            $table->string('uk');
-            $table->string('syarat1');
-            $table->string('syarat2');
-            $table->string('syarat3');
-            $table->string('syarat4')->nullable();
-            $table->string('syarat5')->nullable();
-            $table->string('syarat6')->nullable();
             $table->string('pictagenda')->nullable();
             $table->timestamps();
         });

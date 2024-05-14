@@ -10,7 +10,7 @@ class CategoryTraining extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id_category',
+        'id',
         'name_category',
         'created_at',
         'updated_at',
@@ -18,6 +18,6 @@ class CategoryTraining extends Model
 
     public function training()
     {
-        return $this->hasMany(Training::class, 'id_category');
+        return $this->hasMany(Training::class, 'id');
     }
 }

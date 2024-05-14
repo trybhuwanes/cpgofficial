@@ -18,14 +18,10 @@
     {{-- SECTION 2 --}}
     <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 mt-10">
         <p class="font-normal text-black text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum euismod pellentesque.
-            Etiam interdum ex vel sapien porta rhoncus. Nam aliquet risus sapien, ut faucibus purus pharetra ac.
-            Sed consectetur lorem in nibh blandit, eget tincidunt magna suscipit. Duis ac varius nulla.
-            Phasellus elementum nisl vitae varius viverra. Etiam consequat odio dignissim convallis interdum.
-            Quisque id volutpat lectus, non scelerisque nisl. Vestibulum quis efficitur est.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam et
-            rutrum mi, a iaculis lorem.
-            Phasellus blandit eros a nunc vehicula, sit amet mollis felis condimentum <br>
+            Citra Prestasi Gemilang sebagai wadah Assessment Center menyediakan beragam program evaluasi dan pengembangan
+            untuk membantu Anda mencapai potensi terbaik Anda. Dari manajemen sumber daya manusia hingga keahlian administratif,
+            kami menawarkan layanan yang komprehensif untuk membantu perusahaan dan individu dalam mencapai tujuan mereka.
+            Berikut beberapa bidang jasa yang kami tawarkan:<br>
         </p>
         <ol class="space-y-1 text-black list-decimal list-inside">
             <li>Human Capital</li>
@@ -56,77 +52,23 @@
         <h5 class="mb-2 text-3xl font-bold tracking-tight text-black">Skema</h5>
 
     </div>
-    <div data-aos="fade-up" data-aos-duration="1500" class="grid grid-cols-3 sm:grid-cols-2 gap-4 mx-36 mb-16">
+    <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-3 sm:grid-cols-2 gap-4 mx-36 mb-16">
         {{-- CARD BLOG SERVICE EXCELLENCE --}}
-        <div
-            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
-            <a href="{{ route('assesment-center.detail') }}">
-                <img class="block h-36 object-cover w-full rounded-t-lg" src="images\service-excellence.jpg"
-                    alt="" />
-            </a>
-            <div class="p-5">
-                <a href="{{ route('assesment-center.detail') }}">
-                    <h6 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-black">Service Excellence</h6>
+        @foreach ($assesment as $item)
+            <div
+                class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
+                <a href="{{ route('assesment-center.detail', $item->slug) }}">
+                    <img class="block h-36 object-cover w-full rounded-t-lg" src="{{ asset('assets/img/' . $item->pict) }}"
+                        alt="{{ $item->pict }}" />
                 </a>
+                <div class="p-5">
+                    <a href="{{ route('assesment-center.detail', $item->slug) }}">
+                        <h6 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-black">{{ $item->title }}</h6>
+                    </a>
 
+                </div>
             </div>
-        </div>
-
-        {{-- CARD BLOG PUBLIC RELATION --}}
-        <div
-            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
-            <a href="#">
-                <img class="block h-36 object-cover w-full rounded-t-lg" src="images\public-relation.webp" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h6 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-black">Public Relation</h6>
-                </a>
-
-            </div>
-        </div>
-
-        {{-- CARD BLOG HUMAN CAPITAL --}}
-        <div
-            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
-            <a href="#">
-                <img class="block h-36 object-cover w-full rounded-t-lg" src="images\human capital.jpg" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h6 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-black">Human Capital</h6>
-                </a>
-
-            </div>
-        </div>
-
-        {{-- CARD BLOG FILLING SYSTEM --}}
-        <div
-            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
-            <a href="#">
-                <img class="block h-36 object-cover w-full rounded-t-lg" src="images\filing-system.jpg" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h6 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-black">Filling System</h6>
-                </a>
-
-            </div>
-        </div>
-
-        {{-- CARD BLOG BODY SPA --}}
-        <div
-            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
-            <a href="#">
-                <img class="block h-36 object-cover w-full rounded-t-lg" src="images\body-spa.jpg" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h6 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-black">Perawatan Spa & Terapi</h6>
-                </a>
-
-            </div>
-        </div>
+        @endforeach
 
     </div>
 

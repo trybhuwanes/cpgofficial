@@ -10,11 +10,23 @@
 <div class="mt-4 mx-8 space-y-6">
     <form action="{{ route('admin.assesment.create') }}" method="POST" enctype="multipart/form-data">
         @csrf
+
+
+
         <div class="mb-5">
             <label for="title_assessment" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
             <input type="text" id="title_assessment" name="title_assessment"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Write down the title" required />
+        </div>
+
+        <div class="mb-5">
+            <label for="pict_assesment" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Picture of Schema</label>
+            <input type="file" id="pict_assesment" name="pict_assesment" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="photo" />
+        </div>
+
+        <div class="mb-5">
+            <img id="image-preview-as" src="" alt="" style="max-height: 250px;">
         </div>
 
         <div class="mb-5">
@@ -61,26 +73,52 @@
         </div>
 
         <div class="mb-5">
-            <label for="Pict" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pict</label>
-            <input type="file" id="Pict" name="Pict" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="photo" />
+            <label for="pict_agenda" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Flyer Agenda</label>
+            <input type="file" id="pict_agenda" name="pict_agenda" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="photo" />
         </div>
 
         <div class="mb-5">
-            <label for="Foto Agenda" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Foto Agenda</label>
-            <input type="file" id="Foto Agenda" name="Foto Agenda" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="photo" />
+            <img id="image-preview-ag" src="" alt="" style="max-height: 250px;">
         </div>
 
         <input type="hidden" id="jumlah_syarat" name="jumlah_syarat" value="1">
         <input type="hidden" id="jumlah_uk" name="jumlah_uk" value="1">
 
         <button type="submit"
-            class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
+            class="mb-10 inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
             Post
         </button>
     </form>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
+
+    $(document).ready(function(e) {
+            $('#pict_assesment').change(function() {
+                let reader = new FileReader();
+
+                reader.onload = (e) => {
+
+                    $('#image-preview-as').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(this.files[0]);
+            });
+
+            $('#pict_agenda').change(function() {
+                let reader = new FileReader();
+
+                reader.onload = (e) => {
+
+                    $('#image-preview-ag').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(this.files[0]);
+            });
+
+    });
+
     // Function untuk menambah container Syarat
     function addSyaratContainer() {
         var syaratContainer = document.getElementById('syarat-container');
