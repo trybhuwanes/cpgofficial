@@ -9,27 +9,22 @@ use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
-    public function run(): void
-    {
-      
-      User::create([
-            'name' => 'Mellitya Silviandro H',
-            'email' => 'tya@cpg.com',
-                    'password' => Hash::make('password'),
-        ]);
+  /**
+   * Run the database seeds.
+   */
+  public function run(): void
+  {
 
-          User::create([
-            'name' => 'Tri Buwaneswari',
-            'email' => 'tri@cpg.com',
-                    'password' => Hash::make('password'),
-                    ]);
+    User::create([
+      'name' => 'Mellitya Silviandro H',
+      'email' => 'tya@cpg.com',
+      'password' => Hash::make('admintya'),
+    ]);
 
-
-        
-
-
-    }
+    User::create([
+      'name' => 'Try Bhuwaneswari',
+      'email' => 'anes@cpg.com',
+      'password' => Hash::make('adminanes'),
+    ]);
+  }
 }
