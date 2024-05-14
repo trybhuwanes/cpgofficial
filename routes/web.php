@@ -49,6 +49,7 @@ Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index'])->name('cerita
 Route::get('/cerita-umkm/{slug}', [CeritaUmkmController::class, 'read'])->name('cerita-umkm-read');
 Route::get('/assesment-center', [AssesmentController::class, 'index'])->name('assesment-center');
 Route::get('/assesment-center/{slug}', [AssesmentController::class, 'detailAssesmentPage'])->name('assesment-center.detail');
+Route::get('/training/category/', [TrainingController::class, 'trainingByCategory'])->name('training.category');
 Route::get('/organizing', [OrganizingController::class, 'index'])->name('organizing');
 Route::get('/internship', [InternshipController::class, 'index'])->name('internship');
 Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
@@ -95,7 +96,7 @@ Route::prefix('admin')->group(function () {
             Route::put('/edit/{id}', [TrainingController::class, 'updateCategory'])->name('admin.training.category.update');
             Route::get('/delete/{id}', [TrainingController::class, 'deleteCategory'])->name('admin.training.category.delete');
         });
-        
+
     });
 
     Route::prefix('assesment')->group(function () {
