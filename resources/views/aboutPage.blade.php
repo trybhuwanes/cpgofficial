@@ -19,18 +19,17 @@
     <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 my-20">
         <div class="flex flex-wrap items-center justify-center bg-white p-10 border border-gray-300 rounded-xl shadow-2xl">
             <div class="text-4xl font-bold text-black w-full text-center mt-3 mb-5">
-                Who We Are?
+                Get to Know About CPG
             </div>
             <div data-aos="fade-up" data-aos-duration="1500"
-                class="xl:w-1/4 h-56 justify-center items-center sm:w-full sm:mt-5">
-                <img class="h-56 object-cover w-full rounded-xl" src="images/iconCPG2.png">
+                class="xl:w-1/4 h-64 justify-center items-center sm:w-full sm:mt-5">
+                <img class="h-64 object-contain p-8 w-full rounded-xl" src="{{ asset('images/iconCPG.png') }}">
             </div>
             <div class="xl:w-3/4 sm:w-full">
                 <div data-aos="fade-up" data-aos-duration="1500" class="max-w-full xl:pr-10 sm:pr-0">
-                    <p class="text-lg leading-7 text-black w-full mb-5 xl:text-left sm:text-center">
-                        PT CITRA PRESTASI GEMILANG adalah perusahaan yang berfokus pada bidang pelatihan, konsultasi,
-                        pengorganisasi,
-                        dan pusat sertifikasi kompetensi BNSP & internasional. Fokus utama perusahaan adalah melayani
+                    <p class="text-lg leading-7 text-black w-full xl:text-left sm:text-center">
+                        PT CITRA PRESTASI GEMILANG adalah perusahaan yang berfokus pada bidang Training, Consulting, Organizing, 
+                        dan Assesment Center. Fokus utama perusahaan adalah melayani
                         kebutuhan seluruh
                         lapisan masyarakat dalam peningkatan kualitas sumber daya manusia dan pencapaian kompetensi
                         personal.
@@ -76,7 +75,7 @@
                         <div class="w-full max-w-[200px]">
                             <span
                                 class="mb-3 flex tabular-nums text-4xl xl:text-6xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
-                                x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:1000]'">
+                                x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:3600]'">
                                 <span class="supports-[counter-set]:sr-only"></span>+
                             </span>
                             <div class="text-sm text-white text-left w-full max-w-[200px]">
@@ -93,7 +92,7 @@
                                 Big Expansion
                             </div>
                             <p class="text-sm text-left pb-2">
-                                Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
+                                Lebih dari satu dekade pengalaman, kami memiliki keterampilan mendalam untuk memberi solusi yang efektif dan inovatif
                             </p>
                         </div>
 
@@ -103,7 +102,7 @@
                                 Commitmen to Quality
                             </div>
                             <p class="text-sm text-left pb-2">
-                                Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
+                                Kami menyediakan pendampingan yang berfokus pada pertumbuhan dan pengembangan yang berkelanjutan
                             </p>
                         </div>
 
@@ -113,17 +112,17 @@
                                 Professional Team
                             </div>
                             <p class="text-sm text-left pb-2">
-                                Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
+                                Tim kami terdiri dari ahli yang berpengalaman dan berkomitmen memberikan layanan berkualitas kepada klien kami 
                             </p>
                         </div>
 
                         <div data-aos="fade-up" data-aos-duration="1500" class="max-w-[235px] xl:m-10 sm:mx-5">
                             <div class="font-bold mb-2 text-sm text-left xl:text-xl text-white">
                                 {{-- <img src="/images/users.png" alt="Logo Client 1" class="h-[20px]"> --}}
-                                Trusted Program
+                                After Service Experience
                             </div>
                             <p class="text-sm text-left pb-2">
-                                Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
+                                Layanan free coaching setelah kegiatan training dan sertifikasi
                             </p>
                         </div>
                     </div>
@@ -176,7 +175,10 @@
                     <h1 class="text-2xl text-white mb-3">
                         Motto
                     </h1>
-                    <p class="mb-3 font-normal text-white text-center">Passion for Compassion</p>
+                    <p class="mb-3 font-normal text-white text-center">
+                        Melalui motto “Passion for Compassion" PT. Citra Prestasi Gemilang berkomitmen untuk mewujudkan visi dan misi 
+                        perusahaan dengan fokus pada aksi nyata dan menumbuhkan rasa kasih sayang terhadap sesama manusia.
+                    </p>
                 </div>
             </div>
         </div>
@@ -207,8 +209,9 @@
                                 Sri Sudarwati, M.M
                             </div>
                             <p class="text-sm pb-5">
-                                Ibu Sri Sudarwati adalah seorang perempuan mandiri yang terlibat dalam beragam kegiatan dan berpartisipasi aktif dalam berbagai organisasi.
-                                Menjunjukkan kemahiran dalam berbagai keterampilan, divalidasi oleh sertifikasi BNSP.
+                                CPG dibangun sebagai perjalanan spiritual seorang Sri Sudarwati.
+                                Sri Sudarwati adalah seorang perempuan mandiri yang terlibat dalam beragam kegiatan dan berpartisipasi aktif dalam berbagai organisasi.
+                                Memiliki keahlian dalam berbagai keterampilan dan dapat dibuktikan melalui evidence sertifikat BNSP.
                                 Bercirikan kepribadian yang berpikiran terbuka, komunikatif, rendah hati, dan gesit.
                             </p>
                         </div>
@@ -264,7 +267,7 @@
 
     {{-- Section 7 MEET OUR TEAM --}}
     <div class="bg-orange-500 max-w-full px-36 py-20">
-        <div data-aos="fade-up" data-aos-duration="1500" class="text-5xl text-black mb-12 font-bold">
+        <div data-aos="fade-up" data-aos-duration="1500" class="text-5xl text-white mb-12 font-bold">
             Meet Out Team
         </div>
 

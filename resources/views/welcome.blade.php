@@ -8,7 +8,8 @@
     {{-- Section 1 --}}
     <div class="items-center justify-center bg-white">
         <div class="w-full h-fit sm:h-[600px] overflow-hidden relative">
-            <img class="absolute inset-0 h-full w-full object-cover" src="images\hero-image.png">
+            {{-- <img class="absolute inset-0 h-full w-full object-cover" src="images\hero-image.png"> --}}
+            <img class="absolute inset-0 h-full w-full object-cover" src="images\hero-image.gif">
             {{-- <div class="absolute inset-0 bg-white bg-opacity-50"></div> --}}
             <div class="flex h-full items-center justify-center relative">
                 {{-- <h1 class="text-4xl text-black font-semibold">BLOG</h1> --}}
@@ -17,9 +18,8 @@
                         PASSION FOR <br> COMPASSION
                     </div>
                     <p class="text-lg leading-8 text-black xl:max-w-[520px] md:max-w-[460px] sm:w-full text-center pb-10">
-                        Tingkatkan kualitas dirimu bersama Citra Prestasi Gemilang dan jadilah pribadi baru untuk mengantar
-                        anda
-                        menuju kesuksesan dalam karir serta kehidupan.
+                        Tingkatkan kualitas dirimu bersama Citra Prestasi Gemilang dan jalankan kehidupanmu dengan gairah welas asih,
+                        untuk saling menyayangi sesama manusia dan makhluk hidup.
                     </p>
                     <button class="bg-black px-8 py-4 text-white font-bold text-center rounded-full hover:bg-orange-500">
                         Improve With Us!
@@ -101,8 +101,8 @@
     </div>
 
     {{-- Section 4 WHY CHOOSE US --}}
-    <div class="grid w-full h-auto justify-center items-center xl:flex xl:flex-row bg-orange-500 xl:px-36 xl:p-24 sm:py-24">
-            <div data-aos="fade-up" data-aos-duration="1500" class="w-full xl:w-1/2 mb-10 xl:mb-0 xl:mr-10 justify-center items-center">
+    <div class="grid w-full h-auto xl:flex xl:flex-row bg-orange-500 xl:px-36 xl:p-24 sm:py-24">
+            <div data-aos="fade-up" data-aos-duration="1500" class="w-full xl:w-1/2 mb-10 xl:mb-0 xl:mr-10 items-start">
                 <div class="text-5xl text-white mb-10 font-bold">
                     Why Choose Us?
                 </div>
@@ -111,7 +111,7 @@
                     <img class="object-cover w-full h-[380px] xl:w-[550px] rounded-[20px]" src="images\why-choose-us.jpg" alt="">
                 </div>
             </div>
-            <div data-aos="fade-up" data-aos-duration="1500" class="w-full xl:w-1/2">
+            <div data-aos="fade-up" data-aos-duration="1500" class="w-full xl:w-1/2 justify-center items-center ">
                 <div class="text-4xl xl:text-6xl text-white mb-10 flex flex-wrap">
                     <div class="mr-10">
                         <span class="mb-3 flex tabular-nums text-4xl xl:text-5xl text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]" x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:100]'">
@@ -146,7 +146,7 @@
                                 Big Expansion
                             </div>
                             <p class="text-sm pb-2">
-                                Lebih dari satu dekade pengalaman, kami memiliki keterampilan mendalam untuk memberi solusi yang efektif dan inovatif.
+                                Lebih dari satu dekade pengalaman, kami memiliki keterampilan mendalam untuk memberi solusi yang efektif dan inovatif
                             </p>
                         </div>
                         <div class="max-w-[235px] mb-3">
@@ -154,7 +154,7 @@
                                 Commitmen to Quality
                             </div>
                             <p class="text-sm pb-2">
-                                Kami menyediakan pendampingan yang berfokus pada pertumbuhan dan pengembangan yang berkelanjutan.
+                                Kami menyediakan pendampingan yang berfokus pada pertumbuhan dan pengembangan yang berkelanjutan
                             </p>
                         </div>
                     </div>
@@ -165,21 +165,21 @@
                                 Professional Team
                             </div>
                             <p class="text-sm pb-2">
-                                Tim kami terdiri dari ahli yang berpengalaman dan berkomitmen memberikan layanan berkualitas kepada klien kami. 
+                                Tim kami terdiri dari ahli yang berpengalaman dan berkomitmen memberikan layanan berkualitas kepada klien kami 
                             </p>
                         </div>
                         <div class="max-w-[235px]">
                             <div class="font-bold mb-2 text-base xl:text-lg text-white">
-                                Trusted Program
+                                After Service Experience
                             </div>
                             <p class="text-sm pb-2">
-                                Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
+                                Layanan free coaching setelah kegiatan training dan sertifikasi
                             </p>
                         </div>
                     </div>
 
                     <a href="{{ route('about') }}">
-                        <button class="bg-black px-8 py-4 text-white font-bold text-center rounded-full m-5 max-w-[200px]">
+                        <button class="bg-black hover:bg-orange-700 px-8 py-4 text-white font-bold text-center rounded-full mt-5 max-w-[200px]">
                             Learn More!
                         </button>
                     </a>
@@ -202,54 +202,54 @@
         <div class="flex xl:grid">
             <div data-aos="fade-up" data-aos-duration="1500" class="grid grid-cols-2 gap-4 mb-16 pt-16 sm:mx-16">
                 <div class="bg-orange-500 max-w-[400px] max-h-60 p-10 rounded-[20px]">
-                    <h1 class="text-2xl font-bold text-black text-left mb-3">
+                    <h1 class="text-2xl font-bold text-white text-left mb-3">
                         Training
                     </h1>
-                    <p class="text-sm">
-                        Training untuk kalangan dunia pendidikan, perusahaan, instansi atau lembaga lainnya.
+                    <p class="text-sm text-white">
+                        Training untuk kalangan dunia pendidikan, perusahaan, instansi atau masyarakat luas.
                     </p>
                     <a href="{{ route('training') }}">
-                        <div class="text-black mt-5 font-bold text-base hover:text-blue-800">
+                        <div class="text-white mt-5 font-bold text-base hover:text-blue-800">
                             Learn More
                         </div>
                     </a>
                 </div>
 
                 <div class="bg-orange-500 max-w-[400px] max-h-60 p-10 rounded-[20px]">
-                    <h1 class="text-2xl font-bold text-black text-left mb-3">
+                    <h1 class="text-2xl font-bold text-white text-left mb-3">
                         Consulting
                     </h1>
-                    <p class="text-sm">
+                    <p class="text-sm text-white">
                         Pemecahan masalah yang dihadapi dengan bantuan konsultan berpengalaman.
                     </p>
                     <a href="{{ route('consulting') }}">
-                        <div class="text-black mt-5 font-bold text-base hover:text-blue-800">
+                        <div class="text-white mt-5 font-bold text-base hover:text-blue-800">
                             Learn More
                         </div>
                     </a>
                 </div>
 
                 <div class="bg-orange-500 max-w-[400px] max-h-60 p-10 rounded-[20px]">
-                    <h1 class="text-2xl font-bold text-black text-left mb-3">
+                    <h1 class="text-2xl font-bold text-white text-left mb-3">
                         Organizing
                     </h1>
-                    <p class="text-sm">
+                    <p class="text-sm text-white">
                         Organizing, kita akan menjelajahi seni menyusun dan mengelola segala hal, dari ide hingga eksekusi, untuk menciptakan dampak yang berarti.                   </p>
                     <a href="{{ route('organizing') }}">
-                        <div class="text-black mt-5 font-bold text-base hover:text-blue-800">
+                        <div class="text-white mt-5 font-bold text-base hover:text-blue-800">
                             Learn More
                         </div>
                     </a>
                 </div>
 
                 <div class="bg-orange-500 max-w-[400px] max-h-60 p-10 rounded-[20px]">
-                    <h1 class="text-2xl font-bold text-black text-left mb-3">
+                    <h1 class="text-2xl font-bold text-white text-left mb-3">
                         Assesment Center
                     </h1>
-                    <p class="text-sm">
+                    <p class="text-sm text-white">
                         Metode berbasis kompetensi yang sesuai dengan standar internasional, membawa peserta pada perjalanan pencapaian terbaik mereka.                   </p>
                     <a href="{{ route('assesment-center') }}">
-                        <div class="text-black mt-5 font-bold text-base hover:text-blue-800">
+                        <div class="text-white mt-5 font-bold text-base hover:text-blue-800">
                             Learn More
                         </div>
                     </a>
@@ -283,37 +283,37 @@
                 class="xl:w-full lg:w-full sm:w-2/3 h-72 border border-gray-200 rounded-lg shadow-2xl ">
                 <img class="object-cover w-full h-full rounded-lg place-items-center" src="/images/magang-smk.jpg" alt="Magang SMK Blabla" />
                 <p id="teks" class="font-medium text-xl mt-5">
-                    Magang SMK Blabla 2023
+                    Magang SMK
                 </p>
             </div>
         </div>
     </div>
 
     {{-- Section 6 FAQ --}}
-    <div class="grid w-full justify-center items-center xl:flex xl:flex-row bg-orange-500 xl:px-36 xl:p-24 sm:py-24">
+    <div class="grid w-full xl:flex xl:flex-row bg-orange-500 xl:px-36 xl:p-24 sm:py-24">
         <div data-aos="fade-up" data-aos-duration="1500" class="xl:w-1/2">
-            <div class="text-5xl text-black mb-10 font-bold">
+            <div class="text-5xl text-white first-line:mb-10 font-bold mb-5 items-start">
                 Frequently Asked Questions
             </div>
             <div class=" mr-20 ">
-                <img class="object-cover w-full xl:w-[550px] h-[331px] rounded-[20px]" src="images\faq.jpg" alt="">
+                <img class="object-cover w-full xl:w-[550px] h-[331px] rounded-[20px] justify-center items-center " src="images\faq.jpg" alt="">
             </div>
         </div>
         <div data-aos="fade-up" data-aos-duration="1500" class="xl:w-1/2 justify-center items-center place-items-center">
             <div class="display grid text-orange-100">
                 <div class="grid max-w-[600px]">
                     <div class=" pr-2 mb-8">
-                        <div class="font-bold mb-4 text-xl text-black ">
+                        <div class="font-bold mb-4 text-xl text-white ">
                             Bagaimana cara mendaftar pelatihan atau event lainnya di CPG?
                         </div>
                         <p class="text-sm pb-5  border-b border-white border-solid">
-                            Cara mendaftar nya bisa langsung mengisi link pendaftaran yang tersedia, 
-                            dan apabila ada pertanyaan lain bisa menghubungi contact person.
+                            Cara mendaftarnya bisa langsung mengisi link pendaftaran yang tersedia, 
+                            dan apabila ada pertanyaan lain bisa menghubungi contact person atau admin.
                         </p>
                     </div>
 
                     <div class=" pr-2 mb-8">
-                        <div class="font-bold mb-2 text-xl text-black ">
+                        <div class="font-bold mb-2 text-xl text-white">
                             Apakah sertifikat dari CPG cukup kuat untuk melamar pekerjaan?
                         </div>
                         <p class="text-sm pb-5  border-b border-white border-solid">
@@ -324,7 +324,7 @@
                     </div>
 
                     <div class=" pr-2 mb-8">
-                        <div class="font-bold mb-2 text-xl text-black ">
+                        <div class="font-bold mb-2 text-xl text-white">
                             Apakah pelatihan CPG ini hanya bisa diikuti secara online saja?
                         </div>
                         <p class="text-sm pb-5 border-b border-white border-solid">
@@ -377,7 +377,7 @@
     <div class="bg-orange-500 max-w-full">
         <div class="flex flex-col px-36 py-24">
             <div data-aos="fade-up" data-aos-duration="1500" class="flex justify-between items-center mb-10">
-                <div class="text-5xl font-bold text-black max-w-[580px] m-5">
+                <div class="text-5xl font-bold text-white max-w-[580px] m-5">
                     What They Say About Our Program
                 </div>
             </div>

@@ -37,24 +37,31 @@
             Profile Coach
         </div>
 
-        <div class="flex xl:items-end sm:items-center sm:justify-center xl:flex-row sm:flex-col mx-36 mt-8">
-            <div data-aos="fade-up" data-aos-duration="1500"
-                class="xl:w-1/3 sm:w-1/2 h-fit p-1 bg-white rounded-xl shadow-xl items-end">
-                <img class="rounded-xl" src="images\sertif-coach-1.jpg" alt="">
-            </div>
+        <div class="flex items-center sm:justify-center xl:flex-row sm:flex-col mx-36 mt-8">
             <div
-                data-aos="fade-up" data-aos-duration="1500" class="xl:h-[400px] sm:h-[310px] sm:w-2/3 xl:w-auto xl:mt-0 sm:mt-5 bg-white rounded-xl shadow-2xl dark:bg-white dark:border-gray-100 xl:mx-5">
-                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="images\why-choose-us.jpg"
+                data-aos="fade-up" data-aos-duration="1500" class="xl:h-[400px] sm:h-[380px] sm:w-1/2 xl:w-auto xl:mt-0 sm:mt-5 bg-white rounded-xl shadow-2xl dark:bg-white dark:border-gray-100 xl:mx-5">
+                <img class="block xl:h-72 sm:h-64 object-cover w-full rounded-t-lg" src="{{ asset('/images/foto-bu-sri.jpg') }}"
                     alt="" />
                 <div class="px-5 py-3">
                     <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Sri Sudarwati
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Coach, CEO PT Citra Prestasi Gemilang. <br> Certified IALC. DCN/LCP/2018/000083. <br> Certified 3.0 Coaching Academy Ary Ginanjar.</p>
+                    <p class="text-sm text-black dark:text-black text-center">Coach, CEO PT Citra Prestasi Gemilang <br> Certified IALC. DCN/LCP/2018/000083 <br> Certified 3.0 Coaching Academy Ary Ginanjar</p>
                 </div>
             </div>
+        </div>
+
+        <div class="flex xl:items-end sm:items-center sm:justify-center xl:flex-row sm:flex-col mx-36 mt-8 gap-5">
             <div data-aos="fade-up" data-aos-duration="1500"
-                class="xl:w-1/3 sm:w-1/2 h-fit p-1 xl:mt-0 sm:mt-5 bg-white rounded-xl shadow-xl items-end">
-                <img class="rounded-xl" src="images\sertif-coach-2.jpg" alt="">
+                class="xl:w-1/3 sm:w-1/2 h-fit p-1 bg-white rounded-xl shadow-xl items-end">
+                <img class="rounded-xl" src="{{ asset('/images/sertif-coach-1.jpg') }}" alt="">
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1500"
+                class="xl:w-1/3 sm:w-1/2 h-fit p-1 xl:mt-0 bg-white rounded-xl shadow-xl items-end">
+                <img class="rounded-xl" src="{{ asset('/images/sertif-coach-2.jpg') }}" alt="">
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1500"
+                class="xl:w-1/3 sm:w-1/2 h-fit p-1 bg-white rounded-xl shadow-xl items-end">
+                <img class="rounded-xl" src="{{ asset('/images/sertif-sekolah-ceo.jpg') }}" alt="">
             </div>
         </div>
     </div>
