@@ -192,7 +192,7 @@
         </div>
         <div class="grid w-full xl:flex xl:flex-row">
             <figure data-aos="fade-up" data-aos-duration="1500" class="aspect-square relative transition-all duration-300 cursor-pointer xl:mr-20 sm:mr-0">
-                <img class="object-cover w-full aspect-square xl:w-[550px] rounded-xl" src="images\why-choose-us.jpg" alt="image description">
+                <img class="object-cover w-full aspect-square xl:w-[550px] rounded-xl" src="images\foto-bu-sri.jpg" alt="Sri Sudawati - President Director">
                 <figcaption class="absolute p-4 text-lg text-white bottom-0 text-center bg-orange-600 rounded-b-xl">
                     <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta urna nibh, non porta libero molestie eu.“ 
                         <br> (Ini Quotes Bu Wati)</p>
@@ -249,7 +249,7 @@
         
     </div>
 
-    {{-- Section 6 --}}
+    {{-- Section 6 STRUKTUR ORGANISASI --}}
     <div class="bg-white max-w-full my-20 px-36">
         <div class="flex flex-col">
             <div data-aos="fade-up" data-aos-duration="1500" class="text-5xl text-black mb-12 font-bold">
@@ -262,7 +262,7 @@
         </div>
     </div>
 
-    {{-- Section 7 --}}
+    {{-- Section 7 MEET OUR TEAM --}}
     <div class="bg-orange-500 max-w-full px-36 py-20">
         <div data-aos="fade-up" data-aos-duration="1500" class="text-5xl text-black mb-12 font-bold">
             Meet Out Team

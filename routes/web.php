@@ -49,6 +49,7 @@ Route::get('/cerita-umkm', [CeritaUmkmController::class, 'index'])->name('cerita
 Route::get('/cerita-umkm/{slug}', [CeritaUmkmController::class, 'read'])->name('cerita-umkm-read');
 Route::get('/assesment-center', [AssesmentController::class, 'index'])->name('assesment-center');
 Route::get('/assesment-center/{slug}', [AssesmentController::class, 'detailAssesmentPage'])->name('assesment-center.detail');
+Route::get('/training/category/', [TrainingController::class, 'trainingByCategory'])->name('training.category');
 Route::get('/organizing', [OrganizingController::class, 'index'])->name('organizing');
 Route::get('/internship', [InternshipController::class, 'index'])->name('internship');
 Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
@@ -73,7 +74,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/create', [BlogController::class, 'createBlogPage'])->name('admin.blog.create.page')->middleware('auth');
         Route::post('/create', [BlogController::class, 'createBlog'])->name('admin.blog.create')->middleware('auth');
         Route::get('/edit/{id}', [BlogController::class, 'editBlogPage'])->name('admin.blog.edit.page')->middleware('auth');
-        Route::put('/edit/{id}', [BlogController::class, 'editBlog'])->name('edit')->middleware('auth');
+        Route::put('/edit/{id}', [BlogController::class, 'editBlog'])->name('admin.blog.edit')->middleware('auth');
         Route::get('/delete/{id}', [BlogController::class, 'deleteBlog'])->name('admin.blog.delete')->middleware('auth');
     });
 

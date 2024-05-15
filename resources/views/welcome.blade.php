@@ -100,7 +100,7 @@
         </a>
     </div>
 
-    {{-- Section 4 --}}
+    {{-- Section 4 WHY CHOOSE US --}}
     <div class="grid w-full h-auto justify-center items-center xl:flex xl:flex-row bg-orange-500 xl:px-36 xl:p-24 sm:py-24">
             <div data-aos="fade-up" data-aos-duration="1500" class="w-full xl:w-1/2 mb-10 xl:mb-0 xl:mr-10 justify-center items-center">
                 <div class="text-5xl text-white mb-10 font-bold">
@@ -141,31 +141,31 @@
 
                 <div class="grid text-orange-100">
                     <div class="flex mb-10 border-b border-white border-solid max-w-[500px]">
-                        <div class="max-w-[235px] pr-2 mb-3">
+                        <div class="max-w-[235px] pr-2 mb-3 mr-5">
                             <div class="font-bold mb-2 text-base xl:text-lg text-white">
                                 Big Expansion
                             </div>
                             <p class="text-sm pb-2">
-                                Adipiscing turpis sed faucibus magna at sit tincidunt. Non.
+                                Lebih dari satu dekade pengalaman, kami memiliki keterampilan mendalam untuk memberi solusi yang efektif dan inovatif.
                             </p>
                         </div>
-                        <div class="max-w-[235px]">
+                        <div class="max-w-[235px] mb-3">
                             <div class="font-bold mb-2 text-base xl:text-lg text-white">
                                 Commitmen to Quality
                             </div>
                             <p class="text-sm pb-2">
-                                Dengan dedikasi terhadap negeri, kami menyediakan pendampingan yang berfokus pada pertumbuhan dan pengembangan yang berkelanjutan.
+                                Kami menyediakan pendampingan yang berfokus pada pertumbuhan dan pengembangan yang berkelanjutan.
                             </p>
                         </div>
                     </div>
 
                     <div class="flex border-b mb-5 border-white border-solid max-w-[500px]">
-                        <div class="max-w-[235px] mb-3">
+                        <div class="max-w-[235px] mb-3 mr-5">
                             <div class="font-bold mb-2 text-base xl:text-lg text-white">
                                 Professional Team
                             </div>
                             <p class="text-sm pb-2">
-                                Tim kami terdiri dari ahli yang berpengalaman dan berkomitmen untuk memberikan layanan berkualitas tertinggi kepada klien kami. 
+                                Tim kami terdiri dari ahli yang berpengalaman dan berkomitmen memberikan layanan berkualitas kepada klien kami. 
                             </p>
                         </div>
                         <div class="max-w-[235px]">
@@ -263,47 +263,30 @@
             <div class="max-w-[580px] my-5 text-5xl text-black mb-10 font-bold">
                 Internship
             </div>
-            <button class="bg-black px-6 py-2 max-h-12 text-white font-bold text-center rounded-full">
-                See All
-            </button>
+            <a href="{{ route('internship') }}">
+                <button class="bg-black px-6 py-2 max-h-12 text-white font-bold text-center rounded-full">
+                    See All
+                </button>
+            </a>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1500" class="flex justify-center mx-24">
-            <div class="h-auto w-1/2 sm:w-full grid items-center justify-center">
-                <img id="foto" src="/images/internbg.png" alt="Logo Internship">
+
+        <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-10 mx-52 sm:mx-36 mb-12 sm:content-center place-items-center">
+            <div
+                class="xl:w-full lg:w-full sm:w-2/3 h-72 border border-gray-200 rounded-lg shadow-2xl ">
+                <img class="object-cover w-full h-full rounded-lg place-items-center" src="/images/internbg.png" alt="MSIB Batch 6 (Februari - Juni 2024)" />
                 <p id="teks" class="font-medium text-xl mt-5">
                     MSIB Batch 6 (Februari - Juni 2024)
                 </p>
             </div>
-            <div class="h-auto w-1/2 sm:w-full grid items-center justify-center">
-                <img id="foto2" src="/images/internbg.png" alt="Logo Internship">
-                <p id="teks2" class="font-medium text-xl mt-5">
-                    MSIB Batch 6 (Februari - Juni 2024)
+
+            <div
+                class="xl:w-full lg:w-full sm:w-2/3 h-72 border border-gray-200 rounded-lg shadow-2xl ">
+                <img class="object-cover w-full h-full rounded-lg place-items-center" src="/images/magang-smk.jpg" alt="Magang SMK Blabla" />
+                <p id="teks" class="font-medium text-xl mt-5">
+                    Magang SMK Blabla 2023
                 </p>
             </div>
         </div>
-
-        <script>
-            // Ambil elemen gambar pertama dan kedua
-            var foto1 = document.getElementById('foto');
-            var foto2 = document.getElementById('foto2');
-
-            // Atur event listener untuk kedua gambar
-            foto1.onload = function() {
-                // Ambil lebar gambar pertama
-                var lebarFoto1 = foto1.offsetWidth;
-
-                // Atur nilai max-width dari paragraf pertama
-                document.getElementById('teks').style.maxWidth = lebarFoto1 + 'px';
-            };
-
-            foto2.onload = function() {
-                // Ambil lebar gambar kedua
-                var lebarFoto2 = foto2.offsetWidth;
-
-                // Atur nilai max-width dari paragraf kedua
-                document.getElementById('teks2').style.maxWidth = lebarFoto2 + 'px';
-            };
-        </script>
     </div>
 
     {{-- Section 6 FAQ --}}

@@ -120,8 +120,8 @@
                 </div>
             </div>
             <div data-aos="fade-up" data-aos-duration="1500"
-                class="xl:w-1/4 h-56 justify-center items-center sm:w-full sm:mt-5">
-                <img class="h-56 object-cover w-full rounded-xl" src="images\investasi-sekarang.png">
+                class="xl:w-1/4 h-64 justify-center items-center sm:w-full sm:mt-5">
+                <img class="h-64 object-cover w-full rounded-xl" src="{{ asset('/images/investasi-sekarang.png') }}">
             </div>
         </div>
 

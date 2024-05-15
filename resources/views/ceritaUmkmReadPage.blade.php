@@ -14,7 +14,7 @@
     {{-- SECTION 2 - BODY --}}
     <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 mb-5 my-10">
         <p class="text-justify mb-16 font-medium">
-            {{ $story->body_story }}
+            {!! nl2br($story->body_story) !!}
         </p>
     </div>
 @endsection

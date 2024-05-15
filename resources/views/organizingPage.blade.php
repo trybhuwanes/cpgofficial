@@ -42,29 +42,18 @@
         <div class="h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
             <img class="block h-36 object-cover w-full rounded-t-lg" src="images\organizing-1.png" alt="" />
             <div class="px-5 py-3">
-                <h6 class="text-lg font-bold tracking-tight text-black dark:text-black">Noteworthy technology acquisitions
+                <h6 class="text-lg font-bold tracking-tight text-black dark:text-black">Lorem Ipsum
                 </h6>
                 <p class="text-sm text-black dark:text-black">Kamis, 28 Maret 2024</p>
 
             </div>
         </div>
 
-        {{-- CARD FOTO 1 --}}
-        <div class="h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-            <img class="block h-36 object-cover w-full rounded-t-lg" src="images\organizing-1.png" alt="" />
-            <div class="px-5 py-3">
-                <h6 class="text-lg font-bold tracking-tight text-black dark:text-black">Noteworthy technology acquisitions
-                </h6>
-                <p class="text-sm text-black dark:text-black">Kamis, 28 Maret 2024</p>
-
-            </div>
-        </div>
-
-        {{-- CARD FOTO 1 --}}
+        {{-- CARD FOTO 2 --}}
         <div class="h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
             <img class="block h-36 object-cover w-full rounded-t-lg" src="images\organizing-2.png" alt="" />
             <div class="px-5 py-3">
-                <h6 class="text-lg font-bold tracking-tight text-black dark:text-black">Noteworthy technology acquisitions
+                <h6 class="text-lg font-bold tracking-tight text-black dark:text-black">Lorem Ipsum
                 </h6>
                 <p class="text-sm text-black dark:text-black">Kamis, 28 Maret 2024</p>
 

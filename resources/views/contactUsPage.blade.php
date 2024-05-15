@@ -24,9 +24,9 @@
             <div class="grid grid-cols-2 gap-4">
                 {{-- COL 1 - FORM CONTACT US --}}
                 <div class="">
-                    @if(Session::has('success'))
+                    @if (Session::has('success'))
                         <div class="alert alert-success">
-                            {{Session::get('success')}}
+                            {{ Session::get('success') }}
                         </div>
                     @endif
 
@@ -64,9 +64,9 @@
                                 placeholder="Write down your message here ...."></textarea>
                         </div>
 
-
                         <button type="submit"
-                            class="text-white bg-black font-medium rounded-full text-sm px-10 py-3 text-center hover:bg-orange-700">Send</button>
+                            class="text-white bg-black font-medium rounded-full text-sm px-10 py-3 text-center hover:bg-orange-700">Send
+                        </button>
                     </form>
                 </div>
 
@@ -84,9 +84,14 @@
                         <p class="text-sm text-black dark:text-black text-center">
                             Jl. Layur 1/12 Malang, Jawa Timur 65142 <br>
                             info@cpgofficial.com <br>
-                            <br></p>
-                        <button
-                            class="mx-16 text-white bg-black font-medium rounded-full text-sm px-10 py-3 text-center hover:bg-orange-700">Whatsapp</button>
+                            <br>
+                        </p>
+                        <a href="https://wa.me/62811360215" target="_blank">
+                            <button
+                                class="mx-16 text-white bg-black font-medium rounded-full text-sm px-10 py-3 text-center hover:bg-orange-700">Whatsapp
+                            </button>
+                        </a>
+
                     </div>
                 </div>
             </div>

@@ -49,7 +49,7 @@
     <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 mb-5 my-10">
         <h5 class="mb-2 text-3xl font-bold tracking-tight text-black">Description</h5>
         <p class="text-justify mb-16 font-medium">
-            {{ $csr->desc_csr }}
+            {!! nl2br($csr->desc_csr) !!}
         </p>
     </div>
 @endsection
