@@ -101,14 +101,14 @@ Route::prefix('admin')->group(function () {
         Route::get('/', [AssesmentController::class, 'adminAssesment'])->name('admin.assesment')->middleware('auth');
         Route::get('/create', [AssesmentController::class, 'createAssesmentPage'])->name('admin.assesment.create.page')->middleware('auth');
         Route::post('/create', [AssesmentController::class, 'createAssesment'])->name('admin.assesment.create')->middleware('auth');
-        Route::get('/edit/{id}', [AssesmentController::class, 'editAssesmentPage'])->name('admin.assesment.edit.page')->middleware('auth');
+        Route::get('/edit/page/{id}', [AssesmentController::class, 'editAssesmentPage'])->name('admin.assesment.edit.page')->middleware('auth');
         Route::put('/edit/{id}', [AssesmentController::class, 'editAssesment'])->name('admin.assesment.edit')->middleware('auth');
         Route::get('/syarat/{id}', [AssesmentController::class, 'syaratAssesmentPage'])->name('admin.assesment.syarat.page')->middleware('auth');
         Route::post('/syarat/{id}', [AssesmentController::class, 'syaratAssesment'])->name('admin.assesment.syarat')->middleware('auth');
         Route::get('/uk/{id}', [AssesmentController::class, 'ukAssesmentPage'])->name('admin.assesment.uk.page')->middleware('auth');
         Route::post('/uk/{id}', [AssesmentController::class, 'ukAssesment'])->name('admin.assesment.uk')->middleware('auth');
         Route::delete('/delete/{id}', [AssesmentController::class, 'deleteAssesment'])->name('admin.assesment.delete')->middleware('auth');
-        Route::delete('/delete/{id}', [AssesmentController::class, 'deleteSyaratAssesment'])->name('admin.assesment.deleteSyarat')->middleware('auth');
+        Route::delete('/delete/syarat/{id}/{idAssesment}', [AssesmentController::class, 'deleteSyaratAssesment'])->name('admin.assesment.deleteSyarat')->middleware('auth');
     });
 
     Route::prefix('umkm_story')->group(function () {

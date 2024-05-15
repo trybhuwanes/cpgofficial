@@ -39,13 +39,13 @@
                 <li>Produktivitas kerja jadi meningkat</li>
             </ul>
 
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-orange-600">Unit Kompetensi</h5>
-            <hr class="h-px my-3 border-0 bg-gray-800">
-            <ul class="text-base font-medium text-black mb-5 list-disc pl-4">
+            {{-- <h5 class="mb-2 text-2xl font-bold tracking-tight text-orange-600">Unit Kompetensi</h5>
+            <hr class="h-px my-3 border-0 bg-gray-800"> --}}
+            {{-- <ul class="text-base font-medium text-black mb-5 list-disc pl-4">
                 @foreach ($uk as $item)
                 <li>{{ $item->uk}} </li>
                 @endforeach
-            </ul>
+            </ul> --}}
         </div>
     </div>
 
@@ -101,11 +101,11 @@
                         Investasi Sekarang!
                     </div>
 
-                    <p class="text-sm leading-7 text-white w-full mb-5"> 
+                    <p class="text-sm leading-7 text-white w-full mb-5">
                         Saatnya untuk membangun kompetensi personal melalui PT Citra Prestasi Gemilang. Banyak sekali training provider yang hanya menjembatani kebutuhan pelatihan dan pencapaian kompetensi personal sebagai azas formalitas usaha.
                         Disini kami menawarkan dan menjalankan hal yang berbeda. Dari kualitas bimbingan teknis yang diberikan oleh para praktisi industri dengan pengalaman kerja lebih dari 20 tahun dan kualitas materi yang relevan dengan kebutuhan industri saat ini.
                         Kerja sama dengan seluruh LSP P3 dalam semua skema sertifikasi memegang prinsip kejujuran, profesional, dan needs oriented.
-                        
+
                         <br>
                         <br>Jangan ragu untuk mengenal kami lebih dekat. Hubungi:
                         <br>0811 360 215

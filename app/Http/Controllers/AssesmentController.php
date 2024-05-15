@@ -27,12 +27,11 @@ class AssesmentController extends Controller
         $assesment = AssesmentCenter::where('slug', $slug)->first();
         // $id = AssesmentCenter::getIdByName($slug);
         $syarat = SyaratAssesment::where('assesment_center_id', $assesment->id)->get();
-        $uk = UkAssesment::where('assesment_center_id', $assesment->id)->get();
         // $syarat = DB::table('assesment_centers')
         //     ->join('syarat_assesment', 'assesment_centers.id', '=', 'syarat_assesment.assesment_center_id')
         //     ->select('assesment_centers.*', 'syarat_assesment.syarat')
         //     ->get();
-        return view('assesmentDetailPage', compact(['assesment', 'syarat', 'uk']));
+        return view('assesmentDetailPage', compact(['assesment', 'syarat']));
     }
 
 
@@ -91,12 +90,12 @@ class AssesmentController extends Controller
             ]);
         }
 
-        for ($i = 0; $i < $request->jumlah_uk; $i++) {
-            UkAssesment::create([
-                'uk' => $request->input("uk_" . ($i + 1)),
-                'assesment_center_id' => $assesment->id,
-            ]);
-        }
+        // for ($i = 0; $i < $request->jumlah_uk; $i++) {
+        //     UkAssesment::create([
+        //         'uk' => $request->input("uk_" . ($i + 1)),
+        //         'assesment_center_id' => $assesment->id,
+        //     ]);
+        // }
 
         return redirect()->route('admin.assesment');
     }
@@ -106,9 +105,9 @@ class AssesmentController extends Controller
         $encryptedId = Crypt::decrypt($id);
         $assesment = AssesmentCenter::find($encryptedId);
         $syarat = SyaratAssesment::where('assesment_center_id', $encryptedId)->get();
-        $uk = UkAssesment::where('assesment_center_id', $encryptedId)->get();
+        // $uk = UkAssesment::where('assesment_center_id', $encryptedId)->get();
         // dd($id, $decrypted, $assesment);
-        return view('admin.assesment.assesmentUpdate', compact('assesment', 'syarat', 'uk'), ['encryptedId' => $encryptedId]);
+        return view('admin.assesment.assesmentUpdate', compact('assesment', 'syarat'), ['encryptedId' => $encryptedId]);
 
         // return view('edit-blog', ['encryptedId' => $encryptedId]);
     }
@@ -124,7 +123,7 @@ class AssesmentController extends Controller
         // dd($request->all());
 
         $syarat = SyaratAssesment::where('assesment_center_id', $id)->get();
-        $uk = UkAssesment::where('assesment_center_id', $id)->get();
+        // $uk = UkAssesment::where('assesment_center_id', $id)->get();
 
         // dd($syarat);
 
@@ -153,30 +152,30 @@ class AssesmentController extends Controller
             # code...
         }
 
-        foreach ($uk as $key => $value) {
-            // dd($value->syarat);
+        // foreach ($uk as $key => $value) {
+        //     // dd($value->syarat);
 
-            // dd($value);
+        //     // dd($value);
 
-            // dd($request->input("syarat_".($key+1)));
-
-
-            if ($value->uk == $request->input("uk_" . ($key + 1))) {
+        //     // dd($request->input("syarat_".($key+1)));
 
 
-                # code...
-            } else {
-                $value->update([
-                    'uk' => $request->input("uk_" . ($key + 1)),
-                ]);
+        //     if ($value->uk == $request->input("uk_" . ($key + 1))) {
 
-                $value->save();
 
-                # code...
-            }
+        //         # code...
+        //     } else {
+        //         $value->update([
+        //             'uk' => $request->input("uk_" . ($key + 1)),
+        //         ]);
 
-            # code...
-        }
+        //         $value->save();
+
+        //         # code...
+        //     }
+
+        //     # code...
+        // }
 
 
         // $encryptedId = Crypt::decrypt($id);
@@ -195,83 +194,6 @@ class AssesmentController extends Controller
 
         return redirect()->route('admin.assesment');
     }
-    // public function editAssesment(Request $request, $id)
-    // {
-    //     $assesment = AssesmentCenter::find($id);
-    //     $request->validate([
-    //         'title_assesment' => 'required',
-    //         'desc_assesment' => 'required',
-    //         'importance' => 'required',
-    //         'pict_assesment' => 'required|image|mimes:jpeg,png,jpg',
-    //         'pict_agenda' => 'required|image|mimes:jpeg,png,jpg',
-    //     ]);
-
-    //     $request->merge([
-    //         'slug' => Str::slug($request->title_assessment),
-    //     ]);
-
-    //     if($request->file('pict_assesment')){
-    //         // upload image
-    //         $pictAssesment = $request->file('pict_assesment');
-    //         $fileNameAssesment = $request->slug . '-pict' . '.' . $pictAssesment->extension();
-    //         $pictAssesment->move(public_path('assets/img'), $fileNameAssesment);
-
-    //         // delete old image
-    //         Storage::delete('public/assets/img/'. $assesment->pict_assesment);
-
-    //         // update post data image
-    //         $assesment->update([
-    //             'pict_assesment'   => $fileNameAssesment,
-    //         ]);
-    //     }
-
-    //     $syarat = SyaratAssesment::where('assesment_center_id', $id)->get();
-    //     $uk = UkAssesment::where('assesment_center_id', $id)->get();
-
-    //     foreach ($syarat as $key => $value) {
-    //         if ($value->syarat == $request->input("syarat_" . ($key + 1))) {
-    //             # code...
-    //         } else {
-    //             $value->update([
-    //                 'syarat' => $request->input("syarat_" . ($key + 1)),
-    //             ]);
-
-    //             $value->save();
-
-    //             # code...
-    //         }
-
-    //         # code...
-    //     }
-
-    //     foreach ($uk as $key => $value) {
-    //         if ($value->uk == $request->input("uk_" . ($key + 1))) {
-    //             # code...
-    //         } else {
-    //             $value->update([
-    //                 'uk' => $request->input("uk_" . ($key + 1)),
-    //             ]);
-
-    //             $value->save();
-
-    //             # code...
-    //         }
-
-    //         # code...
-    //     }
-
-    //     // $assesment = AssesmentCenter::find($id);
-    //     $assesment->update(
-    //         [
-    //             'title' => $request->title_assesment,
-    //             'desc' => $request->desc_assesment,
-    //             'importance' => $request->importance,
-    //         ]
-    //     );
-    //     $assesment->save();
-
-    //     return redirect()->route('admin.assesment');
-    // }
 
     public function syaratAssesmentPage($id)
     {
@@ -307,35 +229,12 @@ class AssesmentController extends Controller
         return redirect()->route('admin.assesment.edit.page', ['id' => $encryptedId]);
     }
 
-    public function ukAssesmentPage($id)
-    {
-        $assesment = AssesmentCenter::find($id);
-
-        return view('admin.assesment.ukAssesmentPage', compact('assesment'));
-    }
-
-    public function ukAssesment(Request $request, $id)
-    {
-        // dd($request->all());
-        $request->validate([
-            'uk' => 'required|string|max:255',
-        ]);
-
-        UkAssesment::create([
-            'uk' => $request->uk,
-            'assesment_center_id' => $id,
-        ]);
-
-        $encryptedId = Crypt::encrypt($id);
-
-        return redirect()->route('admin.assesment.edit.page', ['id' => $encryptedId]);
-    }
-
     public function deleteAssesment($id)
     {
         $encryptedId = Crypt::decrypt($id);
+
         // Hapus baris-baris terkait di tabel 'uk_assesment'
-        UkAssesment::where('assesment_center_id', $encryptedId)->delete();
+        // UkAssesment::where('assesment_center_id', $encryptedId)->delete();
 
         SyaratAssesment::where('assesment_center_id', $encryptedId)->delete();
 
@@ -347,15 +246,18 @@ class AssesmentController extends Controller
     public function deleteSyaratAssesment($id, $assesmentId)
     {
         $encryptedId = Crypt::decrypt($id);
+        $encryptedIdAssesment = Crypt::decrypt($assesmentId);
         // Hapus baris-baris terkait di tabel 'uk_assesment'
 
-        SyaratAssesment::find($encryptedId)->delete();
+        SyaratAssesment::where('assesment_center_id', $encryptedIdAssesment)
+            ->where('id', $encryptedId)
+        ->delete();
 
 
         // Hapus baris dari tabel 'AssesmentCenter'
         //  dd($encryptedId);
         $encryptedId = Crypt::encrypt($id);
 
-        return redirect()->route('admin.assesment.edit.page', ['id' => $encryptedId]);
+        return redirect()->route('admin.assesment.edit.page', ['id' => $assesmentId]);
     }
 }

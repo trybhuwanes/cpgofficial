@@ -112,7 +112,7 @@
                     <button type="button" id="add-syarat-container"
                         class="mt-3 px-4 py-2 bg-blue-500 text-white rounded-md">Tambah Container</button>
                 </div>
-                <div>
+                {{-- <div>
                     <label for="uk" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Uji
                         Kompetensi</label>
                     <div class="mb-5 grid gap-4" id="uk-container">
@@ -127,7 +127,7 @@
                     </div>
                     <button type="button" id="add-uk-container"
                         class="mt-3 px-4 py-2 bg-blue-500 text-white rounded-md">Tambah Uji Kompetensi</button>
-                </div>
+                </div> --}}
             </div>
 
             <div class="mb-5">
