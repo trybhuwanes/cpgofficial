@@ -10,7 +10,15 @@ use Illuminate\Support\Facades\Storage;
 
 class CsrController extends Controller
 {
-    //
+    public function index() {
+        $csr = Csr::all();
+        return view('csrPage', compact('csr'));
+    }
+    public function csrDetail($slug) {
+        $csr = Csr::where('slug_csr', $slug)->first();
+        return view('csrDetailPage')->with('csr', $csr);
+    }
+    // ADMIN FUNCTION
     public function adminCsr() {
         $csr = Csr::all();
         // dd($Csr);
@@ -30,6 +38,7 @@ class CsrController extends Controller
             'desc_csr' => 'required',
             'date_csr' => 'required',
             'location_csr' => 'required',
+            'link_pendaftaran' => 'required',
         ]);
 
         // Menambahkan id_category ke dalam request jika perlu
@@ -49,6 +58,7 @@ class CsrController extends Controller
         $csr->desc_csr = $request->desc_csr;
         $csr->date_csr = $request->date_csr;
         $csr->location_csr = $request->location_csr;
+        $csr->link_pendaftaran = $request->link_pendaftaran;
         $csr->save();
 
         return redirect()->route('admin.csr');
@@ -86,10 +96,10 @@ class CsrController extends Controller
 
         $csr->title_csr = $request->title_csr;
         $csr->slug_csr = $request->slug_csr;
-        $csr->pict_csr = $fileName;
         $csr->desc_csr = $request->desc_csr; 
         $csr->date_csr = $request->date_csr;
-        $csr->location_csr = $request->location_csr;       
+        $csr->location_csr = $request->location_csr; 
+        $csr->link_pendaftaran = $request->link_pendaftaran;      
         $csr->updated_at = now();
         $csr->save();
         return redirect()->route('admin.csr');

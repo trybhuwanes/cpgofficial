@@ -45,22 +45,20 @@
                 @foreach ($uk as $item)
                 <li>{{ $item->uk}} </li>
                 @endforeach
-                {{-- <li>S.941000.022.02 Melaksanakan Public Speaking</li>
-                <li>S.941000.018.02 Melaksanakan Master Of Ceremony</li>
-                <li>S.941000.023.02 Membuat Pidato</li>
-                <li>S. 941000.026.02 Melaksanakan Fungsi Juru Bicara / Spokeperson</li> --}}
-
+            </ul>
+        </div>
     </div>
 
 
     {{-- SECTION 3 --}}
-    <div class="grid w-full justify-center items-center xl:flex xl:flex-row bg-black xl:px-36 xl:p-24 sm:py-24">
+    <div class="grid w-full justify-center items-center xl:flex xl:flex-row bg-black xl:p-24 sm:py-24">
         <div data-aos="fade-up" data-aos-duration="1500" class="xl:w-1/2">
             <div class="text-5xl text-white mb-10 font-bold">
                 Persyaratan
             </div>
 
-            <div class="bg-white mr-20 h-64 w-full xl:w-[550px] rounded-[20px] p-10 mb-10">
+            <div class="">
+                <img class="object-cover w-full h-64 xl:w-[550px] rounded-[20px] mb-10" src="{{ asset('images/persyaratan.jpg') }}" alt="">
             </div>
         </div>
         <div data-aos="fade-up" data-aos-duration="1500" class="xl:w-1/2">
@@ -86,11 +84,10 @@
                 Upcoming Certification
             </div>
 
-            <a data-aos="fade-up" data-aos-duration="1500" href="#"
-                class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105">
-                <img class="flex items-center justify-center object-cover rounded-t-lg w-80" src="{{ asset('assets/img/' . $assesment->pictagenda) }}"
+            {{-- <a data-aos="fade-up" data-aos-duration="1500" href="#" class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105"> --}}
+                <img data-aos="fade-up" data-aos-duration="1500" class="flex items-center justify-center object-cover rounded-t-lg w-80" src="{{ asset('assets/img/' . $assesment->pictagenda) }}"
                     alt="{{ $assesment->pictagenda }}" />
-            </a>
+            {{-- </a> --}}
         </div>
     </div>
 
@@ -115,13 +112,16 @@
                         <br>0811 360 215
                     </p>
 
-                    <button
-                        class="text-white bg-orange-600 font-medium rounded-full text-sm px-10 py-3 text-center hover:bg-orange-700">Whatsapp</button>
+                    <a href="https://wa.me/62811360215?text=saya%20tertarik%20untuk%20berinvestasi%20di%20Citra%20Prestasi%20Gemilang" target="_blank">
+                        <button
+                            class="text-white bg-orange-600 font-medium rounded-full text-sm px-10 py-3 text-center hover:bg-orange-700">Whatsapp
+                        </button>
+                    </a>
                 </div>
             </div>
             <div data-aos="fade-up" data-aos-duration="1500"
-                class="xl:w-1/4 h-56 justify-center items-center sm:w-full sm:mt-5">
-                <img class="h-56 object-cover w-full rounded-xl" src="images\investasi-sekarang.png">
+                class="xl:w-1/4 h-64 justify-center items-center sm:w-full sm:mt-5">
+                <img class="h-64 object-cover w-full rounded-xl" src="{{ asset('/images/investasi-sekarang.png') }}">
             </div>
         </div>
 

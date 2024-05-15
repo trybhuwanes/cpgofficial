@@ -32,8 +32,8 @@ class TrainingController extends Controller
         return view('trainingPage', compact(['training', 'category']));
     }
 
-    public function trainingDetailPage($id) {
-        $training = Training::whereId($id)->first();
+    public function trainingDetailPage($slug) {
+        $training = Training::where('slug_training', $slug)->first();
         return view('trainingDetailPage')->with('training', $training);
     }
 
@@ -74,6 +74,7 @@ class TrainingController extends Controller
             'shortdesc_training' => 'required',
             'date_training' => 'required',
             'location_training' => 'required',
+            'link_pendaftaran' => 'required',
         ]);
 
         // Menambahkan id_category ke dalam request jika perlu
@@ -94,6 +95,7 @@ class TrainingController extends Controller
         $training->shortdesc_training = $request->shortdesc_training;
         $training->date_training = $request->date_training;
         $training->location_training = $request->location_training;
+        $training->link_pendaftaran = $request->link_pendaftaran;
         $training->save();
 
         return redirect()->route('admin.training');
@@ -134,6 +136,7 @@ class TrainingController extends Controller
         $training->shortdesc_training = $request->shortdesc_training;
         $training->date_training = $request->date_training;
         $training->location_training = $request->location_training;
+        $training->link_pendaftaran = $request->link_pendaftaran;
         $training->updated_at = now();
         $training->save();
 

@@ -146,7 +146,7 @@
 
             
 
-            <a href="#">
+            <a href="https://wa.me/62811360215" target="_blank">
                 <button type="button"
                     class="text-white bg-black hover:bg-orange-500 focus:outline-none focus:ring-4 font-medium rounded-full text-base px-8 py-4 text-center">Register</button>
             </a>

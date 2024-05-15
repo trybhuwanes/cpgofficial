@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\AssesmentCenter;
 use App\Models\SyaratAssesment;
-Use App\Models\UkAssesment;
+use App\Models\UkAssesment;
 use App\Models\CategoryTraining;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+
 
 class AssesmentController extends Controller
 {
@@ -40,6 +42,63 @@ class AssesmentController extends Controller
         $assesment = AssesmentCenter::all();
         // dd($assesment);
         return view('admin.assesment.assesment', compact('assesment'));
+    }
+
+    public function createAssesmentPage()
+    {
+        // $categories = CategoryTraining::all();
+        // dd($categories);
+        return view('admin.assesment.assesmentCreate');
+    }
+
+    public function createAssesment(Request $request)
+    {
+        // dd($request->all());
+        $request->validate([
+            'title_assessment' => 'required',
+            'desc_assessment' => 'required',
+            'importance' => 'required',
+            'pict_assesment' => 'required|image|mimes:jpeg,png,jpg',
+            'pict_agenda' => 'required|image|mimes:jpeg,png,jpg',
+        ]);
+
+        $request->merge([
+            'slug' => Str::slug($request->title_assessment),
+        ]);
+
+        $pictAssesment = $request->file('pict_assesment');
+        $fileNameAssesment = $request->slug . '-pict' . '.' . $pictAssesment->extension();
+        $pictAssesment->move(public_path('assets/img'), $fileNameAssesment);
+
+        $pictAgenda = $request->file('pict_agenda');
+        $fileNameAgenda = $request->slug . '-agenda' . '.' . $pictAgenda->extension();
+        $pictAgenda->move(public_path('assets/img'), $fileNameAgenda);
+
+        $assesment = new AssesmentCenter();
+        // $assesment->id_category = $request->category;
+        $assesment->title = $request->title_assessment;
+        $assesment->slug = $request->slug;
+        $assesment->desc = $request->desc_assessment;
+        $assesment->importance = $request->importance;
+        $assesment->pict = $fileNameAssesment;
+        $assesment->pictagenda = $fileNameAgenda;
+        $assesment->save();
+
+        for ($i = 0; $i < $request->jumlah_syarat; $i++) {
+            SyaratAssesment::create([
+                'syarat' => $request->input("syarat_" . ($i + 1)),
+                'assesment_center_id' => $assesment->id,
+            ]);
+        }
+
+        for ($i = 0; $i < $request->jumlah_uk; $i++) {
+            UkAssesment::create([
+                'uk' => $request->input("uk_" . ($i + 1)),
+                'assesment_center_id' => $assesment->id,
+            ]);
+        }
+
+        return redirect()->route('admin.assesment');
     }
 
     public function editAssesmentPage($id)
@@ -119,6 +178,7 @@ class AssesmentController extends Controller
             # code...
         }
 
+
         // $encryptedId = Crypt::decrypt($id);
         // dd($request->all());
         $assesment = AssesmentCenter::find($id);
@@ -135,6 +195,83 @@ class AssesmentController extends Controller
 
         return redirect()->route('admin.assesment');
     }
+    // public function editAssesment(Request $request, $id)
+    // {
+    //     $assesment = AssesmentCenter::find($id);
+    //     $request->validate([
+    //         'title_assesment' => 'required',
+    //         'desc_assesment' => 'required',
+    //         'importance' => 'required',
+    //         'pict_assesment' => 'required|image|mimes:jpeg,png,jpg',
+    //         'pict_agenda' => 'required|image|mimes:jpeg,png,jpg',
+    //     ]);
+
+    //     $request->merge([
+    //         'slug' => Str::slug($request->title_assessment),
+    //     ]);
+
+    //     if($request->file('pict_assesment')){
+    //         // upload image
+    //         $pictAssesment = $request->file('pict_assesment');
+    //         $fileNameAssesment = $request->slug . '-pict' . '.' . $pictAssesment->extension();
+    //         $pictAssesment->move(public_path('assets/img'), $fileNameAssesment);
+
+    //         // delete old image
+    //         Storage::delete('public/assets/img/'. $assesment->pict_assesment);
+
+    //         // update post data image
+    //         $assesment->update([
+    //             'pict_assesment'   => $fileNameAssesment,
+    //         ]);
+    //     }
+
+    //     $syarat = SyaratAssesment::where('assesment_center_id', $id)->get();
+    //     $uk = UkAssesment::where('assesment_center_id', $id)->get();
+
+    //     foreach ($syarat as $key => $value) {
+    //         if ($value->syarat == $request->input("syarat_" . ($key + 1))) {
+    //             # code...
+    //         } else {
+    //             $value->update([
+    //                 'syarat' => $request->input("syarat_" . ($key + 1)),
+    //             ]);
+
+    //             $value->save();
+
+    //             # code...
+    //         }
+
+    //         # code...
+    //     }
+
+    //     foreach ($uk as $key => $value) {
+    //         if ($value->uk == $request->input("uk_" . ($key + 1))) {
+    //             # code...
+    //         } else {
+    //             $value->update([
+    //                 'uk' => $request->input("uk_" . ($key + 1)),
+    //             ]);
+
+    //             $value->save();
+
+    //             # code...
+    //         }
+
+    //         # code...
+    //     }
+
+    //     // $assesment = AssesmentCenter::find($id);
+    //     $assesment->update(
+    //         [
+    //             'title' => $request->title_assesment,
+    //             'desc' => $request->desc_assesment,
+    //             'importance' => $request->importance,
+    //         ]
+    //     );
+    //     $assesment->save();
+
+    //     return redirect()->route('admin.assesment');
+    // }
 
     public function syaratAssesmentPage($id)
     {
@@ -142,7 +279,6 @@ class AssesmentController extends Controller
 
         return view('admin.assesment.syaratAssesmentPage', compact('assesment'));
     }
-
 
     public function syaratAssesment(Request $request, $id)
     {
@@ -222,119 +358,4 @@ class AssesmentController extends Controller
 
         return redirect()->route('admin.assesment.edit.page', ['id' => $encryptedId]);
     }
-
-public function createAssesmentPage() {
-    // $categories = CategoryTraining::all();
-    // dd($categories);
-    return view('admin.assesment.assesmentCreate');
-}
-
-
-public function createAssesment(Request $request) {
-        // dd($request->all());
-        $request->validate([
-            'title_assessment' => 'required',
-            'desc_assessment' => 'required',
-            'importance' => 'required',
-            'pict_assesment' => 'required|image|mimes:jpeg,png,jpg',
-            'pict_agenda' => 'required|image|mimes:jpeg,png,jpg',
-        ]);
-
-        $request->merge([
-            'slug' => Str::slug($request->title_assessment),
-        ]);
-
-        $pictAssesment = $request->file('pict_assesment');
-        $fileNameAssesment = $request->slug . '-pict' . '.' . $pictAssesment->extension();
-        $pictAssesment->move(public_path('assets/img'), $fileNameAssesment);
-
-        $pictAgenda = $request->file('pict_agenda');
-        $fileNameAgenda = $request->slug . '-agenda' . '.' . $pictAgenda->extension();
-        $pictAgenda->move(public_path('assets/img'), $fileNameAgenda);
-
-        $assesment = new AssesmentCenter();
-        // $assesment->id_category = $request->category;
-        $assesment->title = $request->title_assessment;
-        $assesment->slug = $request->slug;
-        $assesment->desc = $request->desc_assessment;
-        $assesment->importance = $request->importance;
-        $assesment->pict = $fileNameAssesment;
-        $assesment->pictagenda = $fileNameAgenda;
-        // $assesment->uk = 'default.jpg';
-        // $assesment->syarat1 = 'default.jpg';
-        // $assesment->syarat2 = 'default.jpg';
-        // $assesment->syarat3 = 'default.jpg';
-        $assesment->save();
-
-        for ($i=0; $i < $request->jumlah_syarat; $i++) {
-            SyaratAssesment::create([
-                'syarat' => $request->input("syarat_".($i+1)),
-                'assesment_center_id' => $assesment->id,
-            ]);
-        }
-
-        for ($i=0; $i < $request->jumlah_uk; $i++) {
-            UkAssesment::create([
-                'uk' => $request->input("uk_".($i+1)),
-                'assesment_center_id' => $assesment->id,
-            ]);
-        }
-
-        return redirect()->route('admin.assesment');
-
-   }
-
-    // public function createAssesment(Request $request)
-    // {
-    //     // dd($request->all());
-    //     $request->validate([
-    //         'title_assesment' => 'required',
-    //         // 'pict_assesment' => 'required|image|mimes:jpeg,png,jpg',
-    //         'desc_assesment' => 'required',
-    //         'importance' => 'required',
-    //         // 'pict_agenda'  => 'required|image|mimes:jpeg,png,jpg',
-    //     ]);
-
-    //     // $request->merge([
-    //     //     'slug' => Str::slug($request->title_assesment),
-    //     // ]);
-
-    //     // $pictAssesment = $request->file('pict_assesment');
-    //     // $fileNameAssesment = $request->title_assesment . '-pict' . '.' . $pictAssesment->extension();
-    //     // $pictAssesment->move(public_path('assets/img'), $fileNameAssesment);
-
-    //     // $pictAgenda = $request->file('pict_agenda');
-    //     // $fileNameAgenda = $request->slug . '-agenda' . '.' . $pictAgenda->extension();
-    //     // $pictAgenda->move(public_path('assets/img'), $fileNameAgenda);
-
-    //     $assesment = new AssesmentCenter();
-    //     $assesment->title = $request->title_assesment;
-    //     $assesment->slug = 'default';
-    //     // $assesment->pict = $fileNameAssesment;
-    //     $assesment->pict = 'default.jpg';
-    //     $assesment->desc = $request->desc_assesment;
-    //     $assesment->importance = $request->importance;
-    //     // $assesment->pictagenda = $fileNameAgenda;
-    //     $assesment->uk = 'default.jpg';
-    //     $assesment->syarat1 = 'default.jpg';
-    //     $assesment->syarat2 = 'default.jpg';
-    //     $assesment->syarat3 = 'default.jpg';
-    //     $assesment->save();
-
-    //     for ($i = 0; $i < $request->jumlah_syarat; $i++) {
-    //         SyaratAssesment::create([
-    //             'syarat' => $request->input("syarat_" . ($i + 1)),
-    //             'assesment_center_id' => $assesment->id,
-    //         ]);
-    //     }
-
-    //     for ($i = 0; $i < $request->jumlah_uk; $i++) {
-    //         UkAssesment::create([
-    //             'uk' => $request->input("uk_" . ($i + 1)),
-    //             'assesment_center_id' => $assesment->id,
-    //         ]);
-    //     }
-
-    //     return redirect()->route('admin.assesment');
-    // }
 }

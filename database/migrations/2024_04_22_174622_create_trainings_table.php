@@ -24,6 +24,7 @@ class CreateTrainingsTable extends Migration
             $table->text('shortdesc_training');
             $table->date('date_training');
             $table->string('location_training');
+            $table->string('link_pendaftaran');
             $table->timestamps();
         });
     }

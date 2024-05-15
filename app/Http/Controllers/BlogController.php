@@ -92,7 +92,6 @@ class BlogController extends Controller
 
         $blog->title_blog = $request->title;
         $blog->slug_blog = $request->slug_blog;
-        $blog->pict_blog = $fileName;
         $blog->desc_blog = $request->desc;        
         $blog->updated_at = now();
         $blog->save();

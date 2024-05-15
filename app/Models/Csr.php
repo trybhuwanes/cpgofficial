@@ -9,7 +9,6 @@ class Csr extends Model
 {
     use HasFactory;
 
-    protected $table = "csr";
     protected $fillable = [
         'id',
         'title_csr',

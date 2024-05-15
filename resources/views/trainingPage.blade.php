@@ -8,7 +8,7 @@
     {{-- Section 1 --}}
     <div class="items-center justify-center bg-white">
         <div class="w-full h-72 shadow-2xl overflow-hidden relative">
-            <img class="absolute inset-0 h-full w-full object-cover" src="images\hero image.png">
+            <img class="absolute inset-0 h-full w-full object-cover" src="{{ asset('/images/hero image.png') }}">
             <div class="absolute inset-0 bg-white bg-opacity-50"></div>
             <div class="flex h-full items-center justify-center relative">
                 <h1 class="text-4xl text-black font-semibold">TRAINING</h1>
@@ -25,7 +25,7 @@
                     <option value="{{ $category->name_category }}" class="hover:bg-orange-500">{{ $category->name_category }}</option>
                 @endforeach
             </select>
-            <button type="submit">Filter</button>
+            <button type="submit" class="ml-5 bg-black px-10 py-2 max-h-12 text-white font-bold text-center rounded-full">Apply</button>
         </form>
     </div>
 
