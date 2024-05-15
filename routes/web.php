@@ -94,6 +94,7 @@ Route::prefix('admin')->group(function () {
             Route::put('/edit/{id}', [TrainingController::class, 'updateCategory'])->name('admin.training.category.update')->middleware('auth');
             Route::get('/delete/{id}', [TrainingController::class, 'deleteCategory'])->name('admin.training.category.delete')->middleware('auth');
         });
+
     });
 
     Route::prefix('assesment')->group(function () {

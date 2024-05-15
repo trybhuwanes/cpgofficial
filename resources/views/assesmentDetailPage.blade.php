@@ -101,12 +101,12 @@
                         Investasi Sekarang!
                     </div>
 
-                    <p class="text-sm leading-7 text-white w-full mb-5"> 
-                        Saatnya untuk mengembangkan portofolio Anda dengan keputusan investasi yang tepat. 
-                        Di PT Citra Prestasi Gemilang, kami menawarkan kesempatan investasi yang menjanjikan dalam berbagai sektor yang berkembang pesat. 
+                    <p class="text-sm leading-7 text-white w-full mb-5">
+                        Saatnya untuk mengembangkan portofolio Anda dengan keputusan investasi yang tepat.
+                        Di PT Citra Prestasi Gemilang, kami menawarkan kesempatan investasi yang menjanjikan dalam berbagai sektor yang berkembang pesat.
                         Dengan pendekatan yang terpercaya dan tim yang berpengalaman, kami hadir untuk membantu Anda meraih keuntungan maksimal dari investasi Anda. <br>
 
-                        Jangan Tunda Lagi, Hubungi Kami Hari Ini! Kunjungi website kami untuk informasi lebih lanjut atau langsung hubungi kami untuk berkonsultasi 
+                        Jangan Tunda Lagi, Hubungi Kami Hari Ini! Kunjungi website kami untuk informasi lebih lanjut atau langsung hubungi kami untuk berkonsultasi
                         <br>
                         <br>Hubungi contact di bawah ini:
                         <br>0811 360 215
@@ -125,7 +125,7 @@
             </div>
         </div>
 
-        
+
     </div>
 
 @endsection
