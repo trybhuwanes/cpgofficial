@@ -120,10 +120,10 @@ class TrainingController extends Controller
             $pictTraining = $request->file('pict_training');
             $fileName = $request->slug_training . '-pict' . '.' . $pictTraining->extension();
             $pictTraining->move(public_path('assets/img'), $fileName);
-        
+
             // delete old image
             Storage::delete('public/assets/img/'. $training->pict_training);
-        
+
             // update post data image
             $training->update([
                 'pict_training'   => $fileName,
