@@ -81,6 +81,7 @@ Route::prefix('admin')->group(function () {
 
     Route::prefix('training')->group(function () {
         Route::get('/', [TrainingController::class, 'adminTraining'])->name('admin.training')->middleware('auth');
+        Route::get('/read/{id}', [TrainingController::class, 'readTraining'])->name('admin.training.read')->middleware('auth');
         Route::get('/create', [TrainingController::class, 'createTrainingPage'])->name('admin.training.create.page')->middleware('auth');
         Route::post('/create', [TrainingController::class, 'createTraining'])->name('admin.training.create')->middleware('auth');
         Route::get('/edit/{id}', [TrainingController::class, 'editTrainingPage'])->name('admin.training.edit.page')->middleware('auth');

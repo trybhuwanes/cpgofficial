@@ -44,6 +44,12 @@ class TrainingController extends Controller
         return view('admin.training.training', compact('training'));
     }
 
+    public function readTraining($id) {
+        $encryptedId = Crypt::decrypt($id);
+        $training = Training::find($encryptedId);
+        return view('admin.training.readTrainingPage', compact('training'), ['encryptedId' => $encryptedId]);
+    }
+
     public function createTrainingPage()
     {
         $categories = CategoryTraining::all();
