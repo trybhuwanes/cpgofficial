@@ -71,6 +71,7 @@ Route::prefix('admin')->group(function () {
 
     Route::prefix('blog')->group(function () {
         Route::get('/', [BlogController::class, 'adminBlog'])->name('admin.blog')->middleware('auth');
+        Route::get('/read/{id}', [BlogController::class, 'readBlog'])->name('admin.blog.read')->middleware('auth');
         Route::get('/create', [BlogController::class, 'createBlogPage'])->name('admin.blog.create.page')->middleware('auth');
         Route::post('/create', [BlogController::class, 'createBlog'])->name('admin.blog.create')->middleware('auth');
         Route::get('/edit/{id}', [BlogController::class, 'editBlogPage'])->name('admin.blog.edit.page')->middleware('auth');

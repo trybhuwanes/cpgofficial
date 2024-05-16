@@ -29,6 +29,12 @@ class BlogController extends Controller
         return view('admin.blog.blog', compact('blog'));
     }
 
+    public function readBlog($id) {
+        $encryptedId = Crypt::decrypt($id);
+        $blog = Blog::find($encryptedId);
+        return view('admin.blog.blogRead', compact('blog'), ['encryptedId' => $encryptedId]);
+    }
+
     public function createBlogPage() {
         return view('admin.blog.blogCreate');
     }
@@ -64,7 +70,6 @@ class BlogController extends Controller
     public function editBlogPage($id) {
         $encryptedId = Crypt::decrypt($id);
         $blog = Blog::find($encryptedId);
-        // dd($id, $decrypted, $blog);
         return view('admin.blog.blogUpdate', compact('blog'), ['encryptedId' => $encryptedId]);
     }
 
