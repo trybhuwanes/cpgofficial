@@ -114,6 +114,7 @@ Route::prefix('admin')->group(function () {
 
     Route::prefix('umkm_story')->group(function () {
         Route::get('/', [CeritaUmkmController::class, 'adminCeritaUmkm'])->name('admin.umkm_story')->middleware('auth');
+        Route::get('/read/{id}', [CeritaUmkmController::class, 'readCeritaUmkm'])->name('admin.umkm_story.read')->middleware('auth');
         Route::get('/create', [CeritaUmkmController::class, 'createCeritaUmkmPage'])->name('admin.umkm_story.create.page')->middleware('auth');
         Route::post('/create', [CeritaUmkmController::class, 'createCeritaUmkm'])->name('admin.umkm_story.create')->middleware('auth');
         Route::get('/edit/{id}', [CeritaUmkmController::class, 'editCeritaUmkmPage'])->name('admin.umkm_story.edit.page')->middleware('auth');

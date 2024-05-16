@@ -28,6 +28,14 @@ class CeritaUmkmController extends Controller
         return view('admin.umkm_story.umkm_story', compact('umkm'));
     }
 
+    public function readCeritaUmkm($id)
+    {
+        $encryptedId = Crypt::decrypt($id);
+        $story = UMKMStory::find($encryptedId);
+        // dd($id, $decrypted, $blog);
+        return view('admin.umkm_story.storyRead', compact('story'), ['encryptedId' => $encryptedId]);
+    }
+
     public function createCeritaUmkmPage()
     {
         return view('admin.umkm_story.storyCreate');
