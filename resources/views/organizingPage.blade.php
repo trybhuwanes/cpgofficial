@@ -7,7 +7,7 @@
     {{-- SECTION 1 --}}
     <div class="items-center justify-center bg-white">
         <div class="w-full h-72 shadow-2xl overflow-hidden relative">
-            <img class="absolute inset-0 h-full w-full object-cover" src="images\hero image.png">
+            <img class="absolute inset-0 h-full w-full object-cover" src="{{ asset('/images/hero image.png') }}">
             <div class="absolute inset-0 bg-white bg-opacity-50"></div>
             <div class="flex h-full items-center justify-center relative">
                 <h1 class="text-4xl text-black font-semibold">ORGANIZING</h1>
@@ -23,12 +23,22 @@
             Mari menjelajahi bagaimana kami mengubah ide menjadi kenyataan dengan keunggulan organisasi kami melalui tema-tema berikut:<br>
         </p>
         <ol class="space-y-1 text-black list-decimal list-inside">
-            <li>Pertemuan Keluarga</li>
+            {{-- REVISI  --}}
+            <li>Annual Meeting</li> 
+            <li>Family Gathering </li>
+            <li>Boot Camp </li>
+            <li>Wedding</li>
+            <li>Membangun Kelas Industri EO</li>
+            <li>⁠Wellness</li>
+            <li>⁠Meditasi</li>
+            <li> ⁠Writing Camp</li>
+
+            {{-- <li>Pertemuan Keluarga</li>
             <li>Penyelenggara Acara</li>
             <li>Publikasi</li>
             <li>Komunikasi Pelanggan</li>
             <li>Agen Rekrutmen</li>
-            <li>Outbound</li>
+            <li>Outbound</li> --}}
         </ol>
     </div>
 
@@ -40,7 +50,7 @@
     <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-3 sm:grid-cols-2 gap-4 mx-36 mb-16">
         {{-- CARD FOTO 1 --}}
         <div class="h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-            <img class="block h-36 object-cover w-full rounded-t-lg" src="images\organizing-1.png" alt="" />
+            <img class="block h-36 object-cover w-full rounded-t-lg" src="{{ asset('/images/organizing-1.png') }}" alt="" />
             <div class="px-5 py-3">
                 <h6 class="text-lg font-bold tracking-tight text-black dark:text-black">Outbound SMKN 1 Malang
                 </h6>

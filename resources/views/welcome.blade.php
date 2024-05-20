@@ -9,7 +9,7 @@
     <div class="items-center justify-center bg-white">
         <div class="w-full h-fit sm:h-[600px] overflow-hidden relative">
             {{-- <img class="absolute inset-0 h-full w-full object-cover" src="images\hero-image.png"> --}}
-            <img class="absolute inset-0 h-full w-full object-cover" src="images\hero-image.gif">
+            <img class="absolute inset-0 h-full w-full object-cover" src="{{ asset('/images/hero-image.gif') }}">
             {{-- <div class="absolute inset-0 bg-white bg-opacity-50"></div> --}}
             <div class="flex h-full items-center justify-center relative">
                 {{-- <h1 class="text-4xl text-black font-semibold">BLOG</h1> --}}
@@ -38,11 +38,11 @@
 
             <div data-aos="fade-up" data-aos-duration="1500"
                 class="flex justify-center items-center h-full mb-10 space-x-10">
-                <img class="h-20 mr-5" src="images\logo\kementerian\kemnaker.png" alt="Kemnaker" class="mx-auto">
-                <img class="h-20 mr-5" src="images\logo\kementerian\kemdikbud.png" alt="Kemendikbud" class="mx-auto">
-                <img class="h-20 mr-5" src="images\logo\kementerian\kemenparekraf.png" alt="kemenparekraf" class="mx-auto">
-                <img class="h-20 mr-5" src="images\logo\kementerian\bappenas.png" alt="bappenas" class="mx-auto">
-                <img class="h-20 mr-5" src="images\logo\kementerian\kominfo.png" alt="kominfo" class="mx-auto">
+                <img class="h-20 mr-5" src="{{ asset('images\logo\kementerian\kemnaker.png') }}" alt="Kemnaker" class="mx-auto">
+                <img class="h-20 mr-5" src="{{ asset('images\logo\kementerian\kemdikbud.png') }}" alt="Kemendikbud" class="mx-auto">
+                <img class="h-20 mr-5" src="{{ asset('images\logo\kementerian\kemenparekraf.png') }}" alt="kemenparekraf" class="mx-auto">
+                <img class="h-20 mr-5" src="{{ asset('images\logo\kementerian\bappenas.png') }}" alt="bappenas" class="mx-auto">
+                <img class="h-20 mr-5" src="{{ asset('images\logo\kementerian\kominfo.png') }}" alt="kominfo" class="mx-auto">
             </div>
 
             <a href="{{ route('collaboration') }}">
@@ -53,7 +53,7 @@
     </div>
 
 
-    {{-- Section 3 --}}
+    {{-- Section 3 UPCOMING EVENT --}}
     <div class="bg-white max-w-full h-auto text-center">
         <div data-aos="fade-up" data-aos-duration="1500" class="flex flex-col justify-center">
             <p class="text-lg leading-8 text-orange-400 max-w-full mt-20 font-bold">
@@ -108,7 +108,7 @@
                 </div>
 
                 <div class="">
-                    <img class="object-cover w-full h-[380px] xl:w-[550px] rounded-[20px]" src="images\why-choose-us.jpg" alt="">
+                    <img class="object-cover w-full h-[380px] xl:w-[550px] rounded-[20px]" src="{{ asset('images\why-choose-us.jpg') }}" alt="">
                 </div>
             </div>
             <div data-aos="fade-up" data-aos-duration="1500" class="w-full xl:w-1/2 justify-center items-center ">
@@ -188,7 +188,7 @@
 
     </div>
 
-    {{-- Section 5 OUR PROGRAM & INTERNSHIP --}}
+    {{-- Section 5 INTERNSHIP --}}
     <div class="bg-white max-w-full grid xl:flex px-20 pt-20">
         <div data-aos="fade-up" data-aos-duration="1500" class="max-w-full xl:max-w-[480px] m-10 sm:mb-0">
             <div class="max-w-[580px] m-5 text-5xl text-black mb-10 font-bold">
@@ -258,6 +258,7 @@
         </div>
     </div>
 
+    {{-- Section 6 INTERNSHIP  --}}
     <div class="bg-white mb-28 px-3">
         <div data-aos="fade-up" data-aos-duration="1500" class="flex justify-between items-center mx-32">
             <div class="max-w-[580px] my-5 text-5xl text-black mb-10 font-bold">
@@ -273,7 +274,7 @@
         <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-10 mx-52 sm:mx-36 mb-12 sm:content-center place-items-center">
             <div
                 class="xl:w-full lg:w-full sm:w-2/3 h-72 border border-gray-200 rounded-lg shadow-2xl ">
-                <img class="object-cover w-full h-full rounded-lg place-items-center" src="/images/internbg.png" alt="MSIB Batch 6 (Februari - Juni 2024)" />
+                <img class="object-cover w-full h-full rounded-lg place-items-center" src="{{ asset('/images/internbg.png') }}" alt="MSIB Batch 6 (Februari - Juni 2024)" />
                 <p id="teks" class="font-medium text-xl mt-5">
                     MSIB Batch 6 (Februari - Juni 2024)
                 </p>
@@ -281,7 +282,7 @@
 
             <div
                 class="xl:w-full lg:w-full sm:w-2/3 h-72 border border-gray-200 rounded-lg shadow-2xl ">
-                <img class="object-cover w-full h-full rounded-lg place-items-center" src="/images/magang-smk.jpg" alt="Magang SMK Blabla" />
+                <img class="object-cover w-full h-full rounded-lg place-items-center" src="{{ asset('/images/magang-smk.jpg') }}" alt="Magang SMK Blabla" />
                 <p id="teks" class="font-medium text-xl mt-5">
                     Magang SMK
                 </p>
@@ -289,14 +290,14 @@
         </div>
     </div>
 
-    {{-- Section 6 FAQ --}}
+    {{-- Section 7 FAQ --}}
     <div class="grid w-full xl:flex xl:flex-row bg-orange-500 xl:px-36 xl:p-24 sm:py-24">
         <div data-aos="fade-up" data-aos-duration="1500" class="xl:w-1/2">
             <div class="text-5xl text-white first-line:mb-10 font-bold mb-5 items-start">
                 Frequently Asked Questions
             </div>
             <div class=" mr-20 ">
-                <img class="object-cover w-full xl:w-[550px] h-[331px] rounded-[20px] justify-center items-center " src="images\faq.jpg" alt="">
+                <img class="object-cover w-full xl:w-[550px] h-[331px] rounded-[20px] justify-center items-center " src="{{ asset('images\faq.jpg') }}" alt="">
             </div>
         </div>
         <div data-aos="fade-up" data-aos-duration="1500" class="xl:w-1/2 justify-center items-center place-items-center">
@@ -337,7 +338,7 @@
         </div>
     </div>
 
-    {{-- Section 7 VIDEO --}}
+    {{-- Section 8 VIDEO --}}
     <div class="bg-white max-w-full">
         <div class="flex flex-col py-10">
             <div data-aos="fade-up" data-aos-duration="1500" class="flex justify-between items-center my-10 mx-36">
@@ -373,7 +374,7 @@
         </div>
     </div>
 
-    {{-- Section 8 --}}
+    {{-- Section 9 WHAT THEY SAY --}}
     <div class="bg-orange-500 max-w-full">
         <div class="flex flex-col px-36 py-24">
             <div data-aos="fade-up" data-aos-duration="1500" class="flex justify-between items-center mb-10">

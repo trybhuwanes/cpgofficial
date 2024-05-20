@@ -7,7 +7,7 @@
     {{-- SECTION 1 --}}
     <div class="items-center justify-center bg-white">
         <div class="w-full h-72 shadow-2xl overflow-hidden relative">
-            <img class="absolute inset-0 h-full w-full object-cover" src="images\hero image.png">
+            <img class="absolute inset-0 h-full w-full object-cover" src="{{ asset('/images/hero image.png') }}">
             <div class="absolute inset-0 bg-white bg-opacity-50"></div>
             <div class="flex h-full items-center justify-center relative">
                 <h1 class="text-4xl text-black font-semibold">CONSULTING</h1>
@@ -22,12 +22,19 @@
             Dari merencanakan acara hingga memperkuat operasional, kami memiliki solusi yang Anda butuhkan, diantaranya:
         </p>
         <ol class="space-y-1 text-black list-decimal list-inside">
-            <li>Management Event</li>
+            {{-- REVISI  --}}
+            <li>Minat dan Bakat</li>
+            <li>Parenting</li>
+            <li>Harmonisasi Suami</li>
+            <li>Pengembangan Usaha Kecil Mandiri </li>
+            <li>Berdamai dengan Diri Sendiri</li>
+
+            {{-- <li>Management Event</li>
             <li>Industri-Based Curriculum</li>
             <li>Teaching Factory</li>
             <li>Internship</li>
             <li>Standard Operating Procedure</li>
-            <li>Coaching</li>
+            <li>Coaching</li> --}}
         </ol>
     </div>
 
