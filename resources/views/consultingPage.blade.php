@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    {{-- SECTION 2 --}}
+    {{-- SECTION 2 DESCRIPTION --}}
     <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 my-20">
         <p class="font-normal text-black text-justify">
             Citra Prestasi Gemilang tidak hanya menawarkan layanan konsultasi. Kami membantu Anda mengubah potensi bisnis menjadi kenyataan. 
@@ -38,8 +38,8 @@
         </ol>
     </div>
 
-    {{-- SECTION 3 --}}
-    <div class="bg-black max-w-full h-auto text-center py-20">
+    {{-- SECTION 3 PROFILE COACH --}}
+    <div class="bg-black max-w-full h-auto text-center py-24">
         <div data-aos="fade-up" data-aos-duration="1500" class="text-5xl text-white mb-12 font-bold">
             Profile Coach
         </div>
@@ -48,7 +48,7 @@
             <div
                 data-aos="fade-up" data-aos-duration="1500" class="xl:h-[400px] sm:h-[380px] sm:w-1/2 xl:w-auto xl:mt-0 sm:mt-5 bg-white rounded-xl shadow-2xl dark:bg-white dark:border-gray-100 xl:mx-5">
                 <img class="block xl:h-72 sm:h-64 object-cover w-full rounded-t-lg" src="{{ asset('/images/foto-bu-sri.jpg') }}"
-                    alt="" />
+                    alt="Sri Sudarwati - Coach" />
                 <div class="px-5 py-3">
                     <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Sri Sudarwati
                     </h6>
@@ -73,9 +73,9 @@
         </div>
     </div>
 
-    {{-- SECTION 4 --}}
-    <div class="bg-orange-500 max-w-full h-auto text-center py-20">
-        <div data-aos="fade-up" data-aos-duration="1500" class="text-5xl text-black mb-12 font-bold">
+    {{-- SECTION 4 CONSULTANT AT CPG --}}
+    <div class="bg-orange-500 max-w-full h-auto text-center py-24">
+        <div data-aos="fade-up" data-aos-duration="1500" class="text-5xl text-white mb-12 font-bold">
             Consultant at CPG
         </div>
 
@@ -83,8 +83,8 @@
             {{-- CARD FOTO 1 --}}
             <div
                 class="xl:h-96 sm:h-[270px] bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="images\why-choose-us.jpg"
-                    alt="" />
+                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="{{ asset('images/consultant/bu sri.jpg') }}"
+                    alt="Sri Sudarwati - Softskill & Self Development Consultant" />
                 <div class="px-5 py-3">
                     <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Sri Sudarwati
                     </h6>
@@ -96,12 +96,12 @@
             {{-- CARD FOTO 2 --}}
             <div
                 class="xl:h-96 sm:h-[270px] bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="images\why-choose-us.jpg"
-                    alt="" />
+                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="{{ asset('images/consultant/bayu.jpg') }}"
+                    alt="Edy Bayu Sudarmanto - APU PPT consultant" />
                 <div class="px-5 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Sri Sudarwati
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Edy Bayu Sudarmanto
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Softskill & Self Development Consultant</p>
+                    <p class="text-sm text-black dark:text-black text-center">APU PPT consultant</p>
 
                 </div>
             </div>
@@ -109,12 +109,12 @@
             {{-- CARD FOTO 3 --}}
             <div
                 class="xl:h-96 sm:h-[270px] bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="images\why-choose-us.jpg"
-                    alt="" />
+                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="{{ asset('images/consultant/evie.jpg') }}"
+                    alt="Evie Dhiani - Praktisi Hospitality & Digital Marketing" />
                 <div class="px-5 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Sri Sudarwati
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Evie Dhiani
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Softskill & Self Development Consultant</p>
+                    <p class="text-sm text-black dark:text-black text-center">Praktisi Hospitality & Digital Marketing</p>
 
                 </div>
             </div>
@@ -122,12 +122,25 @@
             {{-- CARD FOTO 4 --}}
             <div
                 class="xl:h-96 sm:h-[270px] bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="images\why-choose-us.jpg"
-                    alt="" />
+                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="{{ asset('images/consultant/indra.jpg') }}"
+                    alt="Indra Febrianto - Methodology Trainer" />
                 <div class="px-5 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Sri Sudarwati
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Indra Febrianto
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Softskill & Self Development Consultant</p>
+                    <p class="text-sm text-black dark:text-black text-center">Methodology Trainer</p>
+
+                </div>
+            </div>
+
+            {{-- CARD FOTO 5 --}}
+            <div
+                class="xl:h-96 sm:h-[270px] bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="{{ asset('images/consultant/yunita.jpg') }}"
+                    alt="Yunita - Admin Professional & Humas Protocol" />
+                <div class="px-5 py-3">
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Yunita
+                    </h6>
+                    <p class="text-sm text-black dark:text-black text-center">Admin Professional & Humas Protocol</p>
 
                 </div>
             </div>
