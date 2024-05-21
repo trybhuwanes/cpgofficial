@@ -15,7 +15,8 @@
             </div>
         </div>
     </div>
-    {{-- Section 2 --}}
+
+    {{-- Section 2 GET TO KNOW ABOUT CPT --}}
     <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 my-20">
         <div class="flex flex-wrap items-center justify-center bg-white p-10 border border-gray-300 rounded-xl shadow-2xl">
             <div class="text-4xl font-bold text-black w-full text-center mt-3 mb-5">
@@ -132,7 +133,7 @@
     </div>
     </div>
 
-    {{-- Section 4 --}}
+    {{-- Section 4 VISION, MISSION, MOTTO --}}
     <div class="bg-white max-w-full px-36 py-20">
         <div data-aos="fade-up" data-aos-duration="1500" class="text-5xl text-black mb-12 font-bold text-center">
             Our Vision, Mission, Motto
@@ -185,7 +186,7 @@
 
     </div>
 
-    {{-- Section 5 --}}
+    {{-- Section 5 PRESIDENT DIRECTOR --}}
     <div class="w-full bg-black xl:px-36 xl:py-24 sm:px-36 sm:py-24">
         <div data-aos="fade-up" data-aos-duration="1500" class="xl:w-1/2 sm:w-full items-start place-items-start">
             <div class="text-5xl text-white mb-10 font-bold">
@@ -193,11 +194,10 @@
             </div>
         </div>
         <div class="grid w-full xl:flex xl:flex-row">
-            <figure data-aos="fade-up" data-aos-duration="1500" class="aspect-square relative transition-all duration-300 cursor-pointer xl:mr-20 sm:mr-0">
+            <figure data-aos="fade-up" data-aos-duration="1500" class="aspect-square relative transition-all duration-300 xl:mr-20 sm:mr-0">
                 <img class="object-cover w-full aspect-square xl:w-[550px] rounded-xl" src="images\foto-bu-sri.jpg" alt="Sri Sudawati - President Director">
                 <figcaption class="absolute p-4 text-lg text-white bottom-0 text-center bg-orange-600 rounded-b-xl">
-                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta urna nibh, non porta libero molestie eu.“ 
-                        <br> (Ini Quotes Bu Wati)</p>
+                    <p><blockquote>"Membangun bangunan mewah hanya butuh waktu 1 - 2 tahun, membangun MANUSIA butuh waktu seumur hidup!"</blockquote></p>
                 </figcaption>
             </figure>
 
@@ -274,70 +274,168 @@
         <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 gap-4">
             {{-- CARD FOTO 1 --}}
             <div
-                class="xl:h-[368px] sm:h-[270px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="images\why-choose-us.jpg"
-                    alt="" />
+                class="xl:h-[380px] sm:h-[270px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="{{ asset('images/team/bu sri.JPG') }}"
+                    alt="Sri Sudarwati - President Director CPG" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Sri
-                        Sudarwati
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                        Sri Sudarwati
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">CEO CPG</p>
+                    <p class="text-sm text-black dark:text-black text-center">President Director CPG</p>
 
                 </div>
             </div>
 
             {{-- CARD FOTO 2 --}}
             <div
-                class="xl:h-[368px] sm:h-[270px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="images\why-choose-us.jpg"
-                    alt="" />
+                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block xl:h-72 sm:h-56 object-cover w-full rounded-t-lg" src="{{ asset('images/team/evie.jpg') }}"
+                    alt="Evie Dhiani - Praktisi Hospitality & Digital Marketing" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Sri
-                        Sudarwati
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                        Evie Dhiani
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">CEO CPG</p>
+                    <p class="text-sm text-black dark:text-black text-center">Praktisi Hospitality & Digital Marketing</p>
 
                 </div>
             </div>
 
             {{-- CARD FOTO 3 --}}
             <div
-                class="xl:h-[368px] sm:h-[270px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="images\why-choose-us.jpg"
-                    alt="" />
+                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block xl:h-72 sm:h-56 object-cover w-full rounded-t-lg" src="{{ asset('images/team/dwi-ekasari.png') }}"
+                    alt="Dwi Ekasari Harmadji - Finance & Management Consultant" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Sri
-                        Sudarwati
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                        Dwi Ekasari Harmadji
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">CEO CPG</p>
+                    <p class="text-sm text-black dark:text-black text-center">Finance & Management Consultant</p>
 
                 </div>
             </div>
 
             {{-- CARD FOTO 4 --}}
             <div
-                class="xl:h-[368px] sm:h-[270px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="images\why-choose-us.jpg"
-                    alt="" />
+                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block xl:h-72 sm:h-56 object-cover w-full rounded-t-lg" src="{{ asset('images/team/yunita.jpg') }}"
+                    alt="Yunita - Secretary & Trainer" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Sri
-                        Sudarwati
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                        Yunita
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">CEO CPG</p>
+                    <p class="text-sm text-black dark:text-black text-center">Secretary & Trainer</p>
 
                 </div>
             </div>
 
             {{-- CARD FOTO 5 --}}
             <div
-                class="xl:h-[368px] sm:h-[270px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="images\why-choose-us.jpg"
-                    alt="" />
+                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block xl:h-72 sm:h-56 object-cover w-full rounded-t-lg" src="{{ asset('images/team/ellisa.JPG') }}"
+                    alt="Ellisa Laili - Publication" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">Sri
-                        Sudarwati
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                        Ellisa Laili
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">CEO CPG</p>
+                    <p class="text-sm text-black dark:text-black text-center">Publication</p>
+
+                </div>
+            </div>
+
+            {{-- CARD FOTO 6 --}}
+            <div
+                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block xl:h-72 sm:h-56 object-cover w-full rounded-t-lg" src="{{ asset('images/team/indra.jpg') }}"
+                    alt="Indra Febrianto - Self Development Trainer" />
+                <div class="px-3 py-3">
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                        Indra Febrianto
+                    </h6>
+                    <p class="text-sm text-black dark:text-black text-center">Self Development Trainer</p>
+
+                </div>
+            </div>
+
+            {{-- CARD FOTO 7 --}}
+            <div
+                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block xl:h-72 sm:h-56 object-cover w-full rounded-t-lg" src="{{ asset('images/team/siswanto.png') }}"
+                    alt="Siswanto - Methodology, Welder, AC Trainer Specialized" />
+                <div class="px-3 py-3">
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                        Siswanto
+                    </h6>
+                    <p class="text-sm text-black dark:text-black text-center">Methodology, Welder, AC Trainer Specialized</p>
+
+                </div>
+            </div>
+
+            {{-- CARD FOTO 8 --}}
+            <div
+                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block xl:h-72 sm:h-56 object-cover w-full rounded-t-lg" src="{{ asset('images/team/agus-heri.png') }}"
+                    alt="Agus Heri Santoso - Human Capital & Development Trainer" />
+                <div class="px-3 py-3">
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                        Agus Heri Santoso
+                    </h6>
+                    <p class="text-sm text-black dark:text-black text-center">Human Capital & Development Trainer</p>
+
+                </div>
+            </div>
+
+            {{-- CARD FOTO 9 --}}
+            <div
+                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block xl:h-72 sm:h-56 object-cover w-full rounded-t-lg" src="{{ asset('images/team/bayu.jpg') }}"
+                    alt="Edy Bayu Sudarmanto - Branch Manager Jakarta" />
+                <div class="px-3 py-3">
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                        Edy Bayu Sudarmanto
+                    </h6>
+                    <p class="text-sm text-black dark:text-black text-center">Branch Manager Jakarta</p>
+
+                </div>
+            </div>
+
+            {{-- CARD FOTO 10 --}}
+            <div
+                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block xl:h-72 sm:h-56 object-cover w-full rounded-t-lg" src="{{ asset('images/team/riris.jpg') }}"
+                    alt="Riris R. R. - Branch Manager Jawa Tengah" />
+                <div class="px-3 py-3">
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                        Riris R. R.
+                    </h6>
+                    <p class="text-sm text-black dark:text-black text-center">Branch Manager Jawa Tengah</p>
+
+                </div>
+            </div>
+
+            {{-- CARD FOTO 9 --}}
+            <div
+                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block xl:h-72 sm:h-56 object-cover w-full rounded-t-lg" src="{{ asset('images/team/natasya.jpg') }}"
+                    alt="Natasya Zahliyanti - Administration & Finance Departemen" />
+                <div class="px-3 py-3">
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                        Natasya Zahliyanti
+                    </h6>
+                    <p class="text-sm text-black dark:text-black text-center">Administration & Finance Departemen                    </p>
+
+                </div>
+            </div>
+
+            {{-- CARD FOTO 10 --}}
+            <div
+                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block xl:h-72 sm:h-56 object-cover w-full rounded-t-lg" src="{{ asset('images/team/safira.jpg') }}"
+                    alt="Safira Dwi Jayanti - Director Marketing" />
+                <div class="px-3 py-3">
+                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                        Safira Dwi Jayanti
+                    </h6>
+                    <p class="text-sm text-black dark:text-black text-center">Director Marketing</p>
 
                 </div>
             </div>
