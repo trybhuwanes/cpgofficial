@@ -54,7 +54,7 @@
     <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-3 sm:grid-cols-2 gap-4 mx-36 mb-16">
         {{-- CARD FOTO 1 --}}
         <div class="h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-            <img class="block h-36 object-cover w-full rounded-t-lg" src="images\csr-2024-charity.jpeg" alt="CSR Maret 2024 Charity" />
+            <img class="block h-36 object-cover w-full rounded-t-lg" src="{{ asset('images\csr\csr-2024-charity.jpeg') }}" alt="CSR Maret 2024 Charity" />
             <div class="px-5 py-3">
                 <h6 class="text-lg font-bold tracking-tight text-black dark:text-black">CSR 2024 Charity Event
                 </h6>
@@ -64,7 +64,7 @@
 
         {{-- CARD FOTO 2  --}}
         <div class="h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-            <img class="block h-36 object-cover w-full rounded-t-lg" src="images\csr-mei-2023-digital-office.jpg" alt="CSR Mei 2023 Digital Office" />
+            <img class="block h-36 object-cover w-full rounded-t-lg" src="{{ asset('images\csr\csr-mei-2023-digital-office.jpg') }}" alt="CSR Mei 2023 Digital Office" />
             <div class="px-5 py-3">
                 <h6 class="text-lg font-bold tracking-tight text-black dark:text-black">CSR 2023 Digital Office
                 </h6>
