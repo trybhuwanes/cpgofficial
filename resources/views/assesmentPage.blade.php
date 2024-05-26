@@ -24,17 +24,21 @@
             Berikut beberapa bidang jasa yang kami tawarkan:<br>
         </p>
         <ol class="space-y-1 text-black list-decimal list-inside">
-            <li>Human Capital</li>
+            <li>Modal Manusia</li>
             <ul class="pl-8 space-y-1 text-black list-disc list-inside ">
                 <li>Supervisor</li>
                 <li>General Manager</li>
                 <li>Staff Recruitment</li>
             </ul>
-            <li>Administrative Professional</li>
-            <li>FIlling System (Document Control)</li>
-            <li>Service Excellence</li>
-            <li>Public Relation</li>
-            <li>Public Speaking</li>
+            <li>Profesional Administratif</li>
+            <li>Sistem Pengisian (Pengendalian Dokumen)</li>
+            <li>Kepuasan Layanan</li>
+            <li>Hubungan Masyarakat</li>
+            <li>Berbicara di Depan Umum</li>
+            <li>UMKM</li>
+            <li>Layanan Pelanggan</li>
+            <li>Layanan Pembersihan</li>
+            <li>Layanan Perhotelan</li>
             <li>K3</li>
             <ul class="pl-8 space-y-1 text-black list-disc list-inside ">
                 <li>K3 Umum</li>
@@ -43,6 +47,18 @@
                 <li>K3 Ketinggian</li>
                 <li>K3 Oil dan Gas</li>
             </ul>
+            <li>Metodologi</li>
+            <ul class="pl-8 space-y-1 text-black list-disc list-inside ">
+                <li>ToT KKNI Level 3</li>
+                <li>ToT KKNI Level 4</li>
+                <li>ToT KKNI Level 6</li>
+            </ul>
+            <li>Pemasaran Digital</li>
+            <ul class="pl-8 space-y-1 text-black list-disc list-inside ">
+                <li>Kreator Konten</li>
+                <li>Pemasaran Digital</li>
+                <li>Pemasaran Media Sosial</li>
+            <li>Kewirausahaan</li>
         </ol>
     </div>
 
