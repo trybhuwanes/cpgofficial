@@ -59,18 +59,6 @@ class TrainingController extends Controller
 
     public function createTraining(Request $request)
     {
-        // dd($request->all());
-        // $request->validate([
-        //     'pict_training' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Menambahkan aturan validasi untuk file gambar
-        //     // Aturan validasi lainnya untuk input lainnya
-        // ], [
-        //     'pict_training.required' => 'The photo field is required.',
-        //     'pict_training.image' => 'The photo must be an image.',
-        //     'pict_training.mimes' => 'The photo must be a file of type: jpeg, png, jpg, gif.',
-        //     'pict_training.max' => 'The photo may not be greater than 2MB in size.',
-        //     // Pesan validasi untuk aturan lainnya
-        // ]);
-
         $request->validate([
             // 'id_category' => 'required',
             'title_training' => 'required',
