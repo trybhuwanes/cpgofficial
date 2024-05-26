@@ -11,10 +11,10 @@
                     The most preferable training, coaching and learning institution in Indonesia.
                 </div>
                 <div class="flex">
-                    <img class="h-5 mr-5" src="{{ asset('images/iconLinkedin.png') }}" alt="">
-                    <img class="h-5 mr-5" src="{{ asset('images/iconInstagram.png') }}" alt="">
-                    <img class="h-5 mr-5" src="{{ asset('images/iconTiktok.png') }}" alt="">
-                    <img class="h-5 mr-5" src="{{ asset('images/iconYoutube.png') }}" alt="">
+                    <a href="https://id.linkedin.com/company/citraprestasigemilang" target="_blank"><img class="h-5 mr-5" src="{{ asset('images/iconLinkedin.png') }}" alt=""></a>
+                    <a href="https://www.instagram.com/citraprestasigemilang/" target="_blank"><img class="h-5 mr-5" src="{{ asset('images/iconInstagram.png') }}" alt=""></a>
+                    <a href="https://www.tiktok.com/@cpg_official?_t=8mf2P8krSwS&_r=1" target="_blank"><img class="h-5 mr-5" src="{{ asset('images/iconTiktok.png') }}" alt=""></a>
+                    <a href="http://www.youtube.com/@citraprestasigemilang655" target="_blank"><img class="h-5 mr-5" src="{{ asset('images/iconYoutube.png') }}" alt=""></a>
                 </div>
             </div>
     
