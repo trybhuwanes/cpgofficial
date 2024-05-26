@@ -22,9 +22,11 @@
                         welas asih,
                         untuk saling menyayangi sesama manusia dan makhluk hidup.
                     </p>
-                    <button class="bg-black px-8 py-4 text-white font-bold text-center rounded-full hover:bg-orange-500">
-                        Improve With Us!
-                    </button>
+                    <a href="{{ route('about') }}">
+                        <button class="bg-black px-8 py-4 text-white font-bold text-center rounded-full hover:bg-orange-500">
+                            Improve With Us!
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -63,7 +65,7 @@
 
     {{-- Section 3 UPCOMING EVENT --}}
     <div class="bg-white max-w-full h-auto text-center">
-        <div data-aos="fade-up" data-aos-duration="1500" class="flex flex-col justify-center">
+        <div data-aos="fade-up" data-aos-duration="1500" class="flex flex-col justify-center mb-14">
             <p class="text-lg leading-8 text-orange-400 max-w-full mt-20 font-bold">
                 SCHEDULE
             </p>
@@ -79,37 +81,37 @@
                 class="grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-10 mx-52 sm:mx-36 mb-12 sm:content-center place-items-center">
                 {{-- CARD BLOG --}}
                 <div
-                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
-                    <a href="">
-                        <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png"
+                    class="xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
+                    {{-- <a href=""> --}}
+                        <img class="object-cover w-full rounded-t-lg place-items-center" src="{{ asset('images/upcoming/event-1.png') }}"
                             alt="" />
-                    </a>
+                    {{-- </a> --}}
                 </div>
 
                 <div
-                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
-                    <a href="">
-                        <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png"
+                    class="xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
+                    {{-- <a href=""> --}}
+                        <img class="object-cover w-full rounded-t-lg place-items-center" src="{{ asset('images/upcoming/event-2.png') }}"
                             alt="" />
-                    </a>
+                    {{-- </a> --}}
                 </div>
 
                 <div
-                    class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
-                    <a href="">
-                        <img class="object-cover w-full rounded-t-lg place-items-center" src="images\Flyer CSR 2024.png"
+                    class="xl:w-full lg:w-full sm:w-2/3 h-auto border border-gray-200 rounded-lg shadow-2xl ">
+                    {{-- <a href=""> --}}
+                        <img class="object-cover w-full rounded-t-lg place-items-center" src="{{ asset('images/upcoming/event-3.png') }}"
                             alt="" />
-                    </a>
+                    {{-- </a> --}}
                 </div>
 
             </div>
         </div>
-        <a href="{{ route('training') }}">
+        {{-- <a href="{{ route('training') }}">
             <button data-aos="fade-up" data-aos-duration="1500"
                 class="bg-black px-8 py-4 text-white font-bold text-center rounded-full mb-20 hover:bg-orange-500">
                 Learn More!
             </button>
-        </a>
+        </a> --}}
     </div>
 
     {{-- Section 4 WHY CHOOSE US --}}
@@ -300,7 +302,7 @@
             class="grid xl:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 xl:gap-10 sm:gap-10 sm:gap-y-14 xl:mx-52 sm:mx-36 mb-12 sm:content-center place-items-center">
             <div class="xl:w-full lg:w-full sm:w-2/3 h-72 border border-gray-200 rounded-lg shadow-2xl ">
                 <img class="object-cover w-full h-full rounded-lg place-items-center"
-                    src="{{ asset('/images/internbg.png') }}" alt="MSIB Batch 6 (Februari - Juni 2024)" />
+                    src="{{ asset('/images/internship/internbg.png') }}" alt="MSIB Batch 6 (Februari - Juni 2024)" />
                 <p id="teks" class="font-medium text-xl mt-5">
                     MSIB Batch 6 (Februari - Juni 2024)
                 </p>
@@ -308,9 +310,9 @@
 
             <div class="xl:w-full lg:w-full sm:w-2/3 h-72 border border-gray-200 rounded-lg shadow-2xl ">
                 <img class="object-cover w-full h-full rounded-lg place-items-center"
-                    src="{{ asset('/images/magang-smk.jpg') }}" alt="Magang SMK Blabla" />
+                    src="{{ asset('/images/internship/magang-smk-1.jpg') }}" alt="Magang SMK OTKP/MPLB" />
                 <p id="teks" class="font-medium text-xl mt-5">
-                    Magang SMK
+                    Magang SMK OTKP/MPLB
                 </p>
             </div>
         </div>
