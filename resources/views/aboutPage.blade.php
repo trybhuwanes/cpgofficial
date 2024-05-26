@@ -274,8 +274,8 @@
         <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 gap-4">
             {{-- CARD FOTO 1 --}}
             <div
-                class="xl:h-[380px] sm:h-[270px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block xl:h-72 sm:h-48 object-cover w-full rounded-t-lg" src="{{ asset('images/team/bu sri.JPG') }}"
+                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block xl:h-72 sm:h-56 object-cover w-full rounded-t-lg" src="{{ asset('images/team/bu sri.JPG') }}"
                     alt="Sri Sudarwati - President Director CPG" />
                 <div class="px-3 py-3">
                     <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
