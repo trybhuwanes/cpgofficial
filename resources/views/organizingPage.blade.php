@@ -50,7 +50,7 @@
     <div data-aos="fade-up" data-aos-duration="1500" class="grid xl:grid-cols-3 sm:grid-cols-2 gap-4 mx-36 mb-16">
         {{-- CARD FOTO 1 --}}
         <div class="h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-            <img class="block h-36 object-cover w-full rounded-t-lg" src="{{ asset('/images/organizing-1.png') }}" alt="" />
+            <img class="block h-36 object-cover w-full rounded-t-lg" src="{{ asset('/images/organizing/organizing-1.png') }}" alt="" />
             <div class="px-5 py-3">
                 <h6 class="text-lg font-bold tracking-tight text-black dark:text-black">Outbound SMKN 1 Malang
                 </h6>
