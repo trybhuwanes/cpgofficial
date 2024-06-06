@@ -13,7 +13,7 @@
 <body class="font-body">
     <header>
         <!-- Header Content -->
-        @include('components.Navbar')
+        @include('components.navbar')
     </header>
 
     <div class="content">

@@ -1,13 +1,13 @@
 <footer class="bg-black py-4">
     @vite('resources/css/app.css')
 
-        <div class="container mx-auto justify-between items-top pt-10 px-10">
+        <div class="container mx-auto justify-between items-top pt-10 lg:px-36 px-7">
             <div class="flex pb-6">
                 <!-- Kolom pertama -->
-            <div class="w-2/5 xl:ml-36 sm:ml-5">
+            <div class="w-2/5 lg:ml-16 ml-6">
                 {{-- <h3 class="text-white text-lg font-semibold mb-2">Kolom Pertama</h3> --}}
                 <img src="{{ asset('images\iconCPG.png') }}" alt="Logo" class="h-14 mr-2 mb-2">
-                <div class="text-white text-sm mb-5 sm:w-3/4">
+                <div class="text-white text-lg lg:text-sm mb-5 w-3/4  lg:w-full">
                     The most preferable training, coaching and learning institution in Indonesia.
                 </div>
                 <div class="flex">
@@ -20,7 +20,7 @@
     
             <!-- Kolom kedua -->
             <div class="w-1/5">
-                <h3 class="text-white text-lg font-semibold mb-2">Program</h3>
+                <h3 class="text-white text-xl lg:text-lg font-semibold mb-2">Program</h3>
                 <ul class="text-white">
                     <li class="mb-2"><a href="{{ route('training') }}" class="mb-2 hover:text-orange-500">Training</a></li>
                     <li class="mb-2"><a href="{{ route('consulting') }}" class="mb-2 hover:text-orange-500">Consulting</a></li>
@@ -33,7 +33,7 @@
 
             {{-- Kolom Ketiga  --}}
             <div class="w-1/5">
-                <h3 class="text-white text-lg font-semibold mb-2">Company</h3>
+                <h3 class="text-white text-xl lg:text-lg font-semibold mb-2">Company</h3>
                 <ul class="text-white">
                     <li class="mb-2"><a href="{{ route('about') }}" class="mb-2 hover:text-orange-500">About Us</a></li>
                     <li class="mb-2"><a href="{{ route('schedule') }}" class="mb-2 hover:text-orange-500">Schedule</a></li>
@@ -44,7 +44,7 @@
             </div>
     
             <!-- Kolom keempat -->
-            <div class="w-1/5 xl:mr-16 sm:mr-5">
+            <div class="w-1/5 lg:mr-16 mr-5">
                 <h3 class="text-white text-lg font-semibold mb-2">Address</h3>
                 <ul class="text-white">
                     <li class="mb-2"><a href="#" class="hover:text-gray-300">Jl. Layur 1/12 Malang 62142, Jawa Timur 65142</a></li>
@@ -53,7 +53,7 @@
             </div>
     
             <hr class="border-orange-500 my-4">
-            <span class="text-white text-sm xl:ml-36 sm:ml-5">© 2024 Citra Prestasi Gemilang</span>
+            <span class="text-white text-lg lg:text-sm lg:ml-36 ml-5">© 2024 Citra Prestasi Gemilang</span>
         </div>
 </footer>
 

@@ -6,28 +6,28 @@
 
     {{-- SECTION 1 --}}
     <div class="items-center justify-center bg-white">
-        <div class="w-full h-72 shadow-2xl overflow-hidden relative">
+        <div class="w-full h-96 lg:h-72 shadow-2xl overflow-hidden relative">
             <img class="absolute inset-0 h-full w-full object-cover" src="{{ asset('/images/hero image.png') }}">
             <div class="absolute inset-0 bg-white bg-opacity-50"></div>
             <div class="flex h-full items-center justify-center relative">
-                <h1 class="text-4xl text-black font-semibold">COLLABORATION</h1>
+                <h1 class="text-6xl lg:text-4xl text-black font-semibold">COLLABORATION</h1>
             </div>
         </div>
     </div>
 
     {{-- SECTION 2 --}}
-    <div data-aos="fade-up" data-aos-duration="1500" class="mx-36 my-20">
-        <div class="flex flex-wrap items-center justify-center bg-white p-10 border border-gray-300 rounded-xl shadow-2xl">
+    <div data-aos="lg:fade-up-up" data-aos-duration="1500" class="mx-16 lg:mx-36 my-20">
+        <div class="flex flex-wrap items-center justify-center bg-white p-6 lg:p-10 border border-gray-300 rounded-xl shadow-2xl">
             <div class="w-full">
-                <div data-aos="fade-up" data-aos-duration="1500" class="max-w-full pr-10">
-                    <p class="text-lg leading-7 text-black w-full mb-5 xl:text-left sm:text-center">
+                <div data-aos="lg:fade-up-up" data-aos-duration="1500" class="max-w-full pr-10">
+                    <p class="text-2xl lg:text-lg leading-normal lg:leading-7 text-black w-full mb-5 text-left">
                         Bergabunglah dengan PT Citra Prestasi Gemilang dalam perjalanan kami untuk menciptakan perubahan yang positif! 
                         Kami selalu terbuka untuk berkolaborasi dengan individu, organisasi, dan mitra yang memiliki visi dan nilai yang sejalan dengan kami. 
                         Mari kita bergandengan tangan untuk menciptakan dampak yang berarti bagi masyarakat dan lingkungan. 
                         Ayo, bergabunglah bersama kami hari ini!</p>
                         <a href="https://wa.me/62811360215" target="_blank">
                             <button type="button"
-                                class="text-white bg-black hover:bg-orange-500 focus:outline-none focus:ring-4 font-medium rounded-full text-base px-8 py-4 text-center">Hubungi Kami</button>
+                                class="place-items-center text-white bg-black hover:bg-orange-500 focus:outline-none focus:ring-4 font-medium rounded-full text-2xl lg:text-base px-10 py-6 lg:px-8 lg:py-4 text-center">Hubungi Kami</button>
                         </a>
                 </div>
             </div>
@@ -35,16 +35,16 @@
     </div>
 
     {{-- SECTION 3 --}}
-    <div class="bg-white max-w-full h-auto pb-20 pt-10 px-36">
-        <div data-aos="fade-up" data-aos-duration="1500" class="text-5xl text-black mb-12 font-bold text-center ">
+    <div class="bg-white max-w-full h-auto pb-20 pt-10 px-16 lg:px-36">
+        <div data-aos="lg:fade-up-up" data-aos-duration="1500" class="text-6xl lg:text-5xl text-black mb-12 font-bold text-center ">
             Our Client & Partnership
         </div>
 
         {{-- KEMENTERIAN --}}
-        <div data-aos="fade-up" data-aos-duration="1500">
-            <h5 class="mb-3 text-3xl font-bold tracking-tight text-black">KEMENTERIAN</h5>
+        <div data-aos="lg:fade-up-up" data-aos-duration="1500">
+            <h5 class="mb-3 text-4xl lg:text-3xl font-bold tracking-tight text-black">KEMENTERIAN</h5>
             <hr class="h-px my-3 border-0 bg-gray-800">
-            <div data-aos="fade-up" data-aos-duration="1500"
+            <div data-aos="lg:fade-up-up" data-aos-duration="1500"
                 class="flex flex-wrap gap-y-3 justify-center items-center h-fit mb-10 mt-8">
                 <img class="h-20 mr-5" src="images\logo\kementerian\kemnaker.png" alt="Kemnaker" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\kementerian\kemdikbud.png" alt="Kemendikbud" class="mx-auto">
@@ -55,10 +55,10 @@
         </div>
 
         {{-- BUMN --}}
-        <div data-aos="fade-up" data-aos-duration="1500">
-            <h5 class="mb-3 text-3xl font-bold tracking-tight text-black">BUMN</h5>
+        <div data-aos="lg:fade-up-up" data-aos-duration="1500">
+            <h5 class="mb-3 text-4xl lg:text-3xl font-bold tracking-tight text-black">BUMN</h5>
             <hr class="h-px my-3 border-0 bg-gray-800">
-            <div data-aos="fade-up" data-aos-duration="1500"
+            <div data-aos="lg:fade-up-up" data-aos-duration="1500"
                 class="flex flex-wrap gap-y-3 justify-center items-center h-fit mb-10 mt-8">
                 <img class="h-20 mr-5" src="images\logo\bumn\pegadaian.png" alt="Pegadaian" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\bumn\pt-pelindo.png" alt="PT Pelindo" class="mx-auto">
@@ -74,10 +74,10 @@
         </div>
 
         {{-- KOMUNITAS --}}
-        <div data-aos="fade-up" data-aos-duration="1500">
-            <h5 class="mb-3 text-3xl font-bold tracking-tight text-black">KOMUNITAS</h5>
+        <div data-aos="lg:fade-up-up" data-aos-duration="1500">
+            <h5 class="mb-3 text-4xl lg:text-3xl font-bold tracking-tight text-black">KOMUNITAS</h5>
             <hr class="h-px my-3 border-0 bg-gray-800">
-            <div data-aos="fade-up" data-aos-duration="1500"
+            <div data-aos="lg:fade-up-up" data-aos-duration="1500"
                 class="flex flex-wrap gap-y-3 justify-center items-center h-fit mb-10 mt-8">
                 <img class="h-20 mr-5" src="images\logo\komunitas\GNIK.jpg" alt="GNIK" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\komunitas\smk-hebat.jpg" alt="SMK-BISA-HEBAT" class="mx-auto">
@@ -92,10 +92,10 @@
         </div>
 
         {{-- LSP --}}
-        <div data-aos="fade-up" data-aos-duration="1500">
-            <h5 class="mb-3 text-3xl font-bold tracking-tight text-black">LSP</h5>
+        <div data-aos="lg:fade-up-up" data-aos-duration="1500">
+            <h5 class="mb-3 text-4xl lg:text-3xl font-bold tracking-tight text-black">LSP</h5>
             <hr class="h-px my-3 border-0 bg-gray-800">
-            <div data-aos="fade-up" data-aos-duration="1500"
+            <div data-aos="lg:fade-up-up" data-aos-duration="1500"
                 class="flex flex-wrap gap-y-3 justify-center items-center h-fit mb-10 mt-8">
                 <img class="h-20 mr-5" src="images\logo\lsp\msdm.jpg" alt="LSP MSDM" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\lsp\retail.png" alt="LSP Retail Indonesia" class="mx-auto">
@@ -124,10 +124,10 @@
         </div>
 
         {{-- PERUSAHAAN/KORPORASI --}}
-        <div data-aos="fade-up" data-aos-duration="1500">
-            <h5 class="mb-3 text-3xl font-bold tracking-tight text-black">PERUSAHAAN/KORPORASI</h5>
+        <div data-aos="lg:fade-up-up" data-aos-duration="1500">
+            <h5 class="mb-3 text-4xl lg:text-3xl font-bold tracking-tight text-black">PERUSAHAAN/KORPORASI</h5>
             <hr class="h-px my-3 border-0 bg-gray-800">
-            <div data-aos="fade-up" data-aos-duration="1500"
+            <div data-aos="lg:fade-up-up" data-aos-duration="1500"
                 class="flex flex-wrap gap-y-3 justify-center items-center h-fit mb-10 mt-8">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\arnotts.png" alt="ARNOTT'S" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\auto-2000.png" alt="Auto 2000 Toyota" class="mx-auto">
@@ -150,10 +150,10 @@
         </div>
 
         {{-- PERGURUAN TINGGI  --}}
-        <div data-aos="fade-up" data-aos-duration="1500">
-            <h5 class="mb-3 text-3xl font-bold tracking-tight text-black">PERGURUAN TINGGI</h5>
+        <div data-aos="lg:fade-up-up" data-aos-duration="1500">
+            <h5 class="mb-3 text-4xl lg:text-3xl font-bold tracking-tight text-black">PERGURUAN TINGGI</h5>
             <hr class="h-px my-3 border-0 bg-gray-800">
-            <div data-aos="fade-up" data-aos-duration="1500"
+            <div data-aos="lg:fade-up-up" data-aos-duration="1500"
                 class="flex flex-wrap gap-y-3 justify-center items-center h-fit mb-10 mt-8">
                 <img class="h-20 mr-5" src="images\logo\perguruan-tinggi\ub.jpeg" alt="Universitas Brawijaya" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\perguruan-tinggi\vokasi-ub.jpeg" alt="Vokasi Universitas Brawijaya" class="mx-auto">
@@ -180,10 +180,10 @@
         </div>
 
         {{-- SMK  --}}
-        <div data-aos="fade-up" data-aos-duration="1500">
-            <h5 class="mb-3 text-3xl font-bold tracking-tight text-black">SMK</h5>
+        <div data-aos="lg:fade-up-up" data-aos-duration="1500">
+            <h5 class="mb-3 text-4xl lg:text-3xl font-bold tracking-tight text-black">SMK</h5>
             <hr class="h-px my-3 border-0 bg-gray-800">
-            <div data-aos="fade-up" data-aos-duration="1500"
+            <div data-aos="lg:fade-up-up" data-aos-duration="1500"
                 class="flex flex-wrap gap-y-3 justify-center items-center h-fit mb-10 mt-8">
                 <img class="h-20 mr-5" src="images\logo\smk\smk-qomarul.jpg" alt="SMK Qomarul Hidayah 2" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\smk\smk-muhammadiyah-1.jpg" alt="SMK Muhammadiyah 1 Trenggalek" class="mx-auto">
