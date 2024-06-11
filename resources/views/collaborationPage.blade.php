@@ -46,11 +46,11 @@
             <hr class="h-px my-3 border-0 bg-gray-800">
             <div data-aos="lg:fade-up-up" data-aos-duration="1500"
                 class="flex flex-wrap gap-y-3 justify-center items-center h-fit mb-10 mt-8">
-                <img class="h-20 mr-5" src="images\logo\kementerian\kemnaker.png" alt="Kemnaker" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\kementerian\KEMNAKER.png" alt="Kemnaker" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\kementerian\kemdikbud.png" alt="Kemendikbud" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\kementerian\kemenparekraf.png" alt="kemenparekraf" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\kementerian\bappenas.png" alt="bappenas" class="mx-auto">
-                <img class="h-20 mr-5" src="images\logo\kementerian\kominfo.png" alt="kominfo" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\kementerian\KOMINFO.png" alt="kominfo" class="mx-auto">
             </div>
         </div>
 
@@ -69,7 +69,7 @@
                 <img class="h-20 mr-5" src="images\logo\bumn\PLN.png" alt="PLN" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\bumn\bareskrim.png" alt="Bareskrim" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\bumn\pt-bima.jpg" alt="PT BIMA" class="mx-auto">
-                <img class="h-20 mr-5" src="images\logo\bumn\petrosida-gresik.jpg" alt="Petrosida Gresik" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\bumn\petrosida-gresik.JPG" alt="Petrosida Gresik" class="mx-auto">
             </div>
         </div>
 
@@ -131,18 +131,18 @@
                 class="flex flex-wrap gap-y-3 justify-center items-center h-fit mb-10 mt-8">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\arnotts.png" alt="ARNOTT'S" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\auto-2000.png" alt="Auto 2000 Toyota" class="mx-auto">
-                <img class="h-20 mr-5" src="images\logo\perusahaan\bank-jatim.png" alt="Bank Jatim" class="mx-auto">
-                <img class="h-20 mr-5" src="images\logo\perusahaan\hotel-pangeran.jpg" alt="Hotel Pangeran" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\perusahaan\bank-jatim.PNG" alt="Bank Jatim" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\perusahaan\hotel-pangeran.JPG" alt="Hotel Pangeran" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\bantex.png" alt="Bantex" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\BMJ.png" alt="BMJ" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\concord.png" alt="Concord" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\kalla.png" alt="KALLA" class="mx-auto">
-                <img class="h-20 mr-5" src="images\logo\perusahaan\sonton.png" alt="Sonton" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\perusahaan\sonton.PNG" alt="Sonton" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\metindo.png" alt="PT Metindo Erasakti" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\LPKN.png" alt="LPKN Training Center" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\TEF.png" alt="TEF" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\TKRI.png" alt="PT Tokai Rika Indonesia" class="mx-auto">
-                <img class="h-20 mr-5" src="images\logo\perusahaan\toyota.jpg" alt="Toyota" class="mx-auto">
+                <img class="h-20 mr-5" src="images\logo\perusahaan\toyota.JPG" alt="Toyota" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\whizhotel.png" alt="Whiz Hotel" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\m-class.png" alt="PT M Class Industry" class="mx-auto">
                 <img class="h-20 mr-5" src="images\logo\perusahaan\vale.png" alt="Vale" class="mx-auto">

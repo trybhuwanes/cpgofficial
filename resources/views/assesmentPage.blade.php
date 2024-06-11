@@ -74,7 +74,7 @@
             <div
                 class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
                 <a href="{{ route('assesment-center.detail', $item->slug) }}">
-                    <img class="block h-36 object-cover w-full rounded-t-lg" src="{{ asset('assets/img/' . $item->pict) }}"
+                    <img class="block h-56 lg:h-36 object-cover w-full rounded-t-lg" src="{{ asset('assets/img/' . $item->pict) }}"
                         alt="{{ $item->pict }}" />
                 </a>
                 <div class="p-5">

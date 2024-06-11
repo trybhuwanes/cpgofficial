@@ -17,15 +17,15 @@
     </div>
 
     {{-- Section 2 --}}
-    <div class="bg-white max-w-full px-16 lg:px-36 pt-24 lg:pt-20 pb-10">
+    <div class="bg-white max-w-full px-16 lg:px-36 pt-24 lg:pt-20 pb-10 justify-center item">
         <form action="{{ route('training.category') }}" method="GET">
-            <select name="category" class="text-black bg-white rounded-[20px] px-4 py-2">
-                <option value="full" class="text-2xl lg:text-base hover:bg-orange-500">Pilih Kategori: </option>
+            <select name="category" class="text-black bg-white rounded-full px-4 py-4 lg:py-2">
+                <option value="full" class="text-3xl lg:text-base hover:bg-orange-500">Pilih Kategori: </option>
                 @foreach($category as $category)
                     <option value="{{ $category->name_category }}" class="text-2xl lg:text-base hover:bg-orange-500">{{ $category->name_category }}</option>
                 @endforeach
             </select>
-            <button type="submit" class="text-2xl lg:text-base ml-5 bg-black px-10 py-2 max-h-12 text-white font-bold text-center rounded-full">Apply</button>
+            <button type="submit" class="text-3xl lg:text-base ml-5 bg-black px-16 lg:px-10 py-4 lg:py-2 text-white font-medium text-center rounded-full">Apply</button>
         </form>
     </div>
 
@@ -35,15 +35,15 @@
         {{-- CARD 1 --}}
         @foreach($training as $item)
         <div data-aos="lg:fade-up" data-aos-duration="1500"
-            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 lg:h-[600px] h-[740px] bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
+            class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 lg:h-[600px] h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100 hover:bg-orange-500">
             <a href="{{ route('training.detail', $item->slug_training) }}">
                 <img class="w-full rounded-t-lg" src="{{ asset('assets/img/' . $item->pict_training) }}" alt="" />
             </a>
             <div class="p-5">
                 <a href="{{ route('training.detail', $item->slug_training) }}">
-                    <h6 class="mb-2 text-3xl lg:text-xl font-bold tracking-tight text-black dark:text-black">{{ $item->title_training }}</h6>
+                    <h6 class="mb-2 text-4xl lg:text-xl font-bold tracking-tight text-black dark:text-black">{{ $item->title_training }}</h6>
                 </a>
-                <p class="mb-3 text-sm font-normal text-black dark:text-black">{{ $item->shortdesc_training }}</p>
+                <p class="mb-3 text-2xl lg:text-sm font-normal text-black dark:text-black">{{ $item->shortdesc_training }}</p>
                 <a href="{{ route('training.detail', $item->slug_training) }}"
                     class="text-2xl lg:text-sm inline-flex items-center px-6 lg:px-3 py-3 lg:py-2 font-medium text-center text-white bg-black rounded-lg hover:bg-orange-700 focus:outline-none">
                     Read more

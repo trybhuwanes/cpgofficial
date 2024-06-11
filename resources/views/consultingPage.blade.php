@@ -47,8 +47,8 @@
 
         <div class="flex items-center justify-center lg:flex-row flex-col mx-16 lg:mx-36 mt-8">
             <div data-aos="lg:fade-up" data-aos-duration="1500"
-                class="lg:h-[400px] h-[580px] w-3/4 lg:w-auto lg:mt-0 mt-5 bg-white rounded-xl shadow-2xl dark:bg-white dark:border-gray-100 xl:mx-5">
-                <img class="block lg:h-72 h-[410px] object-cover w-full rounded-t-lg"
+                class="h-auto w-3/4 lg:w-auto lg:mt-0 mt-5 bg-white rounded-xl shadow-2xl dark:bg-white dark:border-gray-100 xl:mx-5">
+                <img class="block lg:h-72 h-[510px] object-cover w-full rounded-t-lg"
                     src="{{ asset('/images/foto-bu-sri.jpg') }}" alt="Sri Sudarwati - Coach" />
                 <div class="px-5 py-3">
                     <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black text-center">Sri
@@ -83,7 +83,7 @@
             Consultant at CPG
         </div>
 
-        <div data-aos="lg:fade-up" data-aos-duration="1500" class="grid lg:grid-cols-5 grid-cols-2 gap-4 mx-36">
+        <div data-aos="lg:fade-up" data-aos-duration="1500" class="grid lg:grid-cols-5 grid-cols-2 gap-4 mx-16 lg:mx-36">
             {{-- CARD FOTO 1 --}}
             <div class="lg:h-96 h-[450px] bg-white border rounded-lg shadow-2xl">
                 <img class="block lg:h-72 h-80 object-cover w-full rounded-t-lg"

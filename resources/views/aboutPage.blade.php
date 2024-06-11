@@ -286,101 +286,101 @@
             class="grid lg:grid-cols-5 grid-cols-2 gap-4">
             {{-- CARD FOTO 1 --}}
             <div
-                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block lg:h-72 h-56 object-cover w-full rounded-t-lg"
+                class="lg:h-[380px] h-[440px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block lg:h-72 h-80 object-cover w-full rounded-t-lg"
                     src="{{ asset('images/team/bu sri.JPG') }}" alt="Sri Sudarwati - President Director CPG" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                    <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black text-center">
                         Sri Sudarwati
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">President Director CPG</p>
+                    <p class="text-2xl lg:text-sm text-black dark:text-black text-center">President Director CPG</p>
 
                 </div>
             </div>
 
             {{-- CARD FOTO 2 --}}
             <div
-                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block lg:h-72 h-56 object-cover w-full rounded-t-lg"
+                class="lg:h-[380px] h-[440px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block lg:h-72 h-80 object-cover w-full rounded-t-lg"
                     src="{{ asset('images/team/evie.jpg') }}"
                     alt="Evie Dhiani - Praktisi Hospitality & Digital Marketing" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                    <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black text-center">
                         Evie Dhiani
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Praktisi Hospitality & Digital Marketing</p>
+                    <p class="text-2xl lg:text-sm text-black dark:text-black text-center">Praktisi Hospitality & Digital Marketing</p>
 
                 </div>
             </div>
 
             {{-- CARD FOTO 3 --}}
             <div
-                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block lg:h-72 h-56 object-cover w-full rounded-t-lg"
+                class="lg:h-[380px] h-[440px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block lg:h-72 h-80 object-cover w-full rounded-t-lg"
                     src="{{ asset('images/team/dwi-ekasari.png') }}"
                     alt="Dwi Ekasari Harmadji - Finance & Management Consultant" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                    <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black text-center">
                         Dwi Ekasari Harmadji
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Finance & Management Consultant</p>
+                    <p class="text-2xl lg:text-sm text-black dark:text-black text-center">Finance & Management Consultant</p>
 
                 </div>
             </div>
 
             {{-- CARD FOTO 4 --}}
             <div
-                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block lg:h-72 h-56 object-cover w-full rounded-t-lg"
+                class="lg:h-[380px] h-[440px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block lg:h-72 h-80 object-cover w-full rounded-t-lg"
                     src="{{ asset('images/team/yunita.jpg') }}" alt="Yunita - Secretary & Trainer" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                    <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black text-center">
                         Yunita
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Secretary & Trainer</p>
+                    <p class="text-2xl lg:text-sm text-black dark:text-black text-center">Secretary & Trainer</p>
 
                 </div>
             </div>
 
             {{-- CARD FOTO 5 --}}
             <div
-                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block lg:h-72 h-56 object-cover w-full rounded-t-lg"
+                class="lg:h-[380px] h-[440px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block lg:h-72 h-80 object-cover w-full rounded-t-lg"
                     src="{{ asset('images/team/ellisa.JPG') }}" alt="Ellisa Laili - Publication" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                    <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black text-center">
                         Ellisa Laili
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Publication</p>
+                    <p class="text-2xl lg:text-sm text-black dark:text-black text-center">Publication</p>
 
                 </div>
             </div>
 
             {{-- CARD FOTO 6 --}}
             <div
-                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block lg:h-72 h-56 object-cover w-full rounded-t-lg"
+                class="lg:h-[380px] h-[440px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block lg:h-72 h-80 object-cover w-full rounded-t-lg"
                     src="{{ asset('images/team/indra.jpg') }}" alt="Indra Febrianto - Self Development Trainer" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                    <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black text-center">
                         Indra Febrianto
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Self Development Trainer</p>
+                    <p class="text-2xl lg:text-sm text-black dark:text-black text-center">Self Development Trainer</p>
 
                 </div>
             </div>
 
             {{-- CARD FOTO 7 --}}
             <div
-                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block lg:h-72 h-56 object-cover w-full rounded-t-lg"
+                class="lg:h-[380px] h-[440px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block lg:h-72 h-80 object-cover w-full rounded-t-lg"
                     src="{{ asset('images/team/siswanto.png') }}"
                     alt="Siswanto - Methodology, Welder, AC Trainer Specialized" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                    <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black text-center">
                         Siswanto
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Methodology, Welder, AC Trainer Specialized
+                    <p class="text-2xl lg:text-sm text-black dark:text-black text-center">Methodology, Welder, AC Trainer Specialized
                     </p>
 
                 </div>
@@ -388,72 +388,72 @@
 
             {{-- CARD FOTO 8 --}}
             <div
-                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block lg:h-72 h-56 object-cover w-full rounded-t-lg"
+                class="lg:h-[380px] h-[440px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block lg:h-72 h-80 object-cover w-full rounded-t-lg"
                     src="{{ asset('images/team/agus-heri.png') }}"
                     alt="Agus Heri Santoso - Human Capital & Development Trainer" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                    <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black text-center">
                         Agus Heri Santoso
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Human Capital & Development Trainer</p>
+                    <p class="text-2xl lg:text-sm text-black dark:text-black text-center">Human Capital & Development Trainer</p>
 
                 </div>
             </div>
 
             {{-- CARD FOTO 9 --}}
             <div
-                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block lg:h-72 h-56 object-cover w-full rounded-t-lg"
+                class="lg:h-[380px] h-[440px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block lg:h-72 h-80 object-cover w-full rounded-t-lg"
                     src="{{ asset('images/team/bayu.jpg') }}" alt="Edy Bayu Sudarmanto - Branch Manager Jakarta" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                    <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black text-center">
                         Edy Bayu Sudarmanto
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Branch Manager Jakarta</p>
+                    <p class="text-2xl lg:text-sm text-black dark:text-black text-center">Branch Manager Jakarta</p>
 
                 </div>
             </div>
 
             {{-- CARD FOTO 10 --}}
             <div
-                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block lg:h-72 h-56 object-cover w-full rounded-t-lg"
+                class="lg:h-[380px] h-[440px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block lg:h-72 h-80 object-cover w-full rounded-t-lg"
                     src="{{ asset('images/team/riris.jpg') }}" alt="Riris R. R. - Branch Manager Jawa Tengah" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                    <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black text-center">
                         Riris R. R.
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Branch Manager Jawa Tengah</p>
+                    <p class="text-2xl lg:text-sm text-black dark:text-black text-center">Branch Manager Jawa Tengah</p>
 
                 </div>
             </div>
 
-            {{-- CARD FOTO 9 --}}
+            {{-- CARD FOTO 11 --}}
             <div
-                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block lg:h-72 h-56 object-cover w-full rounded-t-lg"
+                class="lg:h-[380px] h-[440px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block lg:h-72 h-80 object-cover w-full rounded-t-lg"
                     src="{{ asset('images/team/natasya.jpg') }}"
                     alt="Natasya Zahliyanti - Administration & Finance Departemen" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                    <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black text-center">
                         Natasya Zahliyanti
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Administration & Finance Departemen </p>
+                    <p class="text-2xl lg:text-sm text-black dark:text-black text-center">Administration & Finance Departemen </p>
 
                 </div>
             </div>
 
-            {{-- CARD FOTO 10 --}}
+            {{-- CARD FOTO 12 --}}
             <div
-                class="xl:h-[380px] sm:h-[300px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-                <img class="block lg:h-72 h-56 object-cover w-full rounded-t-lg"
+                class="lg:h-[380px] h-[440px] bg-white border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
+                <img class="block lg:h-72 h-80 object-cover w-full rounded-t-lg"
                     src="{{ asset('images/team/safira.jpg') }}" alt="Safira Dwi Jayanti - Director Marketing" />
                 <div class="px-3 py-3">
-                    <h6 class="text-lg font-bold tracking-tight text-black dark:text-black text-center">
+                    <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black text-center">
                         Safira Dwi Jayanti
                     </h6>
-                    <p class="text-sm text-black dark:text-black text-center">Director Marketing</p>
+                    <p class="text-2xl lg:text-sm text-black dark:text-black text-center">Director Marketing</p>
 
                 </div>
             </div>

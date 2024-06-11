@@ -49,10 +49,10 @@
         <h5 class="text-4xl lg:text-xl font-bold">Perguruan Tinggi</h5>
         <hr class="h-px my-3 border-0 bg-gray-800">
     </div>
-    <div data-aos="lg:fade-up" data-aos-duration="1500" class="grid lg:grid-cols-3 grid-cols-2 gap-4 mx-16 lg:mx-36">
+    <div data-aos="lg:fade-up" data-aos-duration="1500" class="grid lg:grid-cols-3 grid-cols-1 gap-4 mx-16 lg:mx-36">
         {{-- CARD FOTO 1 --}}
         <div class="h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-            <img class="block h-36 object-cover w-full rounded-t-lg" src="{{ asset('images\internship\internbg.png') }}" alt="" />
+            <img class="block h-80 lg:h-36 object-cover w-full rounded-t-lg" src="{{ asset('images\internship\internbg.png') }}" alt="" />
             <div class="px-5 py-3">
                 <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black">MSIB Batch 6
                 </h6>
@@ -69,10 +69,10 @@
         <hr class="h-px my-3 border-0 bg-gray-800">
     </div>
 
-    <div data-aos="lg:fade-up" data-aos-duration="1500" class="grid lg:grid-cols-3 grid-cols-2 gap-4 mx-16 lg:mx-36 mb-16">
+    <div data-aos="lg:fade-up" data-aos-duration="1500" class="grid lg:grid-cols-3 grid-cols-1 gap-4 mx-16 lg:mx-36 mb-16">
         {{-- CARD FOTO 2 --}}
         <div class="h-auto bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-white dark:border-gray-100">
-            <img class="block h-36 object-cover w-full rounded-t-lg" src="{{ asset('images\internship\magang-smk-1.jpg') }}" alt="Magang SMK Blabla" />
+            <img class="block h-80 lg:h-36 object-cover w-full rounded-t-lg" src="{{ asset('images\internship\magang-smk-1.jpg') }}" alt="Magang SMK Blabla" />
             <div class="px-5 py-3">
                 <h6 class="text-3xl lg:text-lg font-bold tracking-tight text-black dark:text-black">Magang SMK OTKP/MPLB
                 </h6>
