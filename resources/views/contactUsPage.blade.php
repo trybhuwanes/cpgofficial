@@ -18,8 +18,8 @@
     {{-- SECTION 2 --}}
     <div data-aos="lg:fade-up" data-aos-duration="1500" class="mx-16 lg:mx-36 mb-5 my-20 lg:my-16">
         <div class="relative container m-auto bg-orange-600 rounded-lg px-5 py-10 lg:py-7">
-            <h5 class="mb-3 text-4xl lg:text-3xl font-bold tracking-tight text-black">How We Can Help You?</h5>
-            <h5 class="mb-3 text-3xl lg:text-xl font-bold tracking-tight text-black">Tell us what you need</h5>
+            <h5 class="mb-3 text-4xl lg:text-3xl font-bold tracking-tight text-white">How We Can Help You?</h5>
+            <h5 class="mb-3 text-3xl lg:text-xl font-bold tracking-tight text-white">Tell us what you need</h5>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 {{-- COL 1 - FORM CONTACT US --}}
@@ -33,37 +33,37 @@
                     <form class="" action="{{ route('contact.store') }}" method="POST">
                         @csrf
                         <div class="mb-5">
-                            <label for="name" class="block mb-2 text-2xl lg:text-sm font-medium text-black">Nama</label>
+                            <label for="name" class="block mb-2 text-2xl lg:text-sm font-medium text-white">Nama</label>
                             <input type="text" id="name" name="name"
                                 class="shadow-sm border text-gray-900 text-2xl lg:text-sm rounded-lg block w-full p-2 bg-gray placeholder-gray-400 focus:ring-black focus:border-black shadow-sm-light mb-3"
                                 placeholder="Your Name" required />
 
                             <label for="email"
-                                class="block mb-2 text-2xl lg:text-sm font-medium text-black">Email</label>
+                                class="block mb-2 text-2xl lg:text-sm font-medium text-white">Email</label>
                             <input type="email" id="email" name="email"
                                 class="shadow-sm border text-gray-900 text-2xl lg:text-sm rounded-lg block w-full p-2 bg-gray placeholder-gray-400 focus:ring-black focus:border-black shadow-sm-light mb-3"
                                 placeholder="yourname@gmail.com" required />
 
                             <label for="company"
-                                class="block mb-2 text-2xl lg:text-sm font-medium text-black">Company</label>
+                                class="block mb-2 text-2xl lg:text-sm font-medium text-white">Company</label>
                             <input type="text" id="company" name="company"
                                 class="shadow-sm border text-gray-900 text-2xl lg:text-sm rounded-lg block w-full p-2 bg-gray placeholder-gray-400 focus:ring-black focus:border-black shadow-sm-light mb-3"
                                 placeholder="Company/University/Government" required />
 
                             <label for="phone"
-                                class="block mb-2 text-2xl lg:text-sm font-medium text-black">Phone</label>
+                                class="block mb-2 text-2xl lg:text-sm font-medium text-white">Phone</label>
                             <input type="text" id="phone" name="phone"
                                 class="shadow-sm border text-gray-900 text-2xl lg:text-sm rounded-lg block w-full p-2 bg-gray placeholder-gray-400 focus:ring-black focus:border-black shadow-sm-light mb-3"
                                 placeholder="08xxxxxxxxxx" required />
 
                             <label for="subject"
-                                class="block mb-2 text-2xl lg:text-sm font-medium text-black">Subject</label>
+                                class="block mb-2 text-2xl lg:text-sm font-medium text-white">Subject</label>
                             <input type="text" id="subject" name="subject"
                                 class="shadow-sm border text-gray-900 text-2xl lg:text-sm rounded-lg block w-full p-2 bg-gray placeholder-gray-400 focus:ring-black focus:border-black shadow-sm-light mb-3"
                                 placeholder="Subject message" required />
 
                             <label for="message"
-                                class="block mb-2 text-2xl lg:text-sm font-medium text-black">Message</label>
+                                class="block mb-2 text-2xl lg:text-sm font-medium text-white">Message</label>
                             <textarea id="message" rows="4" name="message"
                                 class="shadow-sm border text-gray-900 text-2xl lg:text-sm rounded-lg block w-full p-2 bg-gray placeholder-gray-400 focus:ring-black focus:border-black shadow-sm-light mb-3"
                                 placeholder="Write down your message here ...."></textarea>
