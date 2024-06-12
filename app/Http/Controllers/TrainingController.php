@@ -78,13 +78,14 @@ class TrainingController extends Controller
 
         $pictTraining = $request->file('pict_training');
         $fileName = $request->slug_training . '-pict' . '.' . $pictTraining->extension();
-        $pictTraining->move(public_path('assets/img'), $fileName);
+        $path = 'assets/img/';
+        $pictTraining->move($path, $fileName);
 
         $training = new Training();
         $training->id_category = $request->category;
         $training->title_training = $request->title_training;
         $training->slug_training = $request->slug_training;
-        $training->pict_training = $fileName;
+        $training->pict_training = $path.$fileName;
         $training->desc_training = $request->desc_training;
         $training->shortdesc_training = $request->shortdesc_training;
         $training->date_training = $request->date_training;
@@ -110,17 +111,18 @@ class TrainingController extends Controller
         ]);
 
         if($request->file('pict_training')){
+            // delete old image
+            Storage::delete($training->pict_training);
+            
             // upload image
             $pictTraining = $request->file('pict_training');
             $fileName = $request->slug_training . '-pict' . '.' . $pictTraining->extension();
-            $pictTraining->move(public_path('assets/img'), $fileName);
-
-            // delete old image
-            Storage::delete('public/assets/img/'. $training->pict_training);
+            $path = 'assets/img/';
+            $pictTraining->move($path, $fileName);
 
             // update post data image
             $training->update([
-                'pict_training'   => $fileName,
+                'pict_training'   => $path.$fileName,
             ]);
         }
 
@@ -136,17 +138,6 @@ class TrainingController extends Controller
 
         return redirect()->route('admin.training');
     }
-
-    // public function deleteTraining($id) {
-    //     $encryptedId = Crypt::decrypt($id);
-    //     // dd($encryptedId);
-    //     $training = Training::find($encryptedId);
-    //     dd($training,);
-    //     $training->delete();
-
-    //     // Training::find($encryptedId)->delete();
-    //     return redirect()->route('admin.training');
-    // }
 
     public function deleteTraining($id) {
         try {

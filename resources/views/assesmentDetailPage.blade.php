@@ -18,7 +18,7 @@
             </div>
         </div>
         <div data-aos="lg:fade-up" data-aos-duration="1500" class="lg:w-5/12 w-full h-80 lg:h-48 justify-center items-center mt-5 lg:mt-0">
-            <img class="h-80 lg:h-56 object-cover w-full rounded-xl" src="{{ asset('assets/img/' . $assesment->pict) }}" alt="{{ $assesment->pict }}">
+            <img class="h-80 lg:h-56 object-cover w-full rounded-xl" src="{{ asset($assesment->pict) }}" alt="{{ $assesment->pict }}">
         </div>
     </div>
 
@@ -84,7 +84,7 @@
                 Upcoming Certification
             </div>
 
-                <img data-aos="lg:fade-up" data-aos-duration="1500" class="flex items-center justify-center object-cover rounded-t-lg w-full lg:w-80" src="{{ asset('assets/img/' . $assesment->pictagenda) }}"
+                <img data-aos="lg:fade-up" data-aos-duration="1500" class="flex items-center justify-center object-cover rounded-t-lg w-full lg:w-80" src="{{ asset($assesment->pictagenda) }}"
                     alt="{{ $assesment->pictagenda }}" />
             {{-- </a> --}}
         </div>

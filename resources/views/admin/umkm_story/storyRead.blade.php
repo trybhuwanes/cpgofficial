@@ -67,7 +67,7 @@
             <h5 class="mb-8 text-base font-normal tracking-tight text-orange-600">
                 {{ $story->updated_at->format('l, d F Y') }}
             </h5>
-            <img loading="lazy" class="w-full h-[630px] object-cover" src="{{ asset('assets/img/' . $story->pict_story) }}"
+            <img loading="lazy" class="w-full h-[630px] object-cover" src="{{ asset($story->pict_story) }}"
                 alt="{{ $story->pict_story }}">
         </div>
 

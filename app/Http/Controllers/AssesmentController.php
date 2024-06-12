@@ -65,13 +65,15 @@ class AssesmentController extends Controller
             'slug' => Str::slug($request->title_assessment),
         ]);
 
+        $path = 'assets/img/';
+
         $pictAssesment = $request->file('pict_assesment');
         $fileNameAssesment = $request->slug . '-pict' . '.' . $pictAssesment->extension();
-        $pictAssesment->move(public_path('assets/img'), $fileNameAssesment);
+        $pictAssesment->move($path, $fileNameAssesment);
 
         $pictAgenda = $request->file('pict_agenda');
         $fileNameAgenda = $request->slug . '-agenda' . '.' . $pictAgenda->extension();
-        $pictAgenda->move(public_path('assets/img'), $fileNameAgenda);
+        $pictAgenda->move($path, $fileNameAgenda);
 
         $assesment = new AssesmentCenter();
         // $assesment->id_category = $request->category;
@@ -79,8 +81,8 @@ class AssesmentController extends Controller
         $assesment->slug = $request->slug;
         $assesment->desc = $request->desc_assessment;
         $assesment->importance = $request->importance;
-        $assesment->pict = $fileNameAssesment;
-        $assesment->pictagenda = $fileNameAgenda;
+        $assesment->pict = $path.$fileNameAssesment;
+        $assesment->pictagenda = $path.$fileNameAgenda;
         $assesment->save();
 
         for ($i = 0; $i < $request->jumlah_syarat; $i++) {
@@ -108,79 +110,54 @@ class AssesmentController extends Controller
         // $uk = UkAssesment::where('assesment_center_id', $encryptedId)->get();
         // dd($id, $decrypted, $assesment);
         return view('admin.assesment.assesmentUpdate', compact('assesment', 'syarat'), ['encryptedId' => $encryptedId]);
-
-        // return view('edit-blog', ['encryptedId' => $encryptedId]);
     }
 
     public function editAssesment(Request $request, $id)
     {
+        $assesment = AssesmentCenter::find($id);
+        
         $request->validate([
             'title_assesment' => 'required',
             'desc_assesment' => 'required',
             'importance' => 'required',
         ]);
-
-        // dd($request->all());
-
-        $syarat = SyaratAssesment::where('assesment_center_id', $id)->get();
-        // $uk = UkAssesment::where('assesment_center_id', $id)->get();
-
-        // dd($syarat);
-
-        foreach ($syarat as $key => $value) {
-            // dd($value->syarat);
-
-            // dd($value);
-
-            // dd($request->input("syarat_".($key+1)));
-
-
-            if ($value->syarat == $request->input("syarat_" . ($key + 1))) {
-
-
-                # code...
-            } else {
-                $value->update([
-                    'syarat' => $request->input("syarat_" . ($key + 1)),
-                ]);
-
-                $value->save();
-
-                # code...
-            }
-
-            # code...
+        
+        $request->merge([
+            'slug' => Str::slug($request->title_assessment),
+        ]);
+        
+        $path = 'assets/img/';
+        
+        if($request->file('pict_assesment')){
+            // delete old image
+            Storage::delete($assesment->pict);
+            
+            // upload image
+            $pictAssesment = $request->file('pict_assesment');
+            $fileNameAssesment = $request->slug . '-pict' . '.' . $pictAssesment->extension();
+            $pictAssesment->move($path, $fileNameAssesment);
+        
+            // update post data image
+            $assesment->update([
+                'pict'   => $path.$fileNameAssesment,
+            ]);
         }
-
-        // foreach ($uk as $key => $value) {
-        //     // dd($value->syarat);
-
-        //     // dd($value);
-
-        //     // dd($request->input("syarat_".($key+1)));
-
-
-        //     if ($value->uk == $request->input("uk_" . ($key + 1))) {
-
-
-        //         # code...
-        //     } else {
-        //         $value->update([
-        //             'uk' => $request->input("uk_" . ($key + 1)),
-        //         ]);
-
-        //         $value->save();
-
-        //         # code...
-        //     }
-
-        //     # code...
-        // }
-
-
-        // $encryptedId = Crypt::decrypt($id);
-        // dd($request->all());
-        $assesment = AssesmentCenter::find($id);
+        
+        if($request->file('pict_agenda')){
+            // delete old image
+            Storage::delete($assesment->pictagenda);
+            
+            // upload image
+            $pictAgenda = $request->file('pict_agenda');
+            $fileNameAgenda = $request->slug . '-agenda' . '.' . $pictAgenda->extension();
+            $pictAgenda->move($path, $fileNameAgenda);
+        
+            // update post data image
+            $assesment->update([
+                'pictagenda'   => $path.$fileNameAgenda,
+            ]);
+        }
+        
         $assesment->update(
             [
                 'title' => $request->title_assesment,

@@ -1,6 +1,6 @@
 @extends('layouts.admin-app')
 
-@section('title', 'Admin | Update assesment')
+@section('title', 'Admin | Update Assesment')
 
 @section('content')
 
@@ -100,6 +100,11 @@
                     class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                     aria-describedby="photo" />
             </div>
+            
+            <div class="mb-5">
+                <img id="image-preview" src="{{ asset($assesment->pict) }}" alt="{{ $assesment->pict }}"
+                    style="max-height: 250px;">
+            </div>
 
             <div class="mb-5">
                 <label for="Foto Agenda" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Foto
@@ -107,6 +112,11 @@
                 <input type="file" id="pict_agenda" name="pict_agenda"
                     class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                     aria-describedby="photo" />
+            </div>
+            
+            <div class="mb-5">
+                <img id="image-preview-agenda" src="{{ asset($assesment->pictagenda) }}" alt="{{ $assesment->pictagenda }}"
+                    style="max-height: 250px;">
             </div>
 
             <button type="submit"
@@ -151,16 +161,6 @@
                     </div>
                 @endforeach
             </div>
-            {{-- <div class="mb-5 grid gap-4">
-                @foreach ($uk as $key => $item)
-                    <div
-                        class="col-span-1 py-1 flex justify-center items-center bg-gray-800 h-24 border border-gray-200 rounded-md">
-                        <textarea id="editor" rows="2" name="uk_{{ $key + 1 }}"
-                            class="block w-full px-2 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-                            placeholder="{{ $item->uk }}" required>{{ $item->uk }}</textarea>
-                    </div>
-                @endforeach
-            </div> --}}
         </div>
         <div class="flex justify-between mb-5">
             <div>
@@ -169,15 +169,39 @@
                     Tambah Syarat
                 </a>
             </div>
-
-            {{-- <div>
-                <a href="{{ route('admin.assesment.uk.page', $assesment->id) }}"
-                    class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
-                    Tambah Unit Kompetensi
-                </a>
-            </div> --}}
-
         </div>
     </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+            $('#pict_assesment').change(function() {
+
+                let reader = new FileReader();
+
+                reader.onload = (e) => {
+
+                    $('#image-preview').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(this.files[0]);
+
+            });
+            
+            $('#pict_agenda').change(function() {
+
+                let reader = new FileReader();
+
+                reader.onload = (e) => {
+
+                    $('#image-preview-agenda').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(this.files[0]);
+
+            });
+
+        });
+    </script>
 
 @endsection

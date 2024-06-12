@@ -82,7 +82,7 @@
             </div>
 
             <div class="mb-5">
-                <img id="image-preview" src="{{ asset('assets/img/' . $blog->pict_blog) }}" alt="{{ $blog->pict_blog }}"
+                <img id="image-preview" src="{{ asset($blog->pict_blog) }}" alt="{{ $blog->pict_blog }}"
                     style="max-height: 250px;">
             </div>
 

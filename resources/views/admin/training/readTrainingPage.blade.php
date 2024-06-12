@@ -69,7 +69,7 @@
 
     <div class="flex flex-wrap mx-20">
         <div data-aos="fade-up" data-aos-duration="1500" class="xl:w-2/3 sm:w-full ml-autoh-12 xl:pr-10 sm:pr-0">
-            <img class="w-full aspect-square object-cover" src="{{ asset('assets/img/' . $training->pict_training) }}" alt="{{ $training->pict_training }}">
+            <img class="w-full aspect-square object-cover" src="{{ asset($training->pict_training) }}" alt="{{ $training->pict_training }}">
         </div>
         <div
         data-aos="fade-up" data-aos-duration="1500"  class="xl:w-1/3 sm:w-full h-[333px] p-5 bg-white rounded-[20px] shadow border border-neutral-500 flex-col justify-start items-start gap-5 inline-flex">

@@ -1,6 +1,6 @@
 @extends('layouts.admin-app')
 
-@section('title', 'Admin | Create assessment')
+@section('title', 'Admin | Create Assessment')
 
 @section('content')
 

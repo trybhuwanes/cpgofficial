@@ -55,13 +55,14 @@ class CeritaUmkmController extends Controller
 
         $pictStory = $request->file('pict_story');
         $fileName = $request->slug_story . '-pict' . '.' . $pictStory->extension();
-        $pictStory->move(public_path('assets/img'), $fileName);
+        $path = 'assets/img/';
+        $pictStory->move($path, $fileName);
 
         try {
             $story = new UMKMStory();
             $story->title_story = $request->title;
             $story->slug_story = $request->slug_story;
-            $story->pict_story = $fileName;
+            $story->pict_story = $path.$fileName;
             $story->body_story = $request->body;
             $story->save();
             return redirect()->route('admin.umkm_story');
@@ -87,17 +88,18 @@ class CeritaUmkmController extends Controller
         ]);
 
         if($request->file('pict_story')){
+            // delete old image
+            Storage::delete($umkm->pict_story);
+            
             // upload image
             $pictStory = $request->file('pict_story');
             $fileName = $request->slug_story . '-pict' . '.' . $pictStory->extension();
-            $pictStory->move(public_path('assets/img'), $fileName);
-        
-            // delete old image
-            Storage::delete('public/assets/img/'. $umkm->pict_story);
+            $path = 'assets/img/';
+            $pictStory->move($path, $fileName);
         
             // update post data image
             $umkm->update([
-                'pict_story'   => $fileName,
+                'pict_story'   => $path.$fileName,
             ]);
         }
 

@@ -22,7 +22,7 @@
         <div
             class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 max-w-1/3 h-auto bg-white border border-gray-200 rounded-lg shadow-2xl hover:bg-orange-500">
             <a href="{{ route('blog.read', $blog->slug_blog) }}">
-                <img class="block h-44 lg:h-36 object-cover w-full rounded-t-lg" src="{{ asset('assets/img/' . $blog->pict_blog) }}" alt="{{ $blog->pict_blog }}" />
+                <img class="block h-44 lg:h-36 object-cover w-full rounded-t-lg" src="{{ asset($blog->pict_blog) }}" alt="{{ $blog->pict_blog }}" />
             </a>
             <div class="p-5">
                 <a href="{{ route('blog.read', $blog->slug_blog) }}">

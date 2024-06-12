@@ -1,6 +1,6 @@
 @extends('layouts.admin-app')
 
-@section('title', 'Admin | Create Training Program')
+@section('title', 'Admin | Syarat Assesment')
 
 @section('content')
 

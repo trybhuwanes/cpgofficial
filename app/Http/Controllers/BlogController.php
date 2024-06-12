@@ -52,13 +52,14 @@ class BlogController extends Controller
 
         $pictBlog = $request->file('pict_blog');
         $fileName = $request->slug_blog . '-pict' . '.' . $pictBlog->extension();
-        $pictBlog->move(public_path('assets/img'), $fileName);
+        $path = 'assets/img/';
+        $pictBlog->move($path, $fileName);
 
         try {
             $blog = new Blog();
             $blog->title_blog = $request->title;
             $blog->slug_blog = $request->slug_blog;
-            $blog->pict_blog = $fileName;
+            $blog->pict_blog = $path.$fileName;
             $blog->desc_blog = $request->desc;
             $blog->save();
             return redirect()->route('admin.blog');
@@ -81,17 +82,18 @@ class BlogController extends Controller
         ]);
 
         if($request->file('pict_blog')){
+            // delete old image
+            Storage::delete($blog->pict_blog);
+            
             // upload image
             $pictBlog = $request->file('pict_blog');
             $fileName = $request->slug_blog . '-pict' . '.' . $pictBlog->extension();
-            $pictBlog->move(public_path('assets/img'), $fileName);
-        
-            // delete old image
-            Storage::delete('public/assets/img/'. $blog->pict_blog);
+            $path = 'assets/img/';
+            $pictBlog->move($path, $fileName);
         
             // update post data image
             $blog->update([
-                'pict_blog'   => $fileName,
+                'pict_blog'   => $path.$fileName,
             ]);
         }
 

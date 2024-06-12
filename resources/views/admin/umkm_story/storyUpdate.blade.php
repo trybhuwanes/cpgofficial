@@ -82,7 +82,7 @@
             </div>
 
             <div class="mb-5">
-                <img id="image-preview" src="{{ asset('assets/img/' . $umkm->pict_story) }}" alt="{{ $umkm->pict_story }}"
+                <img id="image-preview" src="{{ asset($umkm->pict_story) }}" alt="{{ $umkm->pict_story }}"
                     style="max-height: 250px;">
             </div>
 
