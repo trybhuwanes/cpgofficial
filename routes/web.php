@@ -125,6 +125,7 @@ Route::prefix('admin')->group(function () {
 
     Route::prefix('csr')->group(function () {
         Route::get('/', [CsrController::class, 'adminCsr'])->name('admin.csr')->middleware('auth');
+        Route::get('/read/{id}', [CsrController::class, 'readCsr'])->name('admin.csr.read')->middleware('auth');
         Route::get('/create', [CsrController::class, 'createCsrPage'])->name('admin.csr.create.page')->middleware('auth');
         Route::post('/create', [CsrController::class, 'createCsr'])->name('admin.csr.create')->middleware('auth');
         Route::get('/edit/{id}', [CsrController::class, 'editCsrPage'])->name('admin.csr.edit.page')->middleware('auth');

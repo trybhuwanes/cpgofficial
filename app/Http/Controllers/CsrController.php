@@ -21,8 +21,13 @@ class CsrController extends Controller
     // ADMIN FUNCTION
     public function adminCsr() {
         $csr = Csr::all();
-        // dd($Csr);
         return view('admin.csr.csr', compact('csr'));
+    }
+
+    public function readCsr($id) {
+        $encryptedId = Crypt::decrypt($id);
+        $csr = Csr::find($encryptedId);
+        return view('admin.csr.readCsrPage', compact('csr'), ['encryptedId' => $encryptedId]);
     }
 
     public function createCsrPage() {
@@ -48,13 +53,13 @@ class CsrController extends Controller
 
         $pictCsr = $request->file('pict_csr');
         $fileName = $request->slug_csr . '-pict' . '.' . $pictCsr->extension();
-        $pictCsr->move(public_path('assets/img'), $fileName);
-
+        $path = 'assets/img/';
+        $pictCsr->move($path, $fileName);
 
         $csr = new Csr();
         $csr->title_csr = $request->title_csr;
         $csr->slug_csr = $request->slug_csr;
-        $csr->pict_csr = $fileName;
+        $csr->pict_csr = $path.$fileName;
         $csr->desc_csr = $request->desc_csr;
         $csr->date_csr = $request->date_csr;
         $csr->location_csr = $request->location_csr;
@@ -80,17 +85,18 @@ class CsrController extends Controller
         ]);
 
         if($request->file('pict_csr')){
+            // delete old image
+            Storage::delete($csr->pict_csr);
+            
             // upload image
             $pictCsr = $request->file('pict_csr');
             $fileName = $request->slug_csr . '-pict' . '.' . $pictCsr->extension();
-            $pictCsr->move(public_path('assets/img'), $fileName);
-        
-            // delete old image
-            Storage::delete('public/assets/img/'. $csr->pict_csr);
+            $path = 'assets/img/';
+            $pictCsr->move($path, $fileName);
         
             // update post data image
             $csr->update([
-                'pict_csr'   => $fileName,
+                'pict_csr'   => $path.$fileName,
             ]);
         }
 
